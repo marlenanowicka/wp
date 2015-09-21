@@ -1,0 +1,75 @@
+<div class="container-fluid">
+    <div class="row">
+
+            <header>
+                <div class="col-sm-2 col-md-2 col-xs-12">
+                     <a>Wonderpage LOGO</a>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 search">
+                    <div class="btn-group" role="group" aria-label="...">
+                        <input type="text" type="button" class="btn btn-default" name="search" placeholder="search phrase">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a>my pages</a></li>
+                                <li><a>all pages</a></li>
+                                <li><a>users</a></li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn btn-default">search</button>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-md-2 col-xs-12 login">
+                        <p>Zalogowany jako:</p>
+                </div>
+            </header>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-12 col-md-2 menu">
+        <div>
+            <ul>
+                <li>
+                    <button data-toggle="tooltip" data-placement="right" title="edit category settings" ng-click="toggleModal()" type="button" class="btn btn-info btn-xs btn-tooltip"><span class="glyphicon glyphicon-wrench"></span></button><a href="#" class="btn-tooltip" data-toggle="tooltip" data-placement="right" title="Home">  Home</a>
+                </li>
+                <li><a class="btn-tooltip" href="#" data-toggle="tooltip" data-placement="right" title="see who you fallows">i'm fallowing  <span class="glyphicon glyphicon-share-alt"></span></a></li>
+                <li><a class="btn-tooltip" href="#" data-toggle="tooltip" data-placement="right" title="see who fallows you">my fallowers  </a></li>
+                <li><a class="btn-tooltip" href="#" data-toggle="tooltip" data-placement="right" title="most viewied">most viewied  <span class="glyphicon glyphicon-signal"></span></a></li>
+                <li><a class="btn-tooltip" href="#" data-toggle="tooltip" data-placement="right" title="recently added bookmarks">recently added <span class="glyphicon glyphicon-certificate"></span></a></li>
+                <li>
+                    <button type="button" class="btn btn-info btn-xs">add bookmark</button>
+                    <button type="button" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-plus"></span></button>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-info btn-xs">add folder</button>
+                    <button type="button" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-minus"></span></button>
+                </li>
+            </ul>
+        </div>
+        </div>
+        <div class="col-md-8 col-sm-12 content">
+            <div ng-switch on="selectionSize.id">
+                <div ng-switch-when="1">
+                    <list></list>
+                </div>
+                <div ng-switch-default>
+                    <grid></grid>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-2">
+            <public-feed items-per-page="{{myItemPerPage}}"><strong>Public Feed 1</strong></public-feed>
+        </div>
+    </div>
+</div>
+<footer>
+        <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
+            <p>ikona miniatur</p>
+                <select class="dropup" id="simpleSizeSel" ng-model="selectionSize"  ng-options="option.value for option in simpleSizeValue track by option.id">
+                </select>
+        </div>
+</footer>
