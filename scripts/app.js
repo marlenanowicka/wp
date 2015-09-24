@@ -2,7 +2,7 @@
 
 angular.module('wonderpage', [
     'ngRoute',
-    'wonderpage.settings',
+    'ui.bootstrap',
     'wonderpage.views',
     'wonderpage.public_feed',
     'wonderpage.bookmarks_views'

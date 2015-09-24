@@ -2,10 +2,10 @@
     <div class="row">
 
             <header>
-                <div class="col-sm-2 col-md-2 col-xs-12">
+                <div class="col-sm-1 col-md-1 col-xs-12">
                      <a>Wonderpage LOGO</a>
                 </div>
-                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 search">
+                <div class="col-lg-10 col-md-8 col-sm-8 col-xs-12 search">
                     <div class="btn-group" role="group" aria-label="...">
                         <input type="text" type="button" class="btn btn-default" name="search" placeholder="search phrase">
                         <div class="btn-group" role="group">
@@ -22,7 +22,7 @@
                         <button type="button" class="btn btn-default">search</button>
                     </div>
                 </div>
-                <div class="col-sm-2 col-md-2 col-xs-12 login">
+                <div class="col-sm-1 col-md-1 col-xs-12 login">
                         <p>Zalogowany jako:</p>
                 </div>
             </header>
@@ -30,7 +30,7 @@
 
 
     <div class="row">
-        <div class="col-sm-12 col-md-2 menu">
+        <div class="col-sm-12 col-md-1 menu">
         <div>
             <ul>
                 <li>
@@ -51,7 +51,7 @@
             </ul>
         </div>
         </div>
-        <div class="col-md-8 col-sm-12 content">
+        <div class="col-md-10 col-sm-12 content">
             <div ng-switch on="selectionSize.id">
                 <div ng-switch-when="1">
                     <list></list>
@@ -61,13 +61,13 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-12 col-md-2">
+        <div class="col-sm-12 col-md-1">
             <public-feed items-per-page="{{myItemPerPage}}"><strong>Public Feed 1</strong></public-feed>
         </div>
     </div>
 </div>
 <footer>
-        <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
+        <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-10 col-xs-12">
             <p>ikona miniatur</p>
                 <select class="dropup" id="simpleSizeSel" ng-model="selectionSize"  ng-options="option.value for option in simpleSizeValue track by option.id">
                 </select>

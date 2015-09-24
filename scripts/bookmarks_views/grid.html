@@ -1,9 +1,26 @@
-<div class="col-xs-12 col-sm-12 col-md-12 view-grid" ng-repeat="view in lists">
-    <img ng-src="images/{{view.screen}}" />
-    <div class="">
-        <p class="name">{{view.name}}</p>
-        <button type="button" class="btn btn-success btn-xs"><span>!</span></button>
-        <button type="button" class="btn btn-success btn-xs"><span>F</span></button>
-        <button type="button" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-plus"></span></button>
+<div class="row">
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="col-md-4 col-sm-4 xs-col-4" ng-repeat="view in lists">
+            <div class="view-grid" ng-mouseover="options = true" ng-mouseout="options = false" >
+                <img ng-src="images/{{view.screen}}" />
+                <span class="icons glyphicon glyphicon-user"></span>
+                <p class="name">{{view.name}}</p>
+                    <div ng-show="options">!</div>
+                    <div ng-show="options">F</div>
+                    <div ng-show="options">+</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="col-md-4 col-sm-4 xs-col-4" ng-repeat="view in lists">
+            <div class="view-grid" ng-mouseover="options = true" ng-mouseout="options = false" >
+                <img ng-src="images/{{view.screen}}" />
+                <span class="icons glyphicon glyphicon-user"></span>
+                <p class="name">{{view.name}}</p>
+                <div ng-show="options">!</div>
+                <div ng-show="options">F</div>
+                <div ng-show="options">+</div>
+            </div>
+        </div>
     </div>
 </div>

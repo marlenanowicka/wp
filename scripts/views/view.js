@@ -11,6 +11,8 @@ angular.module('wonderpage', ['ngRoute','wonderpage.public_feed', 'wonderpage.bo
             });
     }]).controller("Ctrl1",['$scope', function($scope){
         //$scope.myItemPerPage = 4;
+        //dialogService.openFolderPropertiesDialog();
+
         $scope.simpleSizeValue = [{
             'id': '1',
             value: 'list'

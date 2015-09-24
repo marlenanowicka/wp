@@ -1,0 +1,30 @@
+<header class="modal-header">
+    <button type="button" class="close" ng-click="close()" ng-disabled="isCancelDisabled()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title">edit folder properties - </h4>
+</header>
+<div class="modal-body">
+    <form>
+        <div class="form-group">
+            <div class="col-md-6">
+                <label for="folder-name">name: </label><input  type="text" id="folder-name" name="folder-name" ng-model="formData.name" value="" />
+                <label for="folder-description">description: </label><input id="folder-description" type="text" name="folder-description-name" ng-model="formData.description" value="">
+            </div>
+            <div class="col-md-6">
+                <p>privacy*:</p>
+                <label for="private"><input name="privacy" type="radio" value="private" />private</label>
+                <label for="public"><input name="public" type="radio" value="public" />public</label>
+                <p>*This folder is private. All bookmars in this folder are private.</p>
+            </div>
+
+        </div>
+    </form>
+</div>
+<footer class="modal-footer">
+    <button type="button">remove</button>
+    <button type="button" class="btn btn-default pull-right" ng-disabled="isCancelDisabled()" ng-click="close()">cancel</button>
+    <button type="button" class="btn btn-primary" ng-click="uploadFiles()" ng-disabled="isUploadDisabled()">
+        Save
+    </button>
+</footer>

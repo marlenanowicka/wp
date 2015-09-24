@@ -51,6 +51,7 @@ input {
     border: 1px solid lightgrey;
     border-radius: 3px;
     -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
 }
 input[type="text"] {
     float: right;
@@ -71,6 +72,7 @@ input[type="text"] {
     border: 1px solid lightgray;
     border-radius: 3px;
     -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
     height: 500px;
 }
 .view-list {
@@ -78,25 +80,60 @@ input[type="text"] {
     border: 1px solid lightgrey;
     border-radius: 3px;
     -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
     margin: 5px;
 }
-img {
+.view-list img {
     width: 30px;
     height: 30px;
     padding: 5px;
     margin-right: 20px;
     float: left;
 }
-.name, .address {
+.view-list >.name, .view-list >.address {
     width: 250px;
     float: left;
 }
-.description {
+.view-list >.description {
     width: 400px;
     float: left;
 }
-.grid-views {
+.view-grid {
     border: 1px solid lightskyblue;
     border-radius: 3px;
     -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-color: skyblue;
+    min-height: 110px;
+    padding: 5px;
+}
+.view-grid img {
+    width: 100%;
+    height: 70px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.view-grid >.name {
+    float: left;
+    margin: 10px 5px 5px 5px;
+    font-size: 8px;
+    z-index: -1;
+}
+.view-grid:hover {
+    background-color: orange;
+    border-color: orange;
+}
+.icons {
+    float: left;
+    margin: 10px 5px 5px 5px;
+}
+.view-grid div {
+    float: right;
+    background-color: lightseagreen;
+    padding: 2px;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
 }
