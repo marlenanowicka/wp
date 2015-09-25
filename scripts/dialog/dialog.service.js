@@ -8,18 +8,12 @@ angular
         };
 
         function folderPropertiesDialog() {
-            console.log("tutja");
-            /*return $modal.open({
-                    templateUrl: 'scripts/dialog/folder-properties-dialog.controller.html',
-                    controller: 'UploadFileDialog'
-                },
-                defaultOptions());*/
-        }
-
-        function defaultOptions() {
-            return {
-                backdrop: 'static',
-                keyboard: false
-            };
+            return $modal.open({
+                    templateUrl: 'scripts/dialog/folder-properties-dialog.html',
+                    controller: 'UploadFileDialog',
+                    backdrop: 'static',
+                    keyboard: false
+                }
+                );
         }
     }]);

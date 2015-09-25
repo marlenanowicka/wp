@@ -1,5 +1,5 @@
 'use strict';
-angular.module('wonderpage', ['ngRoute','wonderpage.public_feed', 'wonderpage.bookmarks_views'])
+angular.module('wonderpage', ['ngRoute','ui.bootstrap', 'wonderpage.public_feed', 'wonderpage.bookmarks_views', 'wonderpage.dialog'])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.
             when('/', {
@@ -9,9 +9,13 @@ angular.module('wonderpage', ['ngRoute','wonderpage.public_feed', 'wonderpage.bo
             otherwise({
                 redirectTo: '/'
             });
-    }]).controller("Ctrl1",['$scope', function($scope){
+    }]).controller("Ctrl1",['$scope', 'dialogService', function($scope, dialogService){
         //$scope.myItemPerPage = 4;
-        //dialogService.openFolderPropertiesDialog();
+
+
+        $scope.openFolder = function (){
+            dialogService.openFolderPropertiesDialog();
+        };
 
         $scope.simpleSizeValue = [{
             'id': '1',

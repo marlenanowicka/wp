@@ -1,0 +1,29 @@
+<header class="modal-header">
+    <button type="button" class="close" ng-click="close()" ng-disabled="isCancelDisabled()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title">edit folder properties - </h4>
+</header>
+<div class="modal-body">
+    <form>
+        <div class="form-group pop-up">
+            <div class="col-md-6">
+                <label for="bookmark-name">name: </label><input type="text" id="bookmark-name" name="bookmark-name" ng-model="formData.name" value="" />
+                <label for="bookmark-address">adres: </label><input type="text" id="bookmark-address" name="bookmark-address" ng-model="formData.name" value="" />
+                <label for="bookmark-description">description: </label><input id="bookmark-description" type="text" name="bookmark-description" ng-model="formData.description" value="">
+                <label for="bookmark-keywords">description: </label><input id="bookmark-keywords" type="text" name="bookmark-keywords" ng-model="formData.description" value="">
+            </div>
+            <div class="col-md-6">
+                <p class="privacy">privacy*:</p>
+                <label for="private"><input name="privacy" type="radio" value="private" />private</label>
+                <label for="public"><input name="privacy" type="radio" value="public" />public</label>
+                <p>*This folder is private. All bookmars in this folder are private.</p>
+            </div>
+        </div>
+    </form>
+</div>
+<footer class="modal-footer">
+    <button type="button" class="btn btn-inverse" ng-disabled="isCancelDisabled()" ng-click="close()">remove</button>
+    <button type="button" class="btn btn-primary" ng-click="uploadFiles()" ng-disabled="isUploadDisabled()">save</button>
+    <button type="button" class="btn btn-inverse" ng-disabled="isCancelDisabled()" ng-click="close()">cancel</button>
+</footer>

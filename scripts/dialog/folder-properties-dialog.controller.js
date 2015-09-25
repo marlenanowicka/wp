@@ -2,10 +2,9 @@
 
 angular
     .module('wonderpage.dialog')
-    .controller('UploadFileDialog', function ($scope, $modalInstance) {
-        $scope.close = closeDialog;
+    .controller('UploadFileDialog',['$scope', '$modalInstance', function ($scope, $modalInstance) {
 
-        function closeDialog() {
+        $scope.close = function () {
             $modalInstance.close();
         }
-    });
+    }]);
