@@ -5,20 +5,22 @@
     <h4 class="modal-title">edit folder properties - </h4>
 </header>
 <div class="modal-body">
-    <form>
-        <div class="form-group pop-up">
-            <div class="col-md-6">
-                <label for="folder-name">name: </label><input  type="text" id="folder-name" name="folder-name" ng-model="formData.name" value="" />
-                <label for="folder-description">description: </label><input id="folder-description" type="text" name="folder-description-name" ng-model="formData.description" value="">
+        <form>
+            <div class="form-group folder-dialog">
+                <div class="col-md-6 folder-left-direction">
+                    <label for="folder-name">name:</label>
+                    <input  type="text" id="folder-name" name="folder-name" ng-model="formData.name" value="" />
+                    <label for="folder-description">description:</label>
+                    <textarea id="folder-description" name="folder-description-name" ng-model="formData.description" value=""></textarea>
+                </div>
+                <div class="col-md-6 folder-right-direction">
+                    <p >privacy*:</p>
+                <label><input name="privacy" type="radio" value="private" />private</label>
+                <label><input name="privacy" type="radio" value="public" />public</label>
+                    <p>*This folder is private. All bookmars in this folder are private.</p>
+                </div>
             </div>
-            <div class="col-md-6">
-                <p class="privacy">privacy*:</p>
-                <label for="private"><input name="privacy" type="radio" value="private" />private</label>
-                <label for="public"><input name="privacy" type="radio" value="public" />public</label>
-                <p>*This folder is private. All bookmars in this folder are private.</p>
-            </div>
-        </div>
-    </form>
+        </form>
 </div>
 <footer class="modal-footer">
     <button type="button" class="btn btn-inverse" ng-disabled="isCancelDisabled()" ng-click="close()">remove</button>

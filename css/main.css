@@ -24,7 +24,7 @@ li {
 }
 ul li:first-child {
     background-color: lightskyblue;
-padding: 2px;
+    padding: 2px;
 }
 .btn-tooltip + .tooltip > .tooltip-inner {
     background-color: #8AC007;
@@ -35,35 +35,82 @@ padding: 2px;
 .tooltip-arrow {
 display: none;
 }
-.pop-up {
-    width: auto;
-    min-height: 50px;
-}
-.pop-up p {
-    padding: 3px 0 0 3px ;
-    float: left;
-}
-.privacy {
-    margin-right: 10px;
-}
 form {
     font-size: 12px;
     padding: 5px;
 }
-input {
+input, textarea {
     border: 1px solid lightgrey;
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
 }
-input[type="text"] {
-    float: right;
-}
-.pop-up button {
+.folder-dialog button {
     float: right;
     padding: 2px 8px;
     margin-right: 10px;
     margin-top: 20px;
+}
+.folder-dialog {
+    width: auto;
+    height: 50px;
+}
+.folder-left-direction label {
+    text-align:right;
+    width: 40%;
+    padding-right:10px;
+}
+
+.folder-left-direction input, .folder-left-direction textarea {
+     float: right;
+     width: 60%;
+ }
+.folder-dialog >.folder-right-direction label {
+    float: left;
+    padding-left: 10px;
+}
+.folder-dialog >.folder-right-direction input {
+    margin-right: 10px;
+}
+
+.bookmark-dialog1 {
+    float: left;
+    width: 35%;
+    padding-right: 20px;
+}
+.bookmark-dialog2 {
+    width: 25%;
+    float: left;
+    padding-right: 10px;
+}
+.bookmark-dialog3 {
+    width: 60%;
+    float: left;
+    padding-right: 10px;
+}
+.bookmark-dialog1, .bookmark-dialog3 p {
+   text-align: right;
+}
+.bookmark-dialog1 input, .bookmark-dialog2 select, .bookmark-dialog3 input {
+    float: right;
+    margin-left: 5px;
+}
+.bookmark-dialog3 input {
+    height: 20px;
+}
+
+.bookmark-dialog4 img{
+    height: 150px;
+    width: 250px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    margin-left: 20px;
+}
+.folder-dialog p {
+    padding: 3px 0 0 3px ;
+    float: left;
 }
 .btn {
     margin: 5px 0;
@@ -139,4 +186,13 @@ input[type="text"] {
     right: 0;
     bottom: 0;
     z-index: 2;
+}
+
+/*-------- media ----------*/
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 780px;
+        margin: 30px auto;
+    }
 }

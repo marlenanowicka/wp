@@ -2,7 +2,7 @@
 
 angular
     .module('wonderpage.dialog')
-    .controller('openFolderDialog',['$scope', '$modalInstance', function ($scope, $modalInstance) {
+    .controller('openBookmarkDialog',['$scope', '$modalInstance', function ($scope, $modalInstance) {
 
         $scope.close = function () {
             $modalInstance.close();
