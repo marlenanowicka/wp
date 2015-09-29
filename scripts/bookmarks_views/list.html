@@ -3,10 +3,10 @@
         <div class="view-list" ng-repeat="view in lists">
                 <img ng-src="images/{{view.screen}}" />
                 <p class="name">{{view.name}}</p>
-                <a class="address" href="#">{{view.bookmark}}</a>
+                <a class="address" href="#">{{view.address}}</a>
                 <p class="description">{{view.description}}</p>
             <button type="button" class="btn btn-success btn-xs" ng-click="openBookmark()">!</button>
-            <button type="button" class="btn btn-success btn-xs">F</button>
+            <button type="button" class="btn btn-success btn-xs" ng-click="openSocial()">F</button>
             <button type="button" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-plus"></span></button>
         </div>
     </div>

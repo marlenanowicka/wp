@@ -5,7 +5,8 @@ angular
     .factory('dialogService',['$modal', function($modal) {
         return {
             openFolderPropertiesDialog: folderPropertiesDialog,
-            openBookmarkPropertiesDialog: bookmarkPropertiesDialog
+            openBookmarkPropertiesDialog: bookmarkPropertiesDialog,
+            openSocialMediaDialog: socialMediaDialog
         };
 
         function folderPropertiesDialog() {
@@ -20,6 +21,15 @@ angular
             return $modal.open({
                 templateUrl: 'scripts/dialog/bookmark-properties-dialog.html',
                 controller: 'openBookmarkDialog',
+                backdrop: 'static',
+                keyboard: false
+            });
+        }
+        function socialMediaDialog() {
+            return $modal.open({
+                templateUrl: 'scripts/dialog/social-media-dialog.html',
+                controller: 'openSocialDialog',
+                windowClass: 'sm-dialog',
                 backdrop: 'static',
                 keyboard: false
             });

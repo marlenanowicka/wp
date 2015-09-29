@@ -11,14 +11,19 @@ angular.module('wonderpage', ['ngRoute','ui.bootstrap', 'wonderpage.public_feed'
             });
     }]).controller("Ctrl1",['$scope', 'dialogService', function($scope, dialogService){
         //$scope.myItemPerPage = 4;
-        dialogService.openBookmarkPropertiesDialog();
 
         $scope.openFolder = function (){
             dialogService.openFolderPropertiesDialog();
         };
-        /*$scope.openBookmark = function (){
+
+        $scope.openBookmark = function (){
             dialogService.openBookmarkPropertiesDialog();
-        };*/
+
+        };
+
+        $scope.openSocial = function (){
+            dialogService.openSocialMediaDialog();
+        };
 
         $scope.simpleSizeValue = [{
             'id': '1',
