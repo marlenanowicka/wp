@@ -5,6 +5,7 @@ angular.module('wonderpage', [
     'wonderpage.views',
     'wonderpage.public_feed',
     'wonderpage.bookmarks_views',
-    'wonderpage.dialog'
+    'wonderpage.dialog',
+    'wonderpage.fallowing'
 
 ]);

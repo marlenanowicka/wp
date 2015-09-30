@@ -6,15 +6,24 @@
                      <a>Wonderpage LOGO</a>
                 </div>
                 <div class="col-lg-10 col-md-8 col-sm-8 col-xs-12 search">
+                    <div class="input-group">
+                            <input ng-model="search" type="text" class="form-control" placeholder="search phrase"/>
+                            <select class="form-control">
+                            <option value="">my pages</option>
+                            <option value="">all pages</option>
+                            <option value="">users</option>
+                            </select>
+                        <button type="submit" class="form-control">search</button>
+
+                    </div>
                     <div class="btn-group" role="group" aria-label="...">
-                    <input type="text" type="button" class="btn btn-default" name="search" placeholder="search phrase">
+                    <input type="text" type="button" class="btn btn-default" name="search" placeholder="search phrase" ng-model="search">
                     <div class="btn-group" role="group">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-                            <span class="caret"></span>
+                           <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a>my pages</a></li>
+                            <li class="active"><a>my pages</a></li>
                             <li><a>all pages</a></li>
                             <li><a>users</a></li>
                         </ul>
@@ -31,38 +40,46 @@
 
     <div class="row">
         <div class="col-sm-12 col-md-1 menu">
-        <div>
             <ul>
+                <li><button data-toggle="tooltip" data-placement="right" title="edit category settings" class="btn btn-info btn-xs btn-tooltip"><span ng-click="openFolder()" class="glyphicon glyphicon-wrench"></span></button><a data-toggle="tooltip" data-placement="right" title="Home" ng-class="{active: tab == 'home'}" ng-click="tab='home'"> Home</a></li>
+                <li><a class="btn-tooltip" data-toggle="tooltip" data-placement="right" title="see who you fallows" ng-class="{active: tab == 'fallowing'}" ng-click="tab='fallowing'">i'm fallowing<span class="glyphicon glyphicon-share-alt"></span></a></li>
+                <li><a class="btn-tooltip" data-toggle="tooltip" data-placement="right" title="see who fallows you" ng-class="{active: tab == 'fallowers'}" ng-click="tab='fallowers'">my fallowers</a></li>
+                <li><a class="btn-tooltip" data-toggle="tooltip" data-placement="right" title="most viewied" ng-class="{active: tab == 'most_viewied'}" ng-click="tab='most_viewied'">most viewied  <span class="glyphicon glyphicon-signal"></span></a></li>
+                <li><a class="btn-tooltip" data-toggle="tooltip" data-placement="right" title="recently added bookmarks" ng-class="{active: tab == 'recently_added'}" ng-click="tab='recently_added'">recently added <span class="glyphicon glyphicon-certificate"></span></a></li>
                 <li>
-                    <button data-toggle="tooltip" data-placement="right" title="edit category settings" ng-click="toggleModal()" type="button" class="btn btn-info btn-xs btn-tooltip"><span ng-click="openFolder()" class="glyphicon glyphicon-wrench"></span></button><a href="#" class="btn-tooltip" data-toggle="tooltip" data-placement="right" title="Home">  Home</a>
-                </li>
-                <li><a class="btn-tooltip" href="#" data-toggle="tooltip" data-placement="right" title="see who you fallows">i'm fallowing  <span class="glyphicon glyphicon-share-alt"></span></a></li>
-                <li><a class="btn-tooltip" href="#" data-toggle="tooltip" data-placement="right" title="see who fallows you">my fallowers  </a></li>
-                <li><a class="btn-tooltip" href="#" data-toggle="tooltip" data-placement="right" title="most viewied">most viewied  <span class="glyphicon glyphicon-signal"></span></a></li>
-                <li><a class="btn-tooltip" href="#" data-toggle="tooltip" data-placement="right" title="recently added bookmarks">recently added <span class="glyphicon glyphicon-certificate"></span></a></li>
-                <li>
-                    <button type="button" class="btn btn-info btn-xs">add bookmark</button>
-                    <button type="button" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-plus"></span></button>
+                <button type="button" class="btn btn-info btn-xs">add bookmark</button>
+                <button type="button" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-plus"></span></button>
                 </li>
                 <li>
                     <button type="button" class="btn btn-info btn-xs">add folder</button>
                     <button type="button" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-minus"></span></button>
                 </li>
             </ul>
-        </div>
+
         </div>
         <div class="col-md-10 col-sm-12 content">
-            <div ng-switch on="selectionSize.id">
-                <div ng-switch-when="1">
-                    <list></list>
+            <div class="row" ng-switch="tab">
+                <div ng-switch-when="fallowing">
+                    <fallowing></fallowing>
                 </div>
-                <div ng-switch-default>
-                    <grid></grid>
+                <div ng-switch-when="fallowers">
+                    <h3>fallowers</h3><br />
+                    fallowers fallowers fallowers fallowers fallowers fallowers
+                </div>
+                <div ng-switch-when="home">
+                    <div ng-switch on="selectionSize.id">
+                        <div ng-switch-when="1">
+                            <list></list>
+                        </div>
+                        <div ng-switch-default>
+                            <grid></grid>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-sm-12 col-md-1">
-            <public-feed items-per-page="{{myItemPerPage}}"><strong>Public Feed 1</strong></public-feed>
+            <public-feed></public-feed>
         </div>
     </div>
 </div>

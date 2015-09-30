@@ -35,6 +35,23 @@ ul li:first-child {
 .tooltip-arrow {
 display: none;
 }
+.input-group {
+    width: 500px;
+    float: right;
+}
+.form-control {
+    width: 150px;
+    float: left;
+}
+.form-control:first-child {
+    width:250px;
+    float: left;
+}
+.form-control:last-child {
+    width: 100px;
+    float: left;
+}
+.
 form {
     font-size: 12px;
     padding: 5px;
@@ -219,7 +236,37 @@ a .fa-envelope-square {
     bottom: 0;
     z-index: 2;
 }
-
+.my-table {
+    font-size: 12px;
+    line-height: 40px;
+    width: 100%;
+}
+.my-table {
+    margin-top: 10px;
+    text-align: left;
+    background-color: lightgrey;
+    border:1px solid lightgray;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.my-table:first-child {
+    background-color: teal;
+    border: 1px solid teal;
+    text-align: left;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    margin-top: 20px;
+    color: white;
+}
+.my-table span {
+    width: 150px;
+}
+.my-table span img {
+    width: 20px;
+    height: 20px;
+}
 
 /*-------- media ----------*/
 

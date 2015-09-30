@@ -1,0 +1,22 @@
+<div class="col-md-12">
+        <div class="my-table">
+            <span></span>
+            <span>name</span>
+            <span>fallowers</span>
+            <span>fallowing</span>
+            <span>status</span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="my-table" ng-repeat="item in users">
+            <span><img ng-src="{{item.avatar}}"/></span>
+            <span>{{item.user_name}}</span>
+            <span>{{item.quantity_fallowers}}</span>
+            <span>{{item.quantity_fallowing}}</span>
+            <span>{{item.status_fallowing}}</span>
+            <span>profile</span>
+            <span>send message</span>
+            <span>unfollow</span>
+        </div>
+</div>

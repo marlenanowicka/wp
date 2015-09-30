@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="view-list" ng-repeat="view in lists">
+        <div class="view-list" ng-repeat="view in lists | filter:search">
                 <img ng-src="images/{{view.screen}}" />
                 <p class="name">{{view.name}}</p>
                 <a class="address" href="#">{{view.address}}</a>
