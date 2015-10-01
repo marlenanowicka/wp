@@ -11,6 +11,8 @@ angular.module('wonderpage', ['ngRoute','ui.bootstrap', 'wonderpage.public_feed'
             });
     }]).controller("Ctrl1",['$scope', 'dialogService','BookmarksServices', function($scope, dialogService, BookmarksServices){
         //$scope.myItemPerPage = 4;
+        dialogService.openCopyBookmarkDialog();
+
         $scope.tab = 'home';
         $scope.items = function($scope) {
 
@@ -28,6 +30,26 @@ angular.module('wonderpage', ['ngRoute','ui.bootstrap', 'wonderpage.public_feed'
 
         $scope.openSocial = function (){
             dialogService.openSocialMediaDialog();
+        };
+
+        $scope.openMessage = function (){
+            dialogService.openSendMessageDialog();
+        };
+
+        $scope.openUnfollow = function (){
+            dialogService.openUnfollowDialog();
+        };
+
+        $scope.openFollow = function (){
+            dialogService.openFollowDialog();
+        };
+
+        $scope.openImproper = function (){
+            dialogService.openImproperBookmarkDialog();
+        };
+
+        $scope.openCopy = function (){
+            dialogService.openCopyBookmarkDialog();
         };
 
         $scope.simpleSizeValue = [{

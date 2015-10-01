@@ -267,7 +267,48 @@ a .fa-envelope-square {
     width: 20px;
     height: 20px;
 }
-
+.send-message {
+    font-size: 12px;
+}
+.send-message input, .send-message textarea {
+    width: 90%;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.send-message label {
+    width: 10%;
+    text-align: right;
+    padding-right: 10px;
+    display: block;
+    float: left;
+}
+.unfollow, .follow, .improper {
+    margin: 10px 0;
+    text-align: center;
+}
+.unfollow p, .follow p {
+    font-size: 12px;
+    display: inline;
+}
+.unfollow button, .follow button, .improper button {
+    margin-left: 10px;
+}
+.unfollow .fa-plus-square, .follow .fa-plus-square, .improper .fa-plus-square{
+    margin-left: 3px;
+}
+.improper p {
+    font-size: 12px;
+}
+.fa-plus-square {
+    color: red;
+}
+.fa-check-square {
+    color: lightgreen;
+    margin-left: 3px;
+}
+.close {
+    opacity: .9;
+}
 /*-------- media ----------*/
 
 @media (min-width: 768px) {
@@ -277,6 +318,80 @@ a .fa-envelope-square {
     }
 }
 .sm-dialog .modal-dialog {
-    width :30%;
-    max-width: 300px;
+     max-width: 300px;
+ }
+.md-dialog .modal-dialog {
+    max-width: 700px;
+}
+.un-dialog .modal-dialog {
+    max-width: 550px;
+    left: auto;
+}
+.fo-dialog .modal-dialog {
+    max-width: 500px;
+}
+.im-dialog .modal-dialog {
+     max-width: 450px;
+ }
+.cb-dialog .modal-dialog {
+     max-width: 780px;
+ }
+.modal {
+    top:30%;
+}
+.left-copy {
+    width: 65%;
+    display: inline;
+   float: left;
+}
+.right-copy {
+    width: 35%;
+    float: left;
+}
+.left-copy-left {
+    width: 60%;
+    display: inline;
+    float: left;
+}
+.left-copy-right {
+    float: left;
+    width: 40%;
+}
+.copy {
+    min-height: 200px;
+    line-height: 20px;
+}
+.copy label {
+    width: 15%;
+    float: left;
+    display: block;
+}
+.copy input {
+    width: 40%;
+    overflow: hidden;
+}
+.copy textarea {
+    width: 70%;
+    overflow: hidden;
+}
+.copy > .left-copy > .left-copy-left label {
+    text-align: right;
+    width: 20%;
+    padding-right: 5px;
+}
+.copy > .left-copy > .left-copy-left input {
+    width: 70%;
+}
+.right-copy img {
+    height: 150px;
+    width: 250px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.left-copy-center label {
+    text-align: right;
+    width: 15%;
+    padding-right: 5px;
 }

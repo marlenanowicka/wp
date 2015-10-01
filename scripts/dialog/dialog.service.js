@@ -6,7 +6,12 @@ angular
         return {
             openFolderPropertiesDialog: folderPropertiesDialog,
             openBookmarkPropertiesDialog: bookmarkPropertiesDialog,
-            openSocialMediaDialog: socialMediaDialog
+            openSocialMediaDialog: socialMediaDialog,
+            openSendMessageDialog: sendMessageDialog,
+            openUnfollowDialog: unfollowDialog,
+            openFollowDialog: followDialog,
+            openImproperBookmarkDialog: improperBookmarkDialog,
+            openCopyBookmarkDialog: copyBookmarkDialog
         };
 
         function folderPropertiesDialog() {
@@ -30,6 +35,51 @@ angular
                 templateUrl: 'scripts/dialog/social-media-dialog.html',
                 controller: 'openSocialDialog',
                 windowClass: 'sm-dialog',
+                backdrop: 'static',
+                keyboard: false
+            });
+        }
+        function sendMessageDialog() {
+            return $modal.open({
+                templateUrl: 'scripts/dialog/send-message-dialog.html',
+                controller: 'openMessageDialog',
+                windowClass: 'md-dialog',
+                backdrop: 'static',
+                keyboard: false
+            });
+        }
+        function unfollowDialog() {
+            return $modal.open({
+                templateUrl: 'scripts/dialog/unfollow-dialog.html',
+                controller: 'openUnfollowDialog',
+                windowClass: 'un-dialog',
+                backdrop: 'static',
+                keyboard: false
+            });
+        }
+        function followDialog() {
+            return $modal.open({
+                templateUrl: 'scripts/dialog/follow-dialog.html',
+                controller: 'openFollowDialog',
+                windowClass: 'fo-dialog',
+                backdrop: 'static',
+                keyboard: false
+            });
+        }
+        function improperBookmarkDialog() {
+            return $modal.open({
+                templateUrl: 'scripts/dialog/improper-bookmark-dialog.html',
+                controller: 'openImproperDialog',
+                windowClass: 'im-dialog',
+                backdrop: 'static',
+                keyboard: false
+            });
+        }
+        function copyBookmarkDialog() {
+            return $modal.open({
+                templateUrl: 'scripts/dialog/copy-bookmark-dialog.html',
+                controller: 'openCopyBookDialog',
+                windowClass: 'cb-dialog',
                 backdrop: 'static',
                 keyboard: false
             });

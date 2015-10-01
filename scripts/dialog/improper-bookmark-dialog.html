@@ -1,0 +1,13 @@
+<header class="modal-header">
+    <button type="button" class="close" ng-click="close()" ng-disabled="isCancelDisabled()">
+        <span aria-hidden="true"><i class="fa fa-plus-square"></i></span>
+    </button>
+    <h4 class="modal-title">Tell us about improper bookmark</h4>
+</header>
+<div class="modal-body">
+    <div class="improper">
+        <p>Are you sure you want to report this page?</p>
+        <button type="button" class="btn btn-inverse btn-xs">cancel<i class="fa fa-plus-square"></i></button>
+        <button type="button" class="btn btn-inverse btn-xs" ng-disabled="isCancelDisabled()" ng-click="close()">send<i class="fa fa-check-square"></i></button>
+    </div>
+</div>
