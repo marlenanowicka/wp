@@ -79,7 +79,14 @@
             </div>
         </div>
         <div class="col-sm-12 col-md-2">
-            <public-feed></public-feed>
+            <div ng-switch="tab">
+                <div ng-switch-when="profile">
+                    <public-profile></public-profile>
+                </div>
+                <div ng-switch-default>
+                    <public-feed></public-feed>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -1,5 +1,5 @@
 'use strict';
-angular.module('wonderpage', ['ngRoute','ui.bootstrap', 'wonderpage.public_feed', 'wonderpage.bookmarks_views', 'wonderpage.dialog', 'wonderpage.fallowing'])
+angular.module('wonderpage', ['ngRoute','ui.bootstrap', 'wonderpage.public_feed', 'wonderpage.bookmarks_views', 'wonderpage.dialog', 'wonderpage.fallowing', 'wonderpage.public_profile' ])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.
             when('/', {
@@ -11,8 +11,6 @@ angular.module('wonderpage', ['ngRoute','ui.bootstrap', 'wonderpage.public_feed'
             });
     }]).controller("Ctrl1",['$scope', 'dialogService','BookmarksServices', function($scope, dialogService, BookmarksServices){
         //$scope.myItemPerPage = 4;
-        dialogService.openCopyBookmarkDialog();
-
         $scope.tab = 'home';
         $scope.items = function($scope) {
 
@@ -92,4 +90,19 @@ angular.module('wonderpage', ['ngRoute','ui.bootstrap', 'wonderpage.public_feed'
                 }
             }
         };
+    }).directive('tooltip', function () {
+        return {
+            restrict:'A',
+            replace: true,
+            transclude: true,
+            template: '<div class="tooltip-bookmark">'+
+            '<img ng-src="images/avatar.jpg" /><a href="onet.pl">http://www.onet.pl</a>' +
+            '</div>',
+            link: function(scope, element, attrs)
+            {
+                $(element)
+                    .attr('title',scope.$eval(attrs.tooltip))
+                    .tooltip({placement: "left"});
+            }
+        }
     });

@@ -15,7 +15,7 @@
             <span>{{item.quantity_fallowers}}</span>
             <span>{{item.quantity_fallowing}}</span>
             <span>{{item.status_fallowing}}</span>
-            <span>profile</span>
+            <span ng-class="{active: tab == 'profile'}" ng-click="tab='profile'">profile</span>
             <span ng-click="openMessage()">send message</span>
             <span ng-click="openUnfollow()">unfollow</span>
         </div>

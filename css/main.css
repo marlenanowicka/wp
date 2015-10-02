@@ -61,6 +61,7 @@ input, textarea {
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
+    background-color: #ffffff;
 }
 .folder-dialog button {
     float: right;
@@ -81,6 +82,7 @@ input, textarea {
 .folder-left-direction input, .folder-left-direction textarea {
      float: right;
      width: 60%;
+    background-color: #ffffff;
  }
 .folder-dialog >.folder-right-direction label {
     float: left;
@@ -274,6 +276,7 @@ a .fa-envelope-square {
     width: 90%;
     overflow: hidden;
     margin-bottom: 10px;
+    background-color: #ffffff;
 }
 .send-message label {
     width: 10%;
@@ -339,63 +342,73 @@ a .fa-envelope-square {
 .modal {
     top:30%;
 }
-.left-copy {
-    width: 65%;
-    display: inline;
-   float: left;
-}
-.right-copy {
-    width: 35%;
-    float: left;
-}
-.left-copy-left {
-    width: 60%;
-    display: inline;
-    float: left;
-}
-.left-copy-right {
-    float: left;
-    width: 40%;
-}
 .copy {
     min-height: 200px;
     line-height: 20px;
 }
-.copy label {
-    width: 15%;
-    float: left;
-    display: block;
+.left-copy-left, .left-copy-center {
+    padding-right: 0;
+    padding-left: 0;
 }
-.copy input {
-    width: 40%;
-    overflow: hidden;
-}
-.copy textarea {
-    width: 70%;
-    overflow: hidden;
-}
-.copy > .left-copy > .left-copy-left label {
+.left-copy-left label, .left-copy-right label {
+    width: 30%;
+    display: inline-block;
     text-align: right;
-    width: 20%;
     padding-right: 5px;
+    padding-top: 5px;
 }
-.copy > .left-copy > .left-copy-left input {
+.left-copy-left input[type="text"] {
     width: 70%;
+    overflow: hidden;
+
+}
+.left-copy-right select {
+    width: 68%;
+    overflow: hidden;
+    height: 22px;
 }
 .right-copy img {
-    height: 150px;
-    width: 250px;
+    height: 156px;
+    width: 100%;
     border: 1px solid lightgray;
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
 }
-.left-copy-center label {
+.left-copy-right {
+    padding-right: 0;
+}
+.left-copy-right select {
+    padding: 2px 3px;
+}
+.radio-btn label {
+    width: 25%;
+    position: relative;
+    display: inline-block;
     text-align: right;
-    width: 15%;
-    padding-right: 5px;
 }
 
-.left-copy {
-    
+.radio-btn p {
+    width: 30%;
+    display: inline-block;
+    text-align: right;
+    padding-right: 5px;
+    padding-top: 5px;
+    font-weight: 700;
+}
+.left-copy-center label{
+    width: 15%;
+    display: block;
+    text-align: right;
+    padding-right: 5px;
+    padding-top: 5px;
+    float: left;
+}
+.left-copy-center textarea {
+    width: 85%;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+.btn-center {
+    text-align: center;
 }

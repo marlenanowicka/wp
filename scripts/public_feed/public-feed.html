@@ -1,7 +1,4 @@
-<div>
-    <div class="panel panel-default" ng-repeat="feed in feeds">
-        <div class="panel-heading">Panel heading without title</div>
-        <div class="panel-body">
+    <div ng-repeat="feed in feeds">
             <ul>
                 <li>
                     {{feed.add}}
@@ -9,10 +6,8 @@
                 <li>
                     {{feed.login}}
                 </li>
-                <li>
-                    {{feed.bookmark}}
+                <li><i class="fa fa-plus" ng-click="openCopy()"></i><a tooltip>{{feed.bookmark}}</a>
                 </li>
             </ul>
-        </div>
+        <div class="clearfix"></div>
     </div>
-</div>

@@ -5,25 +5,33 @@
     <h4 class="modal-title">copy bookmark - </h4>
 </header>
 <div class="modal-body copy">
-    <div class="left-copy">
-        <label>name:</label><input type="text" name="bookmark-name" value="{{lists.name}}" size="20" maxlength="40"/>
+    <div class="col-md-8">
+        <div class="col-md-6 col-xs-12 left-copy-left">
+            <label>name:</label><input type="text" name="bookmark-name" value="{{lists.name}}" size="20" maxlength="40"/>
+            <label>address:</label><input type="text" name="bookmark-address" value="{{lists.address}}" size="20" maxlength="40"/>
+        </div>
+        <div class="col-md-6 col-xs-12 left-copy-right">
             <label>category:</label>
-                <select name="bookmark-address" value="yellowjasmine.pl">
-                    <option checked="checked">Home</option>
+                <select name="bookmark-category" value="category">
+                    <option selected>Home</option>
                     <option>moda</option>
                 </select>
-        <label>address:</label><input type="text" name="bookmark-address" value="{{lists.address}}" size="20" maxlength="40"/>
-            <p><strong>privacy*</p>:
-                <label><input name="privacy" type="radio" value="private" />private</label>
-                <label><input name="privacy" type="radio" value="public" />public</label>
+            <div class="radio-btn">
+                <p>privacy*:</p>
+                    <input name="privacy" type="radio" value="private"/><label for="private">private</label>
+                    <input name="privacy" type="radio" value="public"/><label for="public">public</label>
+                </div>
+        </div>
+        <div class="col-md-12 left-copy-center">
             <label>description:</label><textarea name="bookmark-description" value="yellowjasmine" size="53" maxlength="2000"></textarea>
             <label>keywords:</label><textarea name="bookmark-keywords" value="yellowjasmine.pl" size="53" maxlength="200"></textarea>
+            </div>
     </div>
-    <div class="right-copy">
+    <div class="col-md-4 right-copy">
         <img ng-src="images/avatar.jpg" />
     </div>
 </div>
-<footer class="modal-footer my-btn">
-    <button type="button" class="btn btn-primary">copy bookmark</button>
-    <button type="button" class="btn btn-inverse" ng-disabled="isCancelDisabled()" ng-click="close()">cancel</button>
+<footer class="modal-footer btn-center">
+    <button type="button" class="btn btn-primary btn-xs">copy bookmark</button>
+    <button type="button" class="btn btn-inverse btn-xs" ng-disabled="isCancelDisabled()" ng-click="close()">cancel</button>
 </footer>
