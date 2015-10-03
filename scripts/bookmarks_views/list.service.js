@@ -8,7 +8,7 @@ angular.module('wonderpage.bookmarks_views')
                 return [{
                         screen: '../../images/avatar.jpg',
                         name: 'Yellow Jasmine',
-                        description: 'Projektowanie stron internetowych, tworzenie grafiki',
+                        description: 'Projektowanie stron internetowych, tworzenie grafiki,Projektowanie stron internetowych, tworzenie grafiki,Projektowanie stron internetowych, tworzenie grafiki',
                         address: 'yellowjasmine.pl'
                     },
                     {

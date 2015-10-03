@@ -1,22 +1,22 @@
 <div class="col-md-12">
         <div class="my-table">
-            <span></span>
-            <span>name</span>
-            <span>fallowers</span>
-            <span>fallowing</span>
-            <span>status</span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="my-table" ng-repeat="item in users">
-            <span><img ng-src="{{item.avatar}}"/></span>
-            <span>{{item.user_name}}</span>
-            <span>{{item.quantity_fallowers}}</span>
-            <span>{{item.quantity_fallowing}}</span>
-            <span>{{item.status_fallowing}}</span>
-            <span ng-class="{active: tab == 'profile'}" ng-click="tab='profile'">profile</span>
-            <span ng-click="openMessage()">send message</span>
-            <span ng-click="openUnfollow()">unfollow</span>
+            <ul class="header-table">
+                <li></li>
+                <li>name</li>
+                <li>fallowers</li>
+                <li>fallowing</li>
+                <li>status</li>
+                <li></li>
+            </ul>
+            <ul class="row-table" ng-repeat="item in users">
+                <li><img ng-src="{{item.avatar}}"/></li>
+                <li style="color: #49b9ca">{{item.user_name}}</li>
+                <li>{{item.quantity_fallowers}}</li>
+                <li>{{item.quantity_fallowing}}</li>
+                <li>{{item.status_fallowing}}</li>
+                <li><button ng-class="{active: tab == 'profile'}" ng-click="tab='profile'" class=" btn btn-xs">profile</button>
+                <button ng-click="openMessage()" class="btn btn-xs">send message</button>
+                <button ng-click="openUnfollow()" class="btn btn-xs">unfollow</button></li>
+            </ul>
         </div>
 </div>

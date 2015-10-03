@@ -82,14 +82,9 @@ angular.module('wonderpage', ['ngRoute','ui.bootstrap', 'wonderpage.public_feed'
             restrict: 'A',
 
             link: function(scope, element, attrs){
-                if (attrs.toggle=="tooltip"){
                     $(element).tooltip();
                 }
-                if (attrs.toggle=="popover"){
-                    $(element).popover();
-                }
             }
-        };
     }).directive('tooltip', function () {
         return {
             restrict:'A',

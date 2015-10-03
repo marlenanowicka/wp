@@ -1,13 +1,16 @@
-<div class="row">
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="view-list" ng-repeat="view in lists | filter:search">
-                <img ng-src="images/{{view.screen}}" />
-                <p class="name">{{view.name}}</p>
-                <a class="address" href="#">{{view.address}}</a>
-                <p class="description">{{view.description}}</p>
-            <button type="button" class="btn btn-success btn-xs" ng-click="openBookmark()">!</button>
-            <button type="button" class="btn btn-success btn-xs" ng-click="openSocial()">F</button>
-            <button type="button" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-plus"></span></button>
-        </div>
-    </div>
+<div class="col-md-12">
+<div class="list">
+        <ul ng-repeat="view in lists">
+            <li><a><img ng-src="images/{{view.screen}}" /></a></li>
+            <li><a style="color: #49b9ca">{{view.name}}</a></li>
+            <li><a class="address" href="#">{{view.address}}</a></li>
+            <li class="description"><a>{{view.description}}</a></li>
+            <li><a>
+                <button class="btn btn-xs" ng-click="openBookmark()">!</button>
+                <button class="btn btn-xs" ng-click="openSocial()">F</button>
+                <button class="btn btn-xs"><span class="glyphicon glyphicon-plus"></span></button>
+                </a>
+            </li>
+        </ul>
+</div>
 </div>
