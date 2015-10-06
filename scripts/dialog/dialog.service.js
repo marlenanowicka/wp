@@ -11,7 +11,9 @@ angular
             openUnfollowDialog: unfollowDialog,
             openFollowDialog: followDialog,
             openImproperBookmarkDialog: improperBookmarkDialog,
-            openCopyBookmarkDialog: copyBookmarkDialog
+            openCopyBookmarkDialog: copyBookmarkDialog,
+            openProfileSettingsDialog: profileSettingsDialog,
+            openInviteFriendsDialog: inviteFriendsDialog
         };
 
         function folderPropertiesDialog() {
@@ -80,6 +82,24 @@ angular
                 templateUrl: 'scripts/dialog/copy-bookmark-dialog.html',
                 controller: 'openCopyBookDialog',
                 windowClass: 'cb-dialog',
+                backdrop: 'static',
+                keyboard: false
+            });
+        }
+        function profileSettingsDialog() {
+            return $modal.open({
+                templateUrl: 'scripts/dialog/profile-settings-dialog.html',
+                controller: 'openProfileDialog',
+                windowClass: 'ps-dialog',
+                backdrop: 'static',
+                keyboard: false
+            });
+        }
+        function inviteFriendsDialog() {
+            return $modal.open({
+                templateUrl: 'scripts/dialog/invite-friends-dialog.html',
+                controller: 'openInviteDialog',
+                windowClass: 'if-dialog',
                 backdrop: 'static',
                 keyboard: false
             });

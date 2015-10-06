@@ -1,0 +1,52 @@
+<header class="modal-header">
+    <button type="button" class="close" ng-click="close()" ng-disabled="isCancelDisabled()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title"> - profile settings </h4>
+</header>
+<div class="modal-body profile">
+    <div class="col-md-10">
+        <div class="col-md-6 col-xs-12 left-profile-left">
+            <label>e-mail:</label><input type="text" name="e-mail" value="Ana" size="20" maxlength="40"/>
+            <label>gender:</label>
+            <select name="sex" value="sex">
+                <option selected value="female">female</option>
+                <option value="male">male</option>
+            </select>
+            <label>birth year:</label><input id="birth-year" type="text" name="birth-year" value="" size="4"/>
+            <label>country:</label><input type="text" name="country" value="Poland" size="53" maxlength="200"/>
+            <label>city:</label><input type="text" name="city" value="Sochaczew" size="53" maxlength="200"/>
+        </div>
+        <div class="col-md-6 col-xs-12 left-profile-right">
+            <div class="radio-btn">
+                <p>profile privacy*:</p>
+                <input name="privacy" type="radio" value="private"/><label for="private">private</label>
+                <input name="privacy" type="radio" value="public"/><label for="public">public</label>
+                <p>*If you account is set to private, no one can see your profile, no your assets. If your account is set to public only your public assets are visible.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2 right-profile text-right">
+        <p>user avatar</p>
+        <img ng-src="images/avatar.jpg" />
+        <button class="btn btn-primary btn-xs">upload</button>
+    </div>
+</div>
+<footer class="modal-footer text-right">
+    <button type="button" class="btn btn-primary btn-xs" ng-click="openInvite(); close()">invite friends</button>
+    <button type="button" class="btn btn-primary btn-xs">import bookmarks</button>
+    <button type="button" class="btn btn-primary btn-xs" ng-click="isCollapsed = isCollapse">change password</button>
+    <button type="button" class="btn btn-primary btn-xs">save</button>
+    <button type="button" class="btn btn-inverse btn-xs" ng-disabled="isCancelDisabled()" ng-click="close()">cancel</button>
+    <div collapse="isCollapsed" class="my-border">
+        <form>
+            <div class="change-password">
+                <label>old password:</label><input type="text"/>
+                <label>new password:</label><input type="text"/>
+                <label>confirm:</label><input type="text"/>
+            </div>
+            <button type="button" class="btn btn-inverse btn-xs text-right" ng-click="isCollapsed = !isCollapsed">cancel<i class="fa fa-plus-square"></i></button>
+            <button type="button" class="btn btn-inverse btn-xs text-right">aplly<i class="fa fa-check-square"></i></button>
+        </form>
+    </div>
+</footer>

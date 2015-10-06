@@ -4,6 +4,7 @@
 }
 body {
     font-size: 10px;
+    background-color: #edebec;
 }
 header {
     width: 100%;
@@ -31,24 +32,32 @@ li {
 .tooltip-arrow {
 display: none;
 }
-.input-group {
-    width: 500px;
-    float: right;
-}
-.form-control {
-    width: 150px;
+.input-group > .my-select {
+    width: 120px;
     float: left;
+}
+.form-control:nth-child(3) {
+    width: 80px;
+    float: left;
+    margin-right: 20px;
+
 }
 .form-control:first-child {
-    width:250px;
+    width:200px;
     float: left;
 }
-.form-control:last-child {
-    width: 100px;
-    float: left;
+.input-group {
+    margin-top: 40px;
+    display: inline;
+    float: right;
 }
-.
-form {
+.input-group a {
+    width: 20px;
+    float: left;
+    text-align: right;
+    margin-right: 10px;
+}
+.form {
     font-size: 12px;
     padding: 5px;
 }
@@ -170,7 +179,8 @@ a .fa-envelope-square {
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-    height: 500px;
+    height: 700px;
+    background-color: #ffffff;
 
 }.list {
      font-size: 12px;
@@ -204,6 +214,17 @@ a .fa-envelope-square {
     text-decoration: none;
     color: grey;
     padding-left: 10px;
+}
+.list ul li a i {
+    color: #ffffff;
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+    text-align: center;
+    padding: 1px;
+}
+.list ul li a button {
+    background-color:#49b9ca;
 }
 .list ul li:nth-child(1) a, .list ul li:nth-child(2) a {
     border: none;
@@ -356,7 +377,7 @@ margin-right: 20px;
     color: red;
 }
 .fa-check-square {
-    color: lightgreen;
+    color: green;
     margin-left: 3px;
 }
 .close {
@@ -366,7 +387,7 @@ margin-right: 20px;
     min-height: 200px;
     line-height: 20px;
 }
-.left-copy-left, .left-copy-center {
+.left-copy-left, .left-copy-center, .right-profile {
     padding-right: 0;
     padding-left: 0;
 }
@@ -386,6 +407,7 @@ margin-right: 20px;
     width: 68%;
     overflow: hidden;
     height: 22px;
+    padding: 2px 3px;
 }
 .right-copy img {
     height: 156px;
@@ -395,11 +417,8 @@ margin-right: 20px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
 }
-.left-copy-right {
+.left-copy-right, .left-profile-right {
     padding-right: 0;
-}
-.left-copy-right select {
-    padding: 2px 3px;
 }
 .radio-btn label {
     width: 25%;
@@ -429,6 +448,68 @@ margin-right: 20px;
     overflow: hidden;
     background-color: #ffffff;
 }
+.profile {
+    min-height: 180px;
+    line-height: 20px;
+}
+.left-profile-left {
+    padding-left: 0;
+}
+.left-profile-left label, .left-profile-right label  {
+    width: 21%;
+    display: inline-block;
+    text-align: right;
+    padding-right: 5px;
+    padding-top: 8px;
+}
+.left-profile-right label:last-child {
+    padding-right: 0;
+}
+.left-profile-left input {
+    width: 79%;
+    overflow: hidden;
+}
+.left-profile-left select {
+    padding: 1px 3px 1px 0;
+    width:25%;
+    overflow: hidden;
+    height: 22px;
+    margin-right: 2px;
+}
+.left-profile-left > #birth-year {
+    width: 30%;
+    overflow: hidden;
+}
+
+.right-profile img {
+    height: 70px;
+    width: 70%;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.left-profile-right > .radio-btn p {
+    width: 35%;
+    display: inline-block;
+    text-align:left;
+    padding-right: 5px;
+    padding-top: 5px;
+    font-weight: 700;
+}
+.left-profile-right > .radio-btn p:last-child {
+    width: 100%;
+}
+.left-profile-right {
+    border-left-style: dotted;
+    border-color: gray;
+    border-width: 1px;
+}
+.right-profile {
+    border-left-style: dotted;
+    border-color: gray;
+    border-width: 1px;
+}
 .btn-center {
     text-align: center;
 }
@@ -456,6 +537,52 @@ margin-right: 20px;
     display: inline;
     position: fixed;
 }
+.change-password {
+    margin: 15px 0 0 0;
+    padding: 6px;
+    text-align: center;
+    background-color: #6198c1;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    line-height: 20px;
+    color: #ffffff;
+
+}
+.change-password input {
+    color: gray;
+    margin-right: 25px;
+}
+.change-password label {
+    padding-right: 5px;
+}
+.my-border button {
+   margin-top: 10px;
+    padding: 2px 5px;
+}
+.my-border {
+    border-top-style: dashed;
+    border-color: gray;
+    border-width: 1px;
+    margin-top: 10px;
+}
+.my-border button i {
+    padding-left: 5px;
+}
+.invite-friends {
+    display: inline-block;
+    line-height: 15px;
+    padding: 10px;
+}
+.invite-friends label {
+    padding: 5px 10px;
+}
+.invite-friends input {
+    width: 70%;
+}
+.invite-friends p {
+    padding-left: 10px;
+}
 /*-------- media ----------*/
 
 @media (min-width: 768px) {
@@ -482,6 +609,12 @@ margin-right: 20px;
 }
 .cb-dialog .modal-dialog {
     max-width: 780px;
+}
+.ps-dialog .modal-dialog {
+    max-width: 720px;
+}
+.if-dialog .modal-dialog {
+    max-width: 350px;
 }
 .modal {
     top:30%;

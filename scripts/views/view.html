@@ -2,36 +2,23 @@
     <div class="row">
 
             <header>
-                <div class="col-sm-1 col-md-1 col-xs-12">
+                <div class="col-sm-1 col-md-1 col-xs-1">
                      <a>Wonderpage LOGO</a>
                 </div>
-                <div class="col-lg-10 col-md-8 col-sm-8 col-xs-12 search">
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 search">
                     <div class="input-group">
                             <input ng-model="search" type="text" class="form-control" placeholder="search phrase"/>
-                            <select class="form-control">
+                            <select class="form-control my-select">
                             <option value="">my pages</option>
                             <option value="">all pages</option>
                             <option value="">users</option>
                             </select>
-                        <button type="submit" class="form-control">search</button>
-
+                            <button type="submit" class="form-control">search</button>
+                            <a><i class="fa fa-book fa-2x"></i></a>
+                            <a ng-click="openProfile()"><i class="fa fa-wrench fa-2x"></i></a>
                     </div>
-                    <div class="btn-group" role="group" aria-label="...">
-                    <input type="text" type="button" class="btn btn-default" name="search" placeholder="search phrase" ng-model="search">
-                    <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li class="active"><a>my pages</a></li>
-                            <li><a>all pages</a></li>
-                            <li><a>users</a></li>
-                        </ul>
-                    </div>
-                    <button type="button" class="btn btn-default">search</button>
                 </div>
-                </div>
-                <div class="col-sm-1 col-md-1 col-xs-12 login">
+                <div class="col-sm-1 col-md-1 col-xs-1 login">
                         <p>Zalogowany jako:</p>
                 </div>
             </header>
@@ -39,7 +26,7 @@
 
 
     <div class="row">
-        <div class="col-sm-12 col-md-1 menu">
+        <div class="col-sm-1 col-md-1 col-xs-1 menu">
             <ul>
                 <li><button data-toggle="tooltip" data-placement="right" title="edit category settings" class="btn btn-info btn-xs btn-tooltip"><span ng-click="openFolder()" class="glyphicon glyphicon-wrench"></span></button><a data-toggle="tooltip" data-placement="right" title="Home" ng-class="{active: tab == 'home'}" ng-click="tab='home'"> Home</a></li>
                 <li><a class="btn-tooltip" data-toggle="tooltip" data-placement="right" title="see who you fallows" ng-class="{active: tab == 'fallowing'}" ng-click="tab='fallowing'">i'm fallowing<span class="glyphicon glyphicon-share-alt"></span></a></li>
@@ -57,7 +44,7 @@
             </ul>
 
         </div>
-        <div class="col-md-9 col-sm-12 content">z
+        <div class="col-md-10 col-sm-10 col-xs-10 content">
             <div class="row" ng-switch="tab">
                 <div ng-switch-when="fallowing">
                     <fallowing></fallowing>
@@ -78,7 +65,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-12 col-md-2">
+        <div class="col-sm-1 col-md-1 col-xs-1">
             <div ng-switch="tab">
                 <div ng-switch-when="profile">
                     <public-profile></public-profile>
