@@ -95,6 +95,7 @@ angular
                 keyboard: false
             });
         }
+
         function inviteFriendsDialog() {
             return $modal.open({
                 templateUrl: 'scripts/dialog/invite-friends-dialog.html',

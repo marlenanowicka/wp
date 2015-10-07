@@ -11,4 +11,22 @@ angular.module('wonderpage.public_feed',[])
             $scope.feeds = PublicFeedServices.getFeed();
         }
     };
-}]);
+}]).directive('popover', function () {
+        return {
+            restrict: 'E',
+            transclude: true,
+            template: '<a ng-transclude></a>',
+            scope: {
+                feed: '='
+            },
+            link: function (scope, element) {
+                var options = {
+                    content: '<img src="'+scope.feed.avatar+'"/><p>'+scope.feed.bookmark+'</p>',
+                    placement: "left",
+                    html: true,
+                    trigger: "hover"
+                };
+                $(element).popover(options);
+            }
+        }
+    });

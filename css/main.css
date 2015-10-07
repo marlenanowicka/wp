@@ -183,7 +183,7 @@ a .fa-envelope-square {
     background-color: #ffffff;
 
 }.list {
-     font-size: 12px;
+     font-size: 10px;
      margin-top: 20px;
      box-sizing: border-box;
  }
@@ -513,29 +513,23 @@ margin-right: 20px;
 .btn-center {
     text-align: center;
 }
-.tooltip1 {
-    outline: none;
-}
-.tooltip1 span{
-    display: none;
-    z-index: 10;
-    height: 150px;
+
+.popover.fade {
+    padding: 0 !important;
+    height: 200px;
     width: 200px;
-    line-height:16px;
-    right: 275px;
     background-color: orange;
     border: 1px solid orange;
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
 }
-.tooltip1 span img {
+.popover img {
     width: 100%;
-    height:120px ;
+    height: 160px;
 }
-.tooltip1:hover span {
-    display: inline;
-    position: fixed;
+.arrow  {
+    background-color: red;
 }
 .change-password {
     margin: 15px 0 0 0;
@@ -617,5 +611,10 @@ margin-right: 20px;
     max-width: 350px;
 }
 .modal {
-    top:30%;
+    top: 25%;
+}
+.modal.fade .modal-dialog, .modal.in .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
 }

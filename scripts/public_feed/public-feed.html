@@ -7,13 +7,9 @@
                     {{feed.login}}
                 </li>
                 <li><i class="fa fa-plus" ng-click="openCopy()"></i>
-                    <a class="btn-tooltip tooltip1">
-                        {{feed.bookmark}}
-                        <span>
-                            <img ng-src="{{feed.avatar}}">
-                            <p>{{feed.bookmark}}</p>
-                        </span>
-                    </a>
+
+                        <popover feed="feed">{{feed.bookmark}}</popover>
+
                 </li>
             </ul>
         <div class="clearfix"></div>
