@@ -3,71 +3,188 @@
     margin: 0;
 }
 body {
-    font-size: 10px;
+    font-size: 1.2em;
     background-color: #edebec;
 }
+.menu, .logo {
+    width: 9.16666666666667%;
+    float: left;
+}
+.content, .search {
+    width: 79.16666666666666%;
+    float: left;
+}
+.sidebar, .login {
+    width: 11.6666666666667%;
+    float: left;
+}
+h5 {
+    background-color: orange;
+}
 header {
-    width: 100%;
-    line-height: 50px;
+     margin-top:14px;
+     height: 40px;
 }
 header a {
-    color: #1b6d85;
+    color: #000000;
 }
-.search {
+.logo a {
+    margin-top: 10px;
+}
+/*<<<<<<--------search-------->>>>>>>*/
+.search p {
+    font-size:0.66em ;
+    border-left: 1px solid gray ;
+    padding-left: 1.052631578947368%;
+    color: gray;
+    text-transform: uppercase;
+    letter-spacing:-.5px;
     float: left;
 }
-.login {
-    float: right;
+.search p :first-child {
+    margin-top: 10px;
 }
-li {
-    list-style: none;
-    padding: 5px 0;
-}
-.btn-tooltip + .tooltip > .tooltip-inner {
-    background-color: #8AC007;
-    color: #FFFFFF;
-    padding: 3px 10px;
-    font-size: 10px;
-}
-.tooltip-arrow {
-display: none;
-}
-.input-group > .my-select {
-    width: 120px;
-    float: left;
-}
-.form-control:nth-child(3) {
-    width: 80px;
-    float: left;
-    margin-right: 20px;
-
-}
-.form-control:first-child {
-    width:200px;
-    float: left;
-}
-.input-group {
-    margin-top: 40px;
+.search-group {
     display: inline;
     float: right;
+    background-color:lightseagreen;
+    margin-right: 20px;
+    padding: 1px 1px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
 }
-.input-group a {
-    width: 20px;
+.search-group > .my-select {
+    width: 80px;
+    padding: 3px 0;
     float: left;
-    text-align: right;
-    margin-right: 10px;
+    cursor:pointer;
+}
+.search-control {
+    padding: 1px 3px;
+    font-size: 1em;
+    line-height: 20px;
+}
+.search-control:nth-child(3) {
+    width: 50px;
+    float: left;
+}
+.search-control:first-child {
+    width:130px;
+    float: left;
+}
+.search a {
+    width: 20px;
+    float: right;
+    margin-right: 20px;
+}
+.search a:first-child {
+    margin-left: 10px;
+    border-left-style: dashed;
 }
 .form {
     font-size: 12px;
     padding: 5px;
 }
-input, textarea {
+input, textarea, select {
     border: 1px solid lightgrey;
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     background-color: #ffffff;
 }
+button[type="submit"]{
+    border: 1px solid lightseagreen;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    color: #ffffff;
+    background: -moz-linear-gradient(top,  #dff0f4 0%, rgba(56,149,172,1) 50%, rgba(35,131,155,1) 51%, rgba(19,121,147,1) 51%, rgba(0,118,148,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dff0f4), color-stop(50%,rgba(56,149,172,1)), color-stop(51%,rgba(35,131,155,1)), color-stop(51%,rgba(19,121,147,1)), color-stop(100%,rgba(0,118,148,1)));
+    background: -webkit-linear-gradient(top,  #dff0f4 0%,rgba(56,149,172,1) 50%,rgba(35,131,155,1) 51%,rgba(19,121,147,1) 51%,rgba(0,118,148,1) 100%);
+    background: -o-linear-gradient(top,  #dff0f4 0%,rgba(56,149,172,1) 50%,rgba(35,131,155,1) 51%,rgba(19,121,147,1) 51%,rgba(0,118,148,1) 100%);
+    background: -ms-linear-gradient(top,  #dff0f4 0%,rgba(56,149,172,1) 50%,rgba(35,131,155,1) 51%,rgba(19,121,147,1) 51%,rgba(0,118,148,1) 100%);
+    background: linear-gradient(to bottom, #dff0f4 0%,rgba(56,149,172,1) 50%,rgba(35,131,155,1) 51%,rgba(19,121,147,1) 51%,rgba(0,118,148,1) 100%);
+    background-color:lightseagreen;
+    transition-duration:4s;
+    -webkit-transition-duration:4s;
+    transition-property:background;
+    transition-timing-function:linear;
+}
+button[type="submit"]:hover{
+    background: linear-gradient(to top, #dff0f4 0%,rgba(56,149,172,1) 50%,rgba(35,131,155,1) 51%,rgba(19,121,147,1) 51%,rgba(0,118,148,1) 100%);
+}
+/*---------finish search-------*/
+
+/*-------login-----*/
+.login img {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+.login p {
+    display: block;
+    font-size: 0.5em;
+    color: gray;
+    text-transform: uppercase;
+    letter-spacing:-.5px;
+    margin-bottom: 0;
+}
+.login p:last-child  {
+    font-size: 1.2em;color: #000000;
+}
+
+
+/*-------finish login-----*/
+
+
+/*--------menu-----------*/
+.menu li {
+    text-align: right;
+    display: inline-block;
+    text-decoration: none;
+    list-style: none;
+}
+.menu li i{
+    padding: 0 8px;
+    border-right-style: dotted;
+    border-color: gray;
+    border-width: 1px;
+    border-left-style: dotted;
+
+}
+.menu a {
+    margin-right: 5px;
+    text-align: right;
+    float: left;
+    width: 80px;
+}
+.menu span {
+    float: left;
+    margin: 0 10px;
+    width: 15px;
+    height: 15px;
+    background-color: dodgerblue;
+    text-align: center;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+
+
+
+
+
+
+li {
+    list-style: none;
+    padding: 5px 0;
+}
+
 .folder-dialog button {
     float: right;
     padding: 2px 8px;
@@ -174,17 +291,19 @@ a .fa-envelope-square {
 .modal-footer .btn+.btn {
     margin-bottom: 5px;
 }
+
 .content {
     border: 1px solid lightgray;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+    border-radius: 9px;
+    -moz-border-radius: 9px;
+    -webkit-border-radius: 9px;
     height: 700px;
     background-color: #ffffff;
 
-}.list {
+}
+.list {
      font-size: 10px;
-     margin-top: 20px;
+    margin: 20px 1.052631578947368% 0;
      box-sizing: border-box;
  }
 .list ul{
@@ -196,6 +315,7 @@ a .fa-envelope-square {
     transition-duration:400ms;
     -webkit-transition-duration:400ms;
     transition-property:background-color;
+    cursor:pointer;
 }
 .list ul li {
     line-height: 35px;
@@ -231,7 +351,7 @@ a .fa-envelope-square {
 }
 .list ul:hover {
     background-color: #d7d7d9;
-    cursor: hand;
+    cursor:pointer;
 }
 .list ul li:first-child{
     width: 5%;

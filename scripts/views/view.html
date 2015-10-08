@@ -1,86 +1,71 @@
-<div class="container-fluid">
-    <div class="row">
-
-            <header>
-                <div class="col-sm-1 col-md-1 col-xs-2">
-                     <a>Wonderpage LOGO</a>
-                </div>
-                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8 search">
-                    <div class="input-group">
-                            <input ng-model="search" type="text" class="form-control" placeholder="search phrase"/>
-                            <select class="form-control my-select">
-                            <option value="">my pages</option>
-                            <option value="">all pages</option>
-                            <option value="">users</option>
-                            </select>
-                            <button type="submit" class="form-control">search</button>
-                            <a><i class="fa fa-book fa-2x"></i></a>
-                            <a ng-click="openProfile()"><i class="fa fa-wrench fa-2x"></i></a>
-                    </div>
-                </div>
-                <div class="col-sm-1 col-md-1 col-xs-2 login">
-                        <p>Zalogowany jako:</p>
-                </div>
-            </header>
+<header>
+    <div class="logo">
+        <a>Wonderpage LOGO</a>
     </div>
-
-
-    <div class="row">
-        <div class="col-sm-1 col-md-1 col-xs-2 menu">
-            <ul>
-                <li><button data-toggle="tooltip" data-placement="right" title="edit category settings" class="btn btn-info btn-xs btn-tooltip"><span ng-click="openFolder()" class="glyphicon glyphicon-wrench"></span></button><a data-toggle="tooltip" data-placement="right" title="Home" ng-class="{active: tab == 'home'}" ng-click="tab='home'"> Home</a></li>
-                <li><a class="btn-tooltip" data-toggle="tooltip" data-placement="right" title="see who you fallows" ng-class="{active: tab == 'fallowing'}" ng-click="tab='fallowing'">i'm fallowing<span class="glyphicon glyphicon-share-alt"></span></a></li>
-                <li><a class="btn-tooltip" data-toggle="tooltip" data-placement="right" title="see who fallows you" ng-class="{active: tab == 'fallowers'}" ng-click="tab='fallowers'">my fallowers</a></li>
-                <li><a class="btn-tooltip" data-toggle="tooltip" data-placement="right" title="most viewied" ng-class="{active: tab == 'most_viewied'}" ng-click="tab='most_viewied'">most viewied  <span class="glyphicon glyphicon-signal"></span></a></li>
-                <li><a class="btn-tooltip" data-toggle="tooltip" data-placement="right" title="recently added bookmarks" ng-class="{active: tab == 'recently_added'}" ng-click="tab='recently_added'">recently added <span class="glyphicon glyphicon-certificate"></span></a></li>
-                <li>
-                <button type="button" class="btn btn-info btn-xs">add bookmark</button>
-                <button type="button" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-plus"></span></button>
-                </li>
-                <li>
-                    <button type="button" class="btn btn-info btn-xs">add folder</button>
-                    <button type="button" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-minus"></span></button>
-                </li>
-            </ul>
-
+    <div class="search">
+        <p>one page to rule theme all [beta] </p>
+        <a ng-click="openProfile()"><i class="fa fa-wrench fa-2x"></i></a>
+        <a><i class="fa fa-book fa-2x"></i></a>
+        <div class="search-group">
+            <input ng-model="search" type="text" class="search-control" placeholder="search phrase"/>
+            <select class="search-control my-select">
+                <option value="">my pages</option>
+                <option value="">all pages</option>
+                <option value="">users</option>
+            </select>
+            <button class="search-control" type="submit">search</button>
         </div>
-        <div class="col-md-10 col-sm-10 col-xs-8 content">
-            <div class="row" ng-switch="tab">
-                <div ng-switch-when="fallowing">
-                    <fallowing></fallowing>
-                </div>
-                <div ng-switch-when="fallowers">
-                    <h3>fallowers</h3><br />
-                    fallowers fallowers fallowers fallowers fallowers fallowers
-                </div>
-                <div ng-switch-when="home">
-                    <div ng-switch on="selectionSize.id">
-                        <div ng-switch-when="1">
-                            <list></list>
-                        </div>
-                        <div ng-switch-default>
-                            <grid></grid>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+    </div>
+    <div class="login">
+        <img ng-src="../../images/avatar.jpg" />
+        <p>Logged as:</p>
+        <p>ANA</p>
+    </div>
+</header>
+
+<div class="menu">
+    <ul>
+        <li>
+            <span class="fa fa-wrench"></span>
+            <a data-toggle="tooltip" data-placement="right" title="Home" ng-class="{active: tab == 'home'}" ng-click="tab='home'"> Home</a>
+            <i class="fa fa-lock"></i>
+        </li>
+        <li><span class="fa fa-wrench"></span>
+            <a data-toggle="tooltip" data-placement="right" title="moda" ng-class="{active: tab == 'moda'}" ng-click="tab='moda'"> moda</a>
+            <i class="fa fa-lock"></i>
+        </li>
+    </ul>
+</div>
+<div class="content">
+    <div ng-switch="tab">
+        <div ng-switch-when="fallowing">
+            <fallowing></fallowing>
         </div>
-        <div class="col-sm-1 col-md-1 col-xs-2">
-            <div ng-switch="tab">
-                <div ng-switch-when="profile">
-                    <public-profile></public-profile>
+        <div ng-switch-when="fallowers">
+            <h3>fallowers</h3><br />
+            fallowers fallowers fallowers fallowers fallowers fallowers
+        </div>
+        <div ng-switch-when="home">
+            <div ng-switch on="selectionSize.id">
+                <div ng-switch-when="1">
+                    <list></list>
                 </div>
                 <div ng-switch-default>
-                    <public-feed></public-feed>
+                    <grid></grid>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<footer>
-        <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-10 col-xs-8 col-xs-offset-2">
-            <p>ikona miniatur</p>
-                <select class="dropup" id="simpleSizeSel" ng-model="selectionSize"  ng-options="option.value for option in simpleSizeValue track by option.id">
-                </select>
-        </div>
-</footer>
+<div class="sidebar">
+    <div ng-switch="tab">
+    <div ng-switch-when="profile">
+        <public-profile></public-profile>
+    </div>
+    <div ng-switch-default>
+        <h5>public feed</h5>
+        <public-feed></public-feed>
+    </div>
+</div>
+</div>
