@@ -11,7 +11,7 @@ angular.module('wonderpage', ['ngRoute','ui.bootstrap', 'wonderpage.public_feed'
             });
     }]).controller("Ctrl1",['$scope', 'dialogService','BookmarksServices', function($scope, dialogService, BookmarksServices){
         //$scope.myItemPerPage = 4;
-
+        $scope.inputOpen = false;
         $scope.tab = 'home';
         $scope.items = function($scope) {
 

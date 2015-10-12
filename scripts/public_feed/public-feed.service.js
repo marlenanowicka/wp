@@ -7,19 +7,35 @@ angular.module('wonderpage.public_feed')
             getFeed: function () {
                 return [{
                         avatar: '../../images/avatar.jpg',
-                        login: 'marlena.nowicka',
-                        add: '18.09.2015',
+                        login: 'MariYellow',
+                        add: 'Jul 2015 - Thu the 9th',
                         bookmark: 'yellowjasmine.pl'
                     },
                     {
                         avatar: '../../images/avatar.jpg',
-                        login: 'przemek.nowicka',
-                        add: '21.09.2015',
+                        login: 'AnMaria',
+                        add: 'Nov 2015 - Thu the 10th',
                         bookmark: 'make-it-with.us'
                     },{
                         avatar: '../../images/avatar.jpg',
-                        login: 'aleksandra.nowak',
-                        add: '08.07.2015',
+                        login: 'OlaKowalska',
+                        add: 'Sep 2015 - Thu the 23th',
+                        bookmark: 'onet.pl'
+                    },{
+                        avatar: '../../images/avatar.jpg',
+                        login: 'MariYellow',
+                        add: 'Jul 2015 - Thu the 9th',
+                        bookmark: 'yellowjasmine.pl'
+                    },
+                    {
+                        avatar: '../../images/avatar.jpg',
+                        login: 'AnMaria',
+                        add: 'Nov 2015 - Thu the 10th',
+                        bookmark: 'make-it-with.us'
+                    },{
+                        avatar: '../../images/avatar.jpg',
+                        login: 'OlaKowalska',
+                        add: 'Sep 2015 - Thu the 23th',
                         bookmark: 'onet.pl'
                     }
                 ];

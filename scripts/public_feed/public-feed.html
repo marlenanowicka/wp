@@ -1,16 +1,11 @@
-    <div ng-repeat="feed in feeds">
-            <ul>
-                <li>
-                    {{feed.add}}
-                </li>
-                <li>
-                    {{feed.login}}
-                </li>
-                <li><i class="fa fa-plus" ng-click="openCopy()"></i>
-
+    <div class="feed"ng-repeat="feed in feeds">
+            <span>add one days ago</span>
+                <ul>
+                    <li>{{feed.add}}</li>
+                    <li>{{feed.login}}</li>
+                    <li><i class="fa fa-plus" ng-click="openCopy()"></i>
                         <popover feed="feed">{{feed.bookmark}}</popover>
-
-                </li>
-            </ul>
+                    </li>
+                </ul>
         <div class="clearfix"></div>
     </div>

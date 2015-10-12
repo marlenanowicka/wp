@@ -4,7 +4,7 @@
 }
 body {
     font-size: 1.2em;
-    background-color: #edebec;
+    background-color: #f9f9f9;
 }
 .menu, .logo {
     width: 9.16666666666667%;
@@ -142,6 +142,19 @@ button[type="submit"]:hover{
 
 
 /*--------menu-----------*/
+
+.menu li:first-child{
+    border-color: #ffffff;
+    border-width: 2px;
+    border-top-style: groove;
+    padding-top: 20px;
+}
+.menu li:last-child{
+    border-color: #ffffff;
+    border-width: 2px;
+    border-bottom-style: groove;
+    padding-bottom: 20px;
+}
 .menu li {
     text-align: right;
     display: inline-block;
@@ -154,24 +167,165 @@ button[type="submit"]:hover{
     border-color: gray;
     border-width: 1px;
     border-left-style: dotted;
-
 }
 .menu a {
     margin-right: 5px;
     text-align: right;
     float: left;
     width: 80px;
+    text-underline: none;
+    color: #000000;
+}
+.menu a:hover {
+    color: #49b9ca;
+    text-decoration: none;
 }
 .menu span {
     float: left;
     margin: 0 10px;
     width: 15px;
     height: 15px;
-    background-color: dodgerblue;
+    background-color: #49b9ca;
     text-align: center;
+    border: 2px solid #ffffff;
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
+    color: #ffffff;
+}
+.menu-static {
+    margin: 5px 8px 0 0;
+    display: inline-block;
+    border-color: #ffffff;
+    border-width: 2px;
+    border-bottom-style: groove;
+    padding-bottom: 15px;
+}
+.menu-static div i, .menu-button i {
+    padding: 0 8px;
+    color: darkred;
+}
+.menu-static div, .menu-button div {
+    margin: 5px 0;
+    float: right;
+}
+.menu-button {
+    margin: 5px 8px 0 0;
+    display: inline-block;
+    border-color: #ffffff;
+    border-width: 2px;
+    border-bottom-style: groove;
+    padding-bottom: 15px
+
+}.menu-button input[type="text"] {
+     width: 90px;
+     text-align: center;
+ }
+input[type="text"].myFocus {
+    background-color: white;
+}
+input[type="text"].myBlur {
+    background: -moz-linear-gradient(top,  #dff0f4 0%, rgba(56,149,172,1) 50%, rgba(35,131,155,1) 51%, rgba(19,121,147,1) 51%, rgba(0,118,148,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dff0f4), color-stop(50%,rgba(56,149,172,1)), color-stop(51%,rgba(35,131,155,1)), color-stop(51%,rgba(19,121,147,1)), color-stop(100%,rgba(0,118,148,1)));
+    background: -webkit-linear-gradient(top,  #dff0f4 0%,rgba(56,149,172,1) 50%,rgba(35,131,155,1) 51%,rgba(19,121,147,1) 51%,rgba(0,118,148,1) 100%);
+    background: -o-linear-gradient(top,  #dff0f4 0%,rgba(56,149,172,1) 50%,rgba(35,131,155,1) 51%,rgba(19,121,147,1) 51%,rgba(0,118,148,1) 100%);
+    background: -ms-linear-gradient(top,  #dff0f4 0%,rgba(56,149,172,1) 50%,rgba(35,131,155,1) 51%,rgba(19,121,147,1) 51%,rgba(0,118,148,1) 100%);
+    background: linear-gradient(to bottom, #dff0f4 0%,rgba(56,149,172,1) 50%,rgba(35,131,155,1) 51%,rgba(19,121,147,1) 51%,rgba(0,118,148,1) 100%);
+    background-color:lightseagreen;
+}
+input[type="text"].myBlur:hover{
+    background: linear-gradient(to top, #dff0f4 0%,rgba(56,149,172,1) 50%,rgba(35,131,155,1) 51%,rgba(19,121,147,1) 51%,rgba(0,118,148,1) 100%);
+}
+.input[placeholder].myBlur {
+    color: #ffffff !important;
+}
+input[type="text"].myBlur ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #ffffff;
+}
+input[type="text"].myBlur :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#ffffff;
+    opacity:  1;
+}
+input[type="text"].myBlur ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#ffffff;
+    opacity:  1;
+}
+input[type="text"].myBlur :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:#ffffff;
+}
+/*-----------finish menu------------*/
+
+/*------------start sidebar---------*/
+.sidebar p:first-child{
+    border-color: #ffffff;
+    border-width: 2px;
+    border-top-style: groove;
+    padding-top: 15px;
+    margin-left: 8px;
+    padding-right: 10px;
+    text-align: right;
+    background-color: orange;
+    color: #ffffff;
+    -moz-background-clip: border;     /* Firefox 3.6 */
+    -webkit-background-clip: border;  /* Safari 4? Chrome 6? */
+    background-clip: border-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+
+}
+.feed {
+    margin-top: 20px;
+}
+.feed ul:hover {
+    border-right: 4px inset #49b9ca;
+    background: rgba(250,250,250,1);
+    background: -moz-linear-gradient(left, rgba(250,250,250,1) 0%, rgba(234,234,234,1) 72%, rgba(230,230,230,1) 92%, rgba(230,230,230,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(250,250,250,1)), color-stop(72%, rgba(234,234,234,1)), color-stop(92%, rgba(230,230,230,1)), color-stop(100%, rgba(230,230,230,1)));
+    background: -webkit-linear-gradient(left, rgba(250,250,250,1) 0%, rgba(234,234,234,1) 72%, rgba(230,230,230,1) 92%, rgba(230,230,230,1) 100%);
+    background: -o-linear-gradient(left, rgba(250,250,250,1) 0%, rgba(234,234,234,1) 72%, rgba(230,230,230,1) 92%, rgba(230,230,230,1) 100%);
+    background: -ms-linear-gradient(left, rgba(250,250,250,1) 0%, rgba(234,234,234,1) 72%, rgba(230,230,230,1) 92%, rgba(230,230,230,1) 100%);
+    background: linear-gradient(to right, rgba(250,250,250,1) 0%, rgba(234,234,234,1) 72%, rgba(230,230,230,1) 92%, rgba(230,230,230,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#e6e6e6', GradientType=1 );
+}
+.feed ul {
+    border-color: #ffffff;
+    border-width: 1px;
+    border-top-style: groove;
+    border-bottom-style: groove;
+    line-height: 16px;
+    padding-top:1px;
+    margin-left: 30px;
+    text-shadow:0 1px 1px white;
+}
+.feed ul li {
+    padding: 0;
+}
+.feed ul li:nth-child(2) {
+   font-weight: bold;
+    color: #666;
+}
+.feed ul li:first-child{
+    font-weight: 400;
+    color: darkgray;
+    font-size: .8em;
+    padding-top: 1px;
+}
+.feed ul li:last-child {
+    margin-left: -17px;
+    color:#49b9ca;
+    padding-bottom: 1px;
+}
+.feed ul li i {
+    margin-right: 5px;
+}
+.feed span {
+    margin-left: 30px;
+    color: darkorange;
+    font-weight: 700;
+}
+.feed span:last-child {
+    color:#49b9ca ;
+    margin-left: 0;
+    font-size: .9em;
+    font-weight: 600;
 }
 
 

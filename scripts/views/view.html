@@ -25,17 +25,43 @@
 </header>
 
 <div class="menu">
-    <ul>
-        <li>
-            <span class="fa fa-wrench"></span>
-            <a data-toggle="tooltip" data-placement="right" title="Home" ng-class="{active: tab == 'home'}" ng-click="tab='home'"> Home</a>
-            <i class="fa fa-lock"></i>
-        </li>
-        <li><span class="fa fa-wrench"></span>
-            <a data-toggle="tooltip" data-placement="right" title="moda" ng-class="{active: tab == 'moda'}" ng-click="tab='moda'"> moda</a>
-            <i class="fa fa-lock"></i>
-        </li>
-    </ul>
+    <nav>
+        <ul>
+            <li>
+                <span class="fa fa-wrench"></span>
+                <a data-toggle="tooltip" data-placement="right" title="Home" ng-class="{active: tab == 'home'}" ng-click="tab='home'"> Home</a>
+                <i class="fa fa-lock"></i>
+            </li>
+            <li><span class="fa fa-wrench"></span>
+                <a data-toggle="tooltip" data-placement="right" title="moda" ng-class="{active: tab == 'moda'}" ng-click="tab='moda'"> moda</a>
+                <i class="fa fa-lock"></i>
+            </li>
+        </ul>
+    </nav>
+    <div class="menu-static">
+            <div><a ng-class="{active: tab == 'fallowing'}" ng-click="tab='fallowing'">i'm fallowing</a>
+                <i class="glyphicon glyphicon-share-alt"></i>
+            </div>
+            <div><a ng-class="{active: tab == 'fallowers'}" ng-click="tab='fallowers'">my fallowers</a>
+                <i class="glyphicon glyphicon-share-alt"></i>
+            </div>
+    </div>
+    <div class="menu-static">
+        <div><a ng-class="{active: tab == 'most_viewied'}" ng-click="tab='most_viewied'">most viewied</a>
+            <i class="glyphicon glyphicon-signal"></i>
+        </div>
+        <div><a ng-class="{active: tab == 'recently_added'}" ng-click="tab='recently_added'">recently added</a>
+            <i class="glyphicon glyphicon-certificate"></i>
+        </div>
+    </div>
+    <div class="menu-button">
+        <div ng-init="focus=false;blur=true;active=true"><input ng-class="{ myFocus: focus, myBlur: blur }" ng-focus="focus=true;blur=false;" ng-blur="blur=true;focus=false;" type="text" placeholder="add bookmark"/>
+            <i class="glyphicon glyphicon-plus"></i>
+        </div>
+        <div ng-init="focus=false;blur=true;active=false"><input ng-class="{ myFocus: focus, myBlur: blur }" ng-focus="focus=true;blur=false;" ng-blur="blur=true;focus=false;" type="text" placeholder="add folder" ng-model="newBookmark"/>
+            <i class="glyphicon glyphicon-plus"></i>
+        </div>
+    </div>
 </div>
 <div class="content">
     <div ng-switch="tab">
@@ -61,10 +87,11 @@
 <div class="sidebar">
     <div ng-switch="tab">
     <div ng-switch-when="profile">
+
         <public-profile></public-profile>
     </div>
-    <div ng-switch-default>
-        <h5>public feed</h5>
+    <divs ng-switch-default>
+        <p>public feed</p>
         <public-feed></public-feed>
     </div>
 </div>
