@@ -58,8 +58,9 @@
         <div ng-init="focus=false;blur=true;active=true"><input ng-class="{ myFocus: focus, myBlur: blur }" ng-focus="focus=true;blur=false;" ng-blur="blur=true;focus=false;" type="text" placeholder="add bookmark"/>
             <i class="glyphicon glyphicon-plus"></i>
         </div>
-        <div ng-init="focus=false;blur=true;active=false"><input ng-class="{ myFocus: focus, myBlur: blur }" ng-focus="focus=true;blur=false;" ng-blur="blur=true;focus=false;" type="text" placeholder="add folder" ng-model="newBookmark"/>
+        <div ng-init="focus=false;blur=true;active=false"><input ng-class="{ myFocus: focus, myBlur: blur }" ng-focus="focus=true;blur=false;" ng-blur="blur=true;focus=false;" type="text" placeholder="add folder"/>
             <i class="glyphicon glyphicon-plus"></i>
+            <input type="submit" value="submit"/>
         </div>
     </div>
 </div>
@@ -90,8 +91,7 @@
 
         <public-profile></public-profile>
     </div>
-    <divs ng-switch-default>
-        <p>public feed</p>
+    <div ng-switch-default>
         <public-feed></public-feed>
     </div>
 </div>

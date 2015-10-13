@@ -1,6 +1,6 @@
 
-    <div class="list">
-        <ul ng-repeat="view in lists">
+    <div class="list" ng-controller="myController">
+        <ul ng-repeat="view in lists track by $index" >
             <li><a><img ng-src="images/{{view.screen}}" /></a></li>
             <li><a style="color: #49b9ca">{{view.name}}</a></li>
             <li><a class="address" href="#">{{view.address}}</a></li>
@@ -8,8 +8,12 @@
             <li><a>
                 <button class="btn btn-xs" ng-click="openBookmark()"><i class="fa fa-wrench"></i></button>
                 <button class="btn btn-xs" ng-click="openSocial()"><i class="fa fa-facebook"></i></button>
-                <button class="btn btn-xs"><i class="fa fa-arrows-h"></i></i></button>
+                <button class="btn btn-xs"><i class="fa fa-arrows-h"></i></button>
             </a>
             </li>
         </ul>
+        <form ng-submit="add(view)" ng-init="focus=false;blur=true;active=false">
+            <input  ng-class="{ myFocus: focus, myBlur: blur }" ng-focus="focus=true;blur=false;" ng-blur="blur=true;focus=false;" type="text" placeholder="add folder" ng-model="view.name"/>
+            <button><i class="glyphicon glyphicon-plus"></i></button>
+        </form>
     </div>

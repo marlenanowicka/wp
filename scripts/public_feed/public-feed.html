@@ -1,11 +1,18 @@
-    <div class="feed"ng-repeat="feed in feeds">
-            <span>add one days ago</span>
+<div>
+    <div class="my-to-border"></div>
+    <p>public feed</p>
+    <div class="feed" ng-repeat="feed in feeds">
+        <span><i class="fa fa-circle"></i>add one days ago</span>
                 <ul>
                     <li>{{feed.add}}</li>
-                    <li>{{feed.login}}</li>
-                    <li><i class="fa fa-plus" ng-click="openCopy()"></i>
-                        <popover feed="feed">{{feed.bookmark}}</popover>
+                    <li><a>{{feed.login}}</a></li>
+                    <li>
+                        <a>
+                            <i class="fa fa-plus" ng-click="openCopy()"></i>
+                            <popover feed="feed">{{feed.bookmark}}</popover>
+                        </a>
                     </li>
                 </ul>
         <div class="clearfix"></div>
     </div>
+</div>

@@ -256,26 +256,39 @@ input[type="text"].myBlur :-ms-input-placeholder { /* Internet Explorer 10-11 */
 /*-----------finish menu------------*/
 
 /*------------start sidebar---------*/
-.sidebar p:first-child{
+.sidebar p{
+    margin-left: 30px;
+    padding-right: 10px;
+    background-color: orange;
+    color: #ffffff;
+    line-height: 20px;
+    padding-left: 10px;
+    border-right: 5px solid coral;
+    text-shadow:0 1px 1px white;
+}
+.my-to-border {
     border-color: #ffffff;
     border-width: 2px;
     border-top-style: groove;
+    margin-left: 30px;
     padding-top: 15px;
-    margin-left: 8px;
-    padding-right: 10px;
-    text-align: right;
-    background-color: orange;
-    color: #ffffff;
-    -moz-background-clip: border;     /* Firefox 3.6 */
-    -webkit-background-clip: border;  /* Safari 4? Chrome 6? */
-    background-clip: border-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
-
 }
 .feed {
     margin-top: 20px;
 }
+
+.feed ul {
+    border-color: #ffffff;
+    border-width: 2px;
+    border-top-style: groove;
+    border-bottom-style: groove;
+    line-height: 16px;
+    padding-top:1px;
+    margin-left: 30px;
+    text-shadow:0 1px 1px white;
+}
 .feed ul:hover {
-    border-right: 4px inset #49b9ca;
+    border-right: 4px solid #49b9ca;
     background: rgba(250,250,250,1);
     background: -moz-linear-gradient(left, rgba(250,250,250,1) 0%, rgba(234,234,234,1) 72%, rgba(230,230,230,1) 92%, rgba(230,230,230,1) 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(250,250,250,1)), color-stop(72%, rgba(234,234,234,1)), color-stop(92%, rgba(230,230,230,1)), color-stop(100%, rgba(230,230,230,1)));
@@ -285,20 +298,10 @@ input[type="text"].myBlur :-ms-input-placeholder { /* Internet Explorer 10-11 */
     background: linear-gradient(to right, rgba(250,250,250,1) 0%, rgba(234,234,234,1) 72%, rgba(230,230,230,1) 92%, rgba(230,230,230,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#e6e6e6', GradientType=1 );
 }
-.feed ul {
-    border-color: #ffffff;
-    border-width: 1px;
-    border-top-style: groove;
-    border-bottom-style: groove;
-    line-height: 16px;
-    padding-top:1px;
-    margin-left: 30px;
-    text-shadow:0 1px 1px white;
-}
 .feed ul li {
     padding: 0;
 }
-.feed ul li:nth-child(2) {
+.feed ul li a:first-child {
    font-weight: bold;
     color: #666;
 }
@@ -309,23 +312,36 @@ input[type="text"].myBlur :-ms-input-placeholder { /* Internet Explorer 10-11 */
     padding-top: 1px;
 }
 .feed ul li:last-child {
-    margin-left: -17px;
+    margin-left: -20px;
     color:#49b9ca;
     padding-bottom: 1px;
 }
-.feed ul li i {
+.feed ul li a i {
     margin-right: 5px;
+    color:#49b9ca;
 }
 .feed span {
-    margin-left: 30px;
+    margin-left: 13px;
     color: darkorange;
     font-weight: 700;
+    text-shadow:0 1px 1px white;
 }
 .feed span:last-child {
     color:#49b9ca ;
     margin-left: 0;
     font-size: .9em;
     font-weight: 600;
+}
+.fa-circle {
+    color:darkorange;
+    margin-right: 7px;
+}
+.feed a {
+    text-decoration: none;
+    cursor: pointer;
+}
+.feed ul li a:hover {
+    color: darkorange;
 }
 
 
@@ -451,7 +467,7 @@ a .fa-envelope-square {
     border-radius: 9px;
     -moz-border-radius: 9px;
     -webkit-border-radius: 9px;
-    height: 700px;
+    height: 750px;
     background-color: #ffffff;
 
 }
