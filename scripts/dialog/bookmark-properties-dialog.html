@@ -17,14 +17,14 @@
                         <option>moda</option>
                     </select></p>
                 <p><strong>privacy*</strong>:
-                    <label><input name="privacy" type="radio" value="private" />private</label>
-                    <label><input name="privacy" type="radio" value="public" />public</label>
+                    <label><input class="radio-inline" name="privacy" type="radio" value="private" />private</label>
+                    <label><input class="radio-inline" name="privacy" type="radio" value="public" />public</label>
                 </p>
             </div>
 
             <div class="bookmark-dialog3">
-                <p><strong>description</strong>: <input type="text" name="bookmark-description" value="yellowjasmine" size="53" maxlength="2000"/></p>
-                <p><strong>keywords</strong>: <input type="text" name="bookmark-keywords" value="yellowjasmine.pl" size="53" maxlength="200"/></p>
+                <p><strong>description</strong>: <textarea name="bookmark-description" value="yellowjasmine" size="53" maxlength="2000"></textarea></p>
+                <p><strong>keywords</strong>: <textarea name="bookmark-keywords" value="yellowjasmine.pl" size="53" maxlength="200"></textarea></p>
             </div>
         <div class="bookmark-dialog4">
             <img ng-src="images/avatar.jpg" />
@@ -32,8 +32,19 @@
     </form>
 </div>
 <footer class="modal-footer my-btn">
-    <button type="button" class="btn btn-inverse" ng-disabled="isCancelDisabled()" ng-click="close()">remove</button>
-    <button type="button" class="btn btn-primary" ng-click="uploadFiles()" ng-disabled="isUploadDisabled()">save</button>
-    <button type="button" class="btn btn-inverse" ng-disabled="isCancelDisabled()" ng-click="close()">cancel</button>
+    <div class="btn-left">
+        <button class="btn btn-inverse" ng-disabled="isCancelDisabled()" ng-click="isCollapsed = isCollapse">remove</button>
+        <button class="btn btn-primary" ng-click="uploadFiles()" ng-disabled="isUploadDisabled()">save</button>
+        <button class="btn btn-inverse" ng-disabled="isCancelDisabled()" ng-click="close()">cancel</button>
+    </div>
     <button type="button" class="btn btn-inverse" ng-disabled="isCancelDisabled()" ng-click="close()">recepture</button>
+    <div collapse="isCollapsed" class="my-border">
+        <form>
+            <div class="remove">
+                <p>Are you sure, you want to remove this page</p>
+                <button type="button" class="btn btn-inverse btn-xs" >yes<i class="fa fa-plus-square"></i></button>
+                <button type="button" class="btn btn-inverse btn-xs" ng-click="isCollapsed = !isCollapsed">no<i class="fa fa-check-square"></i></button>
+            </div>
+        </form>
+    </div>
 </footer>

@@ -1,12 +1,11 @@
-<div class="row">
-        <div class="col-md-2 col-sm-2 xs-col-2" ng-repeat="view in lists">
-            <div class="view-grid" ng-mouseover="options = true" ng-mouseout="options = false" >
+ <div class="thiny"  ng-repeat="view in lists">
+    <div ng-mouseover="options = true" ng-mouseout="options = false" >
                 <img ng-src="images/{{view.screen}}" />
                 <span class="icons glyphicon glyphicon-user"></span>
                 <p class="name">{{view.name}}</p>
-                    <div ng-show="options" ng-click="openBookmark()">!</div>
-                    <div ng-show="options" ng-click="openSocial()">F</div>
-                    <div ng-show="options">+</div>
-            </div>
-        </div>
-</div>
+
+         <button  ng-show="options" ng-click="openBookmark()">!</button>
+         <button ng-show="options" ng-click="openSocial()">F</button>
+         <button ng-show="options">+</button>
+    </div>
+ </div>
