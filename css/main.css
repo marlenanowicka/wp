@@ -1,15 +1,22 @@
 *{
     padding: 0;
     margin: 0;
-    text-shadow:0 1px 1px white;
 }
 body {
     font-size: 1.2em;
-    background-color: #f9f9f9;
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(231,231,231,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(231,231,231,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(231,231,231,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(231,231,231,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(231,231,231,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(231,231,231,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e7e7e7', GradientType=0 );
 }
 .menu, .logo {
     width: 9.16666666666667%;
     float: left;
+    text-shadow:0 1px 1px white;
 }
 .content, .search {
     width: 79.16666666666666%;
@@ -18,24 +25,30 @@ body {
 .sidebar, .login {
     width: 11.6666666666667%;
     float: left;
+    text-shadow:0 1px 1px white;
 }
 footer {
     width: 79.16666666666666%;
     margin-left: 9.16666666666667%;
     margin-right:11.6666666666667% ;
+    text-shadow:0 1px 1px white;
 }
 h5 {
     background-color: orange;
 }
 header {
      margin-top:14px;
-     height: 40px;
+     height: 45px;
 }
 header a {
     color: #4d5c67;
 }
-.logo a {
-    margin-top: 10px;
+.logo {
+    margin-top: 4px;
+}
+.logo a img {
+    width: 94%;
+    padding-left: 10px;
 }
 /*<<<<<<--------search-------->>>>>>>*/
 .search p {
@@ -47,29 +60,30 @@ header a {
     letter-spacing:-.5px;
     float: left;
 }
-.search p :first-child {
-    margin-top: 10px;
+.search p:first-child {
+    margin-top: 15px;
 }
 .search-group {
+    margin-top: 7px;
     display: inline;
     float: right;
     background-color:lightseagreen;
-    margin-right: 20px;
-    padding: 1px 1px;
+    margin-right: 22px;
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
 }
 .search-group > .my-select {
-    width: 80px;
-    padding: 3px 0;
+    margin-top: 1px;
+    width: 85px;
     float: left;
     cursor:pointer;
+    margin-bottom: 1px;
 }
 .search-control {
-    padding: 1px 3px;
+    padding: 0 3px;
     font-size: 1em;
-    line-height: 20px;
+    line-height: 16px;
 }
 .search-control:nth-child(3) {
     width: 50px;
@@ -78,15 +92,21 @@ header a {
 .search-control:first-child {
     width:130px;
     float: left;
+    margin-top: 1px;
+    margin-left: 1px;
 }
 .search a {
+    margin-top: 3px;
     width: 20px;
     float: right;
-    margin-right: 20px;
+    margin-right: 5px;
+    margin-left: 15px;
 }
-.search a:first-child {
-    margin-left: 10px;
+.search a:last-child {
+    padding-left: 10px;
     border-left-style: dashed;
+    border-left-width: 1px;
+    border-left-color: gray;
 }
 .form {
     font-size: 12px;
@@ -100,6 +120,7 @@ input, textarea, select {
     background-color: #ffffff;
 }
 button[type="submit"]{
+    padding-bottom: 2px;
     border: 1px solid lightseagreen;
     border-radius: 3px;
     -moz-border-radius: 3px;
@@ -418,42 +439,55 @@ input[type="text"].myBlur :-ms-input-placeholder { /* Internet Explorer 10-11 */
 }
 /*------------finish footer -------------->*/
 
-/*------------start grid thiny --------------->*/
-.thiny {
+/*------------start grid tiny --------------->*/
+.tiny {
     width: 10.72308421052632%;
     float: left;
     display: inline-block;
     margin-left: 1.578947368421053%;
     position: relative;
 }
-.thiny:nth-child(8n+0){
+.tiny:nth-child(8n+0){
     margin-right: 1.578947368421053%;
 }
-.thiny div{
-    border: 1px solid lightskyblue;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    background-color: skyblue;
+.tiny div, .grid-small div, .grid-medium div, .grid-large div, .grid-huge div {
+    background: -moz-linear-gradient(top,  #82c6d0 0%, #82c6d0 50%, #b7e2e4 71%,#b7e2e4 90%, #82c6d0 91%, #82c6d0 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#82c6d0), color-stop(50%,#82c6d0),color-stop(71%,#b7e2e4),color-stop(90%,#b7e2e4), color-stop(91%,#82c6d0), color-stop(100%,#82c6d0));
+    background: -webkit-linear-gradient(top,  #82c6d0 0%,#82c6d0 50%,#b7e2e4 71%,#b7e2e4 90%, #82c6d0 91%,#82c6d0 100%);
+    background: -o-linear-gradient(top,  #82c6d0 0%,#82c6d0 50%,#b7e2e4 71%, #b7e2e4 90%, #82c6d0 91%,#82c6d0 100%);
+    background: -ms-linear-gradient(top,  #82c6d0 0%,#82c6d0 50%,#b7e2e4 71%,#b7e2e4 90%, #82c6d0 91%,#82c6d0 100%);
+    background: linear-gradient(to bottom, #82c6d0 0%,#82c6d0 50%, #b7e2e4 71%,#b7e2e4 90%,#82c6d0 91%,#82c6d0 100%);
+    background-color:#82c6d0;
+    border: 1px solid #82c6d0;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
     margin-top: 20px;
-    padding: 1px;
+    margin-bottom: 20px;
+    padding: 2px;
+    box-sizing: border-box;
+    box-shadow: -25px -1px 40px 6px #82c6d0 inset;
 }
-.thiny div div{
-    margin-top: 0;
-    float: none;
-}
-.thiny img {
+
+.tiny img {
     width: 100%;
     height: 100px;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
 }
-.thiny div:hover {
-    background-color: orange;
-    border-color: orange;
+.tiny div:hover, .grid-small div:hover, .grid-medium div:hover, .grid-huge div:hover {
+    background-color: #ffa255;
+    border: 1px solid #ffa255;
+    box-shadow: -25px -1px 40px 6px #ffa255 inset;
+    background: -moz-linear-gradient(top,  #ffa255 0%, #ffa255 50%, #ffc391 71%,#ffc391 90%, #ffa255 91%, #ffa255 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffa255), color-stop(50%,#ffa255),color-stop(71%,#ffc391),color-stop(90%,#ffc391), color-stop(91%,#ffa255), color-stop(100%,#ffa255));
+    background: -webkit-linear-gradient(top,  #ffa255 0%,#ffa255 50%,#ffc391 71%,#ffc391 90%, #ffa255 91%,#ffa255 100%);
+    background: -o-linear-gradient(top,  #ffa255 0%,#ffa255 50%,#ffc391 71%, #ffc391 90%, #ffa255 91%,#ffa255 100%);
+    background: -ms-linear-gradient(top,  #ffa255 0%,#ffa255 50%,#ffc391 71%,#ffc391 90%, #ffa255 91%,#ffa255 100%);
+    background: linear-gradient(to bottom, #ffa255 0%,#ffa255 50%, #ffc391 71%,#ffc391 90%,#ffa255 91%,#ffa255 100%);
 }
-.thiny > div .icons {
+.tiny > div .icons, .grid-small > div .icons, .grid-medium > div .icons, .grid-large > div .icons, .grid-huge > div .icons {
     float: left;
     display: inline-block;
     margin: 5px 4px;
@@ -464,26 +498,197 @@ input[type="text"].myBlur :-ms-input-placeholder { /* Internet Explorer 10-11 */
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
 }
-.thiny > div .name {
+.tiny > div .name, .grid-small > div .name, .grid-medium > div .name, .grid-large > div .name, .grid-huge > div .name {
+    color: #ffffff;
+    text-shadow:0 1px 1px gray;
     margin-left: 10px;
     margin-top: 7px;
     margin-bottom: 1px;
     overflow: hidden;
     text-overflow: clip;
 }
-.thiny button {
-    font-size: .8em;
+.tiny button, .grid-small button, .grid-medium button, .grid-large button, .grid-huge button {
+    margin-left: 2px;
     float: right;
-    padding: 2px 5px;
     position: relative;
     right: 0;
-    bottom: 30px;
+    bottom: 20px;
     z-index: 2;
+    border: 1px solid white;
+    background: -moz-linear-gradient(top,  #77cedc 0%, #77cedc 50%, #38a4b4 51%, #38a4b4 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#77cedc), color-stop(50%,#77cedc), color-stop(51%,#38a4b4), color-stop(100%,#38a4b4));
+    background: -webkit-linear-gradient(top,  #77cedc 0%,#77cedc 50%, 51%,#38a4b4) 51%,#38a4b4 100%);
+    background: -o-linear-gradient(top,  #77cedc 0%,#77cedc 50%,#38a4b4 51%,#38a4b4 100%);
+    background: -ms-linear-gradient(top,  #77cedc 0%,#77cedc 50%,#38a4b4 51%,#38a4b4 100%);
+    background: linear-gradient(to bottom, #77cedc 0%,#77cedc 50%,#38a4b4 51%,#38a4b4 100%);
+    background-color:#38a4b4;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    vertical-align: middle;
 }
-/*------------finish grid thiny ----------->*/
+.tiny button i, .grid-small button i, .grid-medium button i, .grid-large button i, .grid-huge button i {
+    font-size: .8em;
+    color: #ffffff;
+    padding-bottom: 3px;
+}
+/*------------finish grid tiny ----------->*/
+/*--------------start grid small --------->*/
+.grid-small {
+    width: 12.63157894736842%;
+    float: left;
+    display: inline-block;
+    margin-left: 2.105263157894737%;
+    margin-right: 2.105263157894737%;
+    position: relative;
+}
+.grid-small:nth-child(6n+0){
+    margin-right: 1.578947368421053%;
+}
+.grid-small:nth-child(6n+1) {
+    margin-left: 1.578947368421053%;
+}
+.grid-medium:nth-child(1n+7) div{
+    margin-top: 5px;
+}
+.grid-small img {
+    width: 100%;
+    height: 120px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.grid-small div {
+    margin-bottom: 15px;
+}
+
+/*--------------finish grid small --------->*/
+
+
+/*--------------start grid medium --------->*/
+
+.grid-medium {
+    width: 14.3859649122807%;
+    float: left;
+    display: inline-block;
+    margin-left: 1.052631578947368%;
+    margin-right: 1.052631578947368%;
+    position: relative;
+}
+.grid-medium:nth-child(6n+0){
+    margin-right: 1.578947368421053%;
+}
+.grid-medium:nth-child(6n+1){
+    margin-left: 1.578947368421053%;
+}
+.grid-medium img {
+    width: 100%;
+    height: 140px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.grid-medium div {
+    background: -moz-linear-gradient(top,  #82c6d0 0%, #82c6d0 50%, #b7e2e4 71%,#b7e2e4 92%, #82c6d0 93%, #82c6d0 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#82c6d0), color-stop(50%,#82c6d0),color-stop(71%,#b7e2e4),color-stop(92%,#b7e2e4), color-stop(93%,#82c6d0), color-stop(100%,#82c6d0));
+    background: -webkit-linear-gradient(top,  #82c6d0 0%,#82c6d0 50%,#b7e2e4 71%,#b7e2e4 92%, #82c6d0 93%,#82c6d0 100%);
+    background: -o-linear-gradient(top,  #82c6d0 0%,#82c6d0 50%,#b7e2e4 71%, #b7e2e4 92%, #82c6d0 93%,#82c6d0 100%);
+    background: -ms-linear-gradient(top,  #82c6d0 0%,#82c6d0 50%,#b7e2e4 71%,#b7e2e4 92%, #82c6d0 93%,#82c6d0 100%);
+    background: linear-gradient(to bottom, #82c6d0 0%,#82c6d0 50%, #b7e2e4 71%,#b7e2e4 92%,#82c6d0 93%,#82c6d0 100%);
+}
+.grid-medium div:hover {
+    background: -moz-linear-gradient(top,  #ffa255 0%, #ffa255 50%, #ffc391 71%,#ffc391 92%, #ffa255 93%, #ffa255 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffa255), color-stop(50%,#ffa255),color-stop(71%,#ffc391),color-stop(92%,#ffc391), color-stop(93%,#ffa255), color-stop(100%,#ffa255));
+    background: -webkit-linear-gradient(top,  #ffa255 0%,#ffa255 50%,#ffc391 71%,#ffc391 92%, #ffa255 93%,#ffa255 100%);
+    background: -o-linear-gradient(top,  #ffa255 0%,#ffa255 50%,#ffc391 71%, #ffc391 92%, #ffa255 93%,#ffa255 100%);
+    background: -ms-linear-gradient(top,  #ffa255 0%,#ffa255 50%,#ffc391 71%,#ffc391 92%, #ffa255 93%,#ffa255 100%);
+    background: linear-gradient(to bottom, #ffa255 0%,#ffa255 50%, #ffc391 71%,#ffc391 92%,#ffa255 93%,#ffa255 100%);
+}
+
+/*--------------finish grid medium --------->*/
+
+/*--------------start grid large--------->*/
+
+.grid-large {
+    width: 16.42105263157895%;
+    float: left;
+    display: inline-block;
+    margin-left: 1.578947368421053%;
+    margin-right: 2.105263157894737%;
+    position: relative;
+}
+.grid-large:nth-child(5n+0){
+    margin-right: 1.578947368421053%;
+}
+.grid-large:nth-child(5n+1){
+    margin-left: 1.578947368421053%;
+}
+.grid-large img {
+    width: 100%;
+    height: 160px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.grid-large div {
+    margin-bottom: 40px;
+}
+.grid-large div:hover, .grid-huge div:hover {
+    background-color: #ffa255;
+    border: 1px solid #ffa255;
+    background: -moz-linear-gradient(top,  #ffa255 0%, #ffa255 50%, #ffc391 71%,#ffc391 94%, #ffa255 95%, #ffa255 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffa255), color-stop(50%,#ffa255),color-stop(71%,#ffc391),color-stop(94%,#ffc391), color-stop(95%,#ffa255), color-stop(100%,#ffa255));
+    background: -webkit-linear-gradient(top,  #ffa255 0%,#ffa255 50%,#ffc391 71%,#ffc391 94%, #ffa255 95%,#ffa255 100%);
+    background: -o-linear-gradient(top,  #ffa255 0%,#ffa255 50%,#ffc391 71%, #ffc391 94%, #ffa255 95%,#ffa255 100%);
+    background: -ms-linear-gradient(top,  #ffa255 0%,#ffa255 50%,#ffc391 71%,#ffc391 94%, #ffa255 95%,#ffa255 100%);
+    background: linear-gradient(to bottom, #ffa255 0%,#ffa255 50%, #ffc391 71%,#ffc391 94%,#ffa255 95%,#ffa255 100%);
+}
+.grid-large div, .grid-huge div {
+    background: -moz-linear-gradient(top,  #82c6d0 0%, #82c6d0 50%, #b7e2e4 71%,#b7e2e4 94%, #82c6d0 95%, #82c6d0 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#82c6d0), color-stop(50%,#82c6d0),color-stop(71%,#b7e2e4),color-stop(94%,#b7e2e4), color-stop(95%,#82c6d0), color-stop(100%,#82c6d0));
+    background: -webkit-linear-gradient(top,  #82c6d0 0%,#82c6d0 50%,#b7e2e4 71%,#b7e2e4 94%, #82c6d0 95%,#82c6d0 100%);
+    background: -o-linear-gradient(top,  #82c6d0 0%,#82c6d0 50%,#b7e2e4 71%, #b7e2e4 94%, #82c6d0 95%,#82c6d0 100%);
+    background: -ms-linear-gradient(top,  #82c6d0 0%,#82c6d0 50%,#b7e2e4 71%,#b7e2e4 94%, #82c6d0 95%,#82c6d0 100%);
+    background: linear-gradient(to bottom, #82c6d0 0%,#82c6d0 50%, #b7e2e4 71%,#b7e2e4 94%,#82c6d0 95%,#82c6d0 100%);
+
+}
+/*--------------finish grid large--------->*/
+
+/*--------------start grid huge--------->*/
+.grid-huge {
+    width: 19.07894736842105%;
+    float: left;
+    display: inline-block;
+    margin-left: 3.684210526315789%;
+    margin-right: 3.157894736842105%;
+    position: relative;
+}
+.grid-huge:nth-child(4n+1){
+    margin-left: 1.578947368421053%;
+}
+.grid-huge:nth-child(4n+0){
+    margin-right: 1.578947368421053%;
+}
+.grid-huge img {
+    width: 100%;
+    height: 190px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.grid-huge:nth-child(1n+5) div{
+    margin-top: 0;
+}
+
+/*--------------finish grid huge--------->*/
+
 li {
     list-style: none;
     padding: 5px 0;
+
 }
 
 .folder-dialog button {
@@ -615,8 +820,12 @@ a .fa-envelope-square {
     border-radius: 9px;
     -moz-border-radius: 9px;
     -webkit-border-radius: 9px;
-    height: 750px;
+    height: 745px;
     background-color: #ffffff;
+    -khtml-box-shadow: inset 0 0 3px #d7d7d9;
+    -moz-box-shadow: inset 0 0 3px #d7d7d9;
+    -webkit-box-shadow: inset 0 0 3px #d7d7d9;
+    box-shadow: inset 0 0 3px #d7d7d9;
 
 }
 .list {

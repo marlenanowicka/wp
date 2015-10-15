@@ -1,6 +1,6 @@
 <header>
     <div class="logo">
-        <a>Wonderpage LOGO</a>
+        <a><img src="../../images/logo.png" alt="Wonderpage"/></a>
     </div>
     <div class="search">
         <p>one page to rule theme all [beta] </p>
@@ -81,8 +81,20 @@
                 <div ng-switch-when="1">
                     <list></list>
                 </div>
-                <div ng-switch-default>
+                <div ng-switch-when="2">
                     <grid></grid>
+                </div>
+                <div ng-switch-when="3">
+                    <grid-small></grid-small>
+                </div>
+                <div ng-switch-when="4">
+                    <grid-medium></grid-medium>
+                </div>
+                <div ng-switch-when="5">
+                    <grid-large></grid-large>
+                </div>
+                <div ng-switch-when="6">
+                    <grid-huge></grid-huge>
                 </div>
             </div>
         </div>

@@ -81,7 +81,7 @@ angular.module('wonderpage', ['ngRoute','ui.bootstrap', 'wonderpage.public_feed'
                 value: 'huge'
             }
         ];
-        $scope.selectionSize = {'id': '2', value: 'thiny'};
+        $scope.selectionSize = {'id': '6', value: 'huge'};
     }])
     .directive('toggle', function(){
         return {
