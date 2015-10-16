@@ -1,5 +1,5 @@
 'use strict';
-angular.module('wonderpage', ['ngRoute','ui.bootstrap', 'wonderpage.public_feed', 'wonderpage.bookmarks_views', 'wonderpage.dialog', 'wonderpage.fallowing', 'wonderpage.public_profile' ])
+angular.module('wonderpage', ['ngRoute','ui.bootstrap', 'wonderpage.public_feed', 'wonderpage.bookmarks_views', 'wonderpage.dialog', 'wonderpage.fallowing', 'wonderpage.public_profile', 'wonderpage.allPublicUsers' ])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.
             when('/', {
@@ -11,8 +11,17 @@ angular.module('wonderpage', ['ngRoute','ui.bootstrap', 'wonderpage.public_feed'
             });
     }]).controller("Ctrl1",['$scope', 'dialogService','BookmarksServices', function($scope, dialogService, BookmarksServices){
         //$scope.myItemPerPage = 4;
+        $scope.isInfo = false;
+        $scope.showMe = function(){
+            $scope.show=true;
+        }
+        $scope.hideMe = function(){
+            $scope.show=false;
+        }
+
         $scope.inputOpen = false;
         $scope.tab = 'home';
+
         $scope.items = function($scope) {
 
             BookmarksServices.getBookmarks();
@@ -81,7 +90,7 @@ angular.module('wonderpage', ['ngRoute','ui.bootstrap', 'wonderpage.public_feed'
                 value: 'huge'
             }
         ];
-        $scope.selectionSize = {'id': '6', value: 'huge'};
+        $scope.selectionSize = {'id': '1', value: 'list'};
     }])
     .directive('toggle', function(){
         return {
@@ -91,19 +100,4 @@ angular.module('wonderpage', ['ngRoute','ui.bootstrap', 'wonderpage.public_feed'
                     $(element).tooltip();
                 }
             }
-    }).directive('tooltip', function () {
-        return {
-            restrict:'A',
-            replace: true,
-            transclude: true,
-            template: '<div class="tooltip-bookmark">'+
-            '<img ng-src="images/avatar.jpg" /><a href="onet.pl">http://www.onet.pl</a>' +
-            '</div>',
-            link: function(scope, element, attrs)
-            {
-                $(element)
-                    .attr('title',scope.$eval(attrs.tooltip))
-                    .tooltip({placement: "left"});
-            }
-        }
     });

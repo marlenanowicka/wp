@@ -5,7 +5,7 @@
     <div class="search">
         <p>one page to rule theme all [beta] </p>
         <a ng-click="openProfile()"><i class="fa fa-wrench fa-2x"></i></a>
-        <a><i class="fa fa-book fa-2x"></i></a>
+        <a ng-class="{active: tab == 'search-results'}" ng-click="showMe();tab='search-results'"><i class="fa fa-book fa-2x"></i></a>
         <div class="search-group">
             <input ng-model="search" type="text" class="search-control" placeholder="search phrase"/>
             <select class="search-control my-select">
@@ -28,34 +28,39 @@
     <div class="my-top-border-left"></div>
     <nav>
         <ul>
-            <li>
-                <span ng-click="openFolder()" class="fa fa-wrench"></span>
-                <a data-toggle="tooltip" data-placement="right" title="Home" ng-class="{active: tab == 'home'}" ng-click="tab='home'"> Homeeeeeeeeeeeeeee</a>
+            <li ng-class="{active: tab == 'home'}" ng-click="tab='home'">
+                <span ng-show="tab =='home'" ng-click="openFolder()" class="fa fa-wrench"></span>
+                <a data-toggle="tooltip" data-placement="right" title="Home"> Homeeeeeeeeeeeeeee</a>
                 <i class="glyphicon glyphicon-user"></i>
             </li>
-            <li><span ng-click="openFolder()" class="fa fa-wrench"></span>
-                <a data-toggle="tooltip" data-placement="right" title="moda" ng-class="{active: tab == 'moda'}" ng-click="tab='moda'"> moda</a>
+            <li ng-class="{active: tab == 'moda'}" ng-click="tab='moda'"><span ng-click="openFolder()" class="fa fa-wrench"></span>
+                <a data-toggle="tooltip" data-placement="right" title="moda"> moda</a>
                 <i class="glyphicon glyphicon-lock"></i>
             </li>
         </ul>
     </nav>
     <div class="my-top-border-left"></div>
-    <div class="menu-static">
-            <div><a ng-class="{active: tab == 'fallowing'}" ng-click="tab='fallowing'">i'm fallowing</a>
-                <i class="glyphicon glyphicon-share-alt"></i>
+    <div class="menu-static1">
+            <div ng-class="{active: tab == 'fallowing'}" ng-click="tab='fallowing'">
+                <a>i'm following<i class="glyphicon glyphicon-share-alt"></i></a>
             </div>
-            <div><a ng-class="{active: tab == 'fallowers'}" ng-click="tab='fallowers'">my fallowers</a>
-                <i class="glyphicon glyphicon-share-alt"></i>
+            <div ng-class="{active: tab == 'fallowers'}" ng-click="tab='fallowers'">
+                <a >my followers<i class="glyphicon glyphicon-share-alt"></i></a>
             </div>
     </div>
     <div class="my-top-border-left"></div>
-    <div class="menu-static">
-        <div><a ng-class="{active: tab == 'most_viewied'}" ng-click="tab='most_viewied'">most viewied</a>
-            <i class="glyphicon glyphicon-signal"></i>
+    <div class="menu-static2">
+        <div ng-class="{active: tab == 'most_viewied'}" ng-click="tab='most_viewied'">
+            <a>most viewied<i class="glyphicon glyphicon-signal"></i></a>
         </div>
-        <div><a ng-class="{active: tab == 'recently_added'}" ng-click="tab='recently_added'">recently added</a>
-            <i class="glyphicon glyphicon-certificate"></i>
+        <div ng-class="{active: tab == 'recently_added'}" ng-click="tab='recently_added'">
+            <a>recently added<i class="glyphicon glyphicon-certificate"></i></a>
         </div>
+    </div>
+    <div ng-show="show" class="my-top-border-left"></div>
+    <div ng-show="show" class="search-results">
+        <a class="active"><span ng-click="hideMe();" class="fa fa-times"></span>search results<i class="glyphicon glyphicon-search"></i></a>
+
     </div>
     <div class="my-top-border-left"></div>
     <form class="menu-button" ng-submit="add(view)">
@@ -76,25 +81,16 @@
             <h3>fallowers</h3><br />
             fallowers fallowers fallowers fallowers fallowers fallowers
         </div>
+        <div ng-switch-when="search-results">
+            <all-users></all-users>
+        </div>
         <div ng-switch-when="home">
             <div ng-switch on="selectionSize.id">
                 <div ng-switch-when="1">
                     <list></list>
                 </div>
-                <div ng-switch-when="2">
-                    <grid></grid>
-                </div>
-                <div ng-switch-when="3">
-                    <grid-small></grid-small>
-                </div>
-                <div ng-switch-when="4">
-                    <grid-medium></grid-medium>
-                </div>
-                <div ng-switch-when="5">
-                    <grid-large></grid-large>
-                </div>
-                <div ng-switch-when="6">
-                    <grid-huge></grid-huge>
+                <div ng-switch-default>
+                    <grid ng-class="[selectionSize.value]"></grid>
                 </div>
             </div>
         </div>
