@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('wonderpage.allPublicUsers')
+angular.module('wonderpage.search_results')
     .factory('usersPublic',
     function usersPublic() {
         return {

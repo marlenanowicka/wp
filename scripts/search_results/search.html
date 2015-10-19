@@ -1,0 +1,21 @@
+<div class="my-table-results">
+    <div class="results-info">
+        <p><i class="glyphicon glyphicon-search"></i>{{allUsers.length}} search results for "everyone" within Users</p>
+    </div>
+    <ul class="header-table-results">
+        <li></li>
+        <li>name</li>
+        <li>url</li>
+        <li>destription</li>
+        <li></li>
+    </ul>
+    <ul class="row-table-results" ng-repeat="item in Results">
+        <li><img ng-src="{{item.screen}}"/></li>
+        <li style="color: #49b9ca">{{item.name}}</li>
+        <li>{{item.address}}</li>
+        <li>{{item.description}}</li>
+        <li><button class=" btn btn-xs"><i class="glyphicon glyphicon-user"></i></button>
+            <button ng-click="openBookmark()"class="btn btn-xs"><i class="fa fa-wrench"></i></button>
+        </li>
+    </ul>
+</div>

@@ -7,6 +7,7 @@ angular.module('wonderpage', [
     'wonderpage.bookmarks_views',
     'wonderpage.dialog',
     'wonderpage.fallowing',
-    'wonderpage.public_profile'
+    'wonderpage.public_profile',
+    'wonderpage.search_results'
 
 ]);

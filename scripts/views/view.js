@@ -1,5 +1,5 @@
 'use strict';
-angular.module('wonderpage', ['ngRoute','ui.bootstrap', 'wonderpage.public_feed', 'wonderpage.bookmarks_views', 'wonderpage.dialog', 'wonderpage.fallowing', 'wonderpage.public_profile', 'wonderpage.allPublicUsers' ])
+angular.module('wonderpage', ['ngRoute','ui.bootstrap', 'wonderpage.public_feed', 'wonderpage.bookmarks_views', 'wonderpage.dialog', 'wonderpage.fallowing', 'wonderpage.public_profile', 'wonderpage.search_results' ])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.
             when('/', {
@@ -9,18 +9,19 @@ angular.module('wonderpage', ['ngRoute','ui.bootstrap', 'wonderpage.public_feed'
             otherwise({
                 redirectTo: '/'
             });
-    }]).controller("Ctrl1",['$scope', 'dialogService','BookmarksServices', function($scope, dialogService, BookmarksServices){
+    }]).controller("Ctrl1",['$scope', 'dialogService','BookmarksServices', 'search', function($scope, dialogService, BookmarksServices, search){
         //$scope.myItemPerPage = 4;
-        $scope.isInfo = false;
+        $scope.Results = search.getResults();
+
         $scope.showMe = function(){
             $scope.show=true;
-        }
+        };
         $scope.hideMe = function(){
             $scope.show=false;
-        }
+        };
 
         $scope.inputOpen = false;
-        $scope.tab = 'home';
+        $scope.tab = 'followers';
 
         $scope.items = function($scope) {
 

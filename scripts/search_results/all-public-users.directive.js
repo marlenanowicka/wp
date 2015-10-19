@@ -1,5 +1,5 @@
 'use strict';
-angular.module('wonderpage.allPublicUsers',[])
+angular.module('wonderpage.search_results',[])
     .directive('allUsers', ['usersPublic', function (usersPublic) {
         return {
             restrict: 'E',
