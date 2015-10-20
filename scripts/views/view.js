@@ -65,6 +65,11 @@ angular.module('wonderpage', ['ngRoute','ui.bootstrap', 'wonderpage.public_feed'
             dialogService.openProfileSettingsDialog();
         };
 
+        $scope.select = '123';
+        $scope.options = [
+            {id:"1", msg:"my pages"},
+            {id:"2", msg:"all pages"},
+            {id:"3", msg:"users" }];
 
         $scope.simpleSizeValue = [{
             'id': '1',
@@ -101,4 +106,18 @@ angular.module('wonderpage', ['ngRoute','ui.bootstrap', 'wonderpage.public_feed'
                     $(element).tooltip();
                 }
             }
+    }).directive('ccSelect', function() {
+        return {
+            restrict: 'AEC',
+            require: ['^select', '^ngModel'],
+            transclude: true,
+            scope: {
+                ngModel: "=",
+                select: "="
+            },
+            template: '<label><select ng-model="select" ng-options="c.msg for c in ngModel"><option value="">my pages</option></select></label>',
+            controller: ['$scope', function($scope) {
+
+            }]
+        }
     });

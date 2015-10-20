@@ -78,6 +78,62 @@ header a {
     float: left;
     cursor:pointer;
     margin-bottom: 1px;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    padding-left: 0;
+}
+.search-group > .my-select label {
+    position: relative;
+    margin-bottom: 0;
+  }
+.search-group > .my-select label::after {
+    content:'>';
+    font-size:1.3em;
+    background: rgba(50,143,157,1);
+    background: -moz-linear-gradient(-45deg, rgba(185,234,240,1) 0%, rgba(50,143,157,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(185,234,240,1)), color-stop(100%, rgba(50,143,157,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(185,234,240,1) 0%, rgba(50,143,157,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(185,234,240,1) 0%, rgba(50,143,157,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(185,234,240,1) 0%, rgba(50,143,157,1) 100%);
+    background: linear-gradient(135deg, rgba(185,234,240,1) 0%, rgba(50,143,157,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b9eaf0', endColorstr='#328f9d', GradientType=1 );
+    color:#fff;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+    right:0;
+    top:2px;
+    text-align: center;
+    width: 14px;
+    height: 14px;
+    position:absolute;
+    pointer-events:none;
+}
+.search-group > .my-select label::before {
+    content:'';
+    right:0;
+    top:2px;
+    width:14px;
+    height:14px;
+    background: rgba(50,143,157,1);
+    background: -moz-linear-gradient(-45deg, rgba(185,234,240,1) 0%, rgba(50,143,157,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(185,234,240,1)), color-stop(100%, rgba(50,143,157,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(185,234,240,1) 0%, rgba(50,143,157,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(185,234,240,1) 0%, rgba(50,143,157,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(185,234,240,1) 0%, rgba(50,143,157,1) 100%);
+    background: linear-gradient(135deg, rgba(185,234,240,1) 0%, rgba(50,143,157,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b9eaf0', endColorstr='#328f9d', GradientType=1 );
+    background:#fff;
+    position:absolute;
+    pointer-events:none;
+    display:block;
+}
+select::-ms-expand {
+    display: none;
 }
 .search-control {
     padding: 0 3px;
@@ -119,6 +175,7 @@ input, textarea, select {
     background-color: #ffffff;
 }
 button[type="submit"]{
+    position:relative;
     padding-bottom: 2px;
     border: 1px solid lightseagreen;
     border-radius: 3px;
@@ -132,10 +189,6 @@ button[type="submit"]{
     background: -ms-linear-gradient(top,  #dff0f4 0%,rgba(56,149,172,1) 50%,rgba(35,131,155,1) 51%,rgba(19,121,147,1) 51%,rgba(0,118,148,1) 100%);
     background: linear-gradient(to bottom, #dff0f4 0%,rgba(56,149,172,1) 50%,rgba(35,131,155,1) 51%,rgba(19,121,147,1) 51%,rgba(0,118,148,1) 100%);
     background-color:lightseagreen;
-    transition-duration:4s;
-    -webkit-transition-duration:4s;
-    transition-property:background;
-    transition-timing-function:linear;
 }
 button[type="submit"]:hover{
     background: linear-gradient(to top, #dff0f4 0%,rgba(56,149,172,1) 50%,rgba(35,131,155,1) 51%,rgba(19,121,147,1) 51%,rgba(0,118,148,1) 100%);
@@ -563,7 +616,7 @@ input[type="text"].myBlur :-ms-input-placeholder { /* Internet Explorer 10-11 */
 /*----------ned public feed -------------->*/
 
 /*------------start footer -------------->*/
-.size-bookmark select{
+.size-bookmark select, .fileUpload{
     margin-top: 15px;
     border: 1px solid #d7d6d6;
     background: rgba(250,250,250,1);
@@ -1098,6 +1151,7 @@ a .fa-envelope-square {
     transition-duration:400ms;
     -webkit-transition-duration:400ms;
     transition-property:background-color;
+   color: #4d5c67;
 }
 .my-table li, .my-table-results li {
     display: inline-block;
@@ -1172,15 +1226,13 @@ a .fa-envelope-square {
     background-color: #edebec;
 }
 .row-table-results li {
-    border-left-style: dotted;
-    border-color: gray;
-    border-width: 1px;
     line-height: 35px;
     white-space:nowrap;
     overflow:hidden;
     text-overflow:clip;
     display: inline-block;
     padding: 5px 8px 0 8px;
+    cursor: pointer;
 }
 .row-table-results li button {
     box-shadow: 0 0 1px 1px rgba(50,143,157,1) inset;
@@ -1217,6 +1269,16 @@ a .fa-envelope-square {
     background: -ms-linear-gradient(-45deg, rgba(50,143,157,1) 0%, rgba(185,234,240,1) 100%);
     background: linear-gradient(135deg, rgba(50,143,157,1) 0%, rgba(185,234,240,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#328f9d', endColorstr='#b9eaf0', GradientType=1 );
+}
+.row-table-results li:nth-child(1n+3) a {
+    border-left-style: dotted;
+    border-color: gray;
+    border-width: 1px;
+    padding-left: 8px;
+}
+.row-table-results li a {
+    color: #4d5c67;
+    text-decoration: none;
 }
 .send-message {
     font-size: 12px;
@@ -1367,6 +1429,22 @@ a .fa-envelope-square {
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
 }
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 1px;
+    font-size: .8em;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
 .left-profile-right > .radio-btn p {
     width: 35%;
     display: inline-block;
@@ -1382,6 +1460,9 @@ a .fa-envelope-square {
     border-left-style: dotted;
     border-color: gray;
     border-width: 1px;
+}
+.right-profile {
+    padding-right: 10px;
 }
 .right-profile {
     border-left-style: dotted;

@@ -10,12 +10,13 @@
         <li></li>
     </ul>
     <ul class="row-table-results" ng-repeat="item in Results">
-        <li><img ng-src="{{item.screen}}"/></li>
-        <li style="color: #49b9ca">{{item.name}}</li>
-        <li>{{item.address}}</li>
-        <li>{{item.description}}</li>
-        <li><button class=" btn btn-xs"><i class="glyphicon glyphicon-user"></i></button>
+        <li><a href="{{item.address}}" target="_blank"><img ng-src="{{item.screen}}"/></a></li>
+        <li><a href="{{item.address}}" target="_blank" style="color: #49b9ca">{{item.name}}</a></li>
+        <li><a href="{{item.address}}" target="_blank">{{item.address}}</a></li>
+        <li><a href="{{item.address}}" target="_blank">{{item.description}}</a></li>
+        <li><a><button class=" btn btn-xs"><i class="glyphicon glyphicon-user"></i></button>
             <button ng-click="openBookmark()"class="btn btn-xs"><i class="fa fa-wrench"></i></button>
+            </a>
         </li>
     </ul>
 </div>

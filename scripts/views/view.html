@@ -8,11 +8,8 @@
         <a ng-class="{active: tab == 'search-results'}" ng-click="showMe();tab='search-results'"><i class="fa fa-book fa-2x"></i></a>
         <div class="search-group">
             <input ng-model="search" type="text" class="search-control" placeholder="search phrase"/>
-            <select class="search-control my-select">
-                <option value="my pages">my pages</option>
-                <option value="all pages">all pages</option>
-                <option value="users">users</option>
-            </select>
+            <cc-select select="select" ng-model="options" class="search-control my-select">
+            </cc-select>
             <button class="search-control" type="submit">search</button>
         </div>
 
@@ -95,7 +92,7 @@
         </div>
     </div>
 </section>
-<section class="sidebar">
+<aside class="sidebar">
     <div ng-switch="tab">
         <div ng-switch-when="profile">
 
@@ -105,7 +102,7 @@
             <public-feed></public-feed>
         </div>
     </div>
-</section>
+</aside>
 <footer>
     <div class="size-bookmark">
         <p>ikona miniatur</p>
