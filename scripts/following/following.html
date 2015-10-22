@@ -2,17 +2,17 @@
             <ul class="header-table">
                 <li></li>
                 <li>name</li>
-                <li>fallowers</li>
-                <li>fallowing</li>
+                <li>followers</li>
+                <li>following</li>
                 <li>status</li>
                 <li></li>
             </ul>
             <ul class="row-table" ng-repeat="item in users">
                 <li><img ng-src="{{item.avatar}}"/></li>
                 <li style="color: #49b9ca">{{item.user_name}}</li>
-                <li>{{item.quantity_fallowers}}</li>
-                <li>{{item.quantity_fallowing}}</li>
-                <li>{{item.status_fallowing}}</li>
+                <li>{{item.quantity_followers}}</li>
+                <li>{{item.quantity_following}}</li>
+                <li>{{item.status_following}}</li>
                 <li><button ng-class="{active: tab == 'profile'}" ng-click="tab='profile'" class=" btn btn-xs">profile</button>
                 <button ng-click="openMessage()" class="btn btn-xs">send message</button>
                 <button ng-click="openUnfollow()" class="btn btn-xs">unfollow</button></li>

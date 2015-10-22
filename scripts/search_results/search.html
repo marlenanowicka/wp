@@ -1,6 +1,6 @@
 <div class="my-table-results">
     <div class="results-info">
-        <p><i class="glyphicon glyphicon-search"></i>{{allUsers.length}} search results for "everyone" within Users</p>
+        <p><i class="glyphicon glyphicon-search"></i>{{allUsers.length}} search results for "{{searchText}}" within Users</p>
     </div>
     <ul class="header-table-results">
         <li></li>
@@ -9,7 +9,7 @@
         <li>destription</li>
         <li></li>
     </ul>
-    <ul class="row-table-results" ng-repeat="item in Results">
+    <ul class="row-table-results" ng-repeat="item in Results | filter: searchText: select">
         <li><a href="{{item.address}}" target="_blank"><img ng-src="{{item.screen}}"/></a></li>
         <li><a href="{{item.address}}" target="_blank" style="color: #49b9ca">{{item.name}}</a></li>
         <li><a href="{{item.address}}" target="_blank">{{item.address}}</a></li>

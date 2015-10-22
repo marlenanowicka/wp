@@ -6,7 +6,7 @@ angular.module('wonderpage', [
     'wonderpage.public_feed',
     'wonderpage.bookmarks_views',
     'wonderpage.dialog',
-    'wonderpage.fallowing',
+    'wonderpage.following',
     'wonderpage.public_profile',
     'wonderpage.search_results'
 

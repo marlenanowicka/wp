@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('wonderpage.fallowing')
+angular.module('wonderpage.following')
     .factory('usersServices',
     function usersServices() {
         return {
@@ -8,44 +8,44 @@ angular.module('wonderpage.fallowing')
                 return [{
                     avatar: '../../images/avatar.jpg',
                     user_name: 'przemek.nowicki',
-                    quantity_fallowers: '4',
-                    quantity_fallowing: '4',
-                    status_fallowing: 'y'
+                    quantity_followers: '4',
+                    quantity_following: '4',
+                    status_following: 'y'
                      },
                     {
                         avatar: '../../images/avatar.jpg',
                         user_name: 'przemek.nowicki',
-                        quantity_fallowers: '4',
-                        quantity_fallowing: '1',
-                        status_fallowing: 'y'
+                        quantity_followers: '4',
+                        quantity_following: '1',
+                        status_following: 'y'
                     },
                     {
                         avatar: '../../images/avatar.jpg',
                         user_name: 'przemek.nowicki',
-                        quantity_fallowers: '4',
-                        quantity_fallowing: '0',
-                        status_fallowing: 'y'
+                        quantity_followers: '4',
+                        quantity_following: '0',
+                        status_following: 'y'
                     },
                     {
                         avatar: '../../images/avatar.jpg',
                         user_name: 'przemek.nowicki',
-                        quantity_fallowers: '4',
-                        quantity_fallowing: '3',
-                        status_fallowing: 'n'
+                        quantity_followers: '4',
+                        quantity_following: '3',
+                        status_following: 'n'
                     },
                     {
                         avatar: '../../images/avatar.jpg',
                         user_name: 'przemek.nowicki',
-                        quantity_fallowers: '2',
-                        quantity_fallowing: '4',
-                        status_fallowing: 'n'
+                        quantity_followers: '2',
+                        quantity_following: '4',
+                        status_following: 'n'
                     },
                     {
                         avatar: '../../images/avatar.jpg',
                         user_name: 'przemek.nowicki',
-                        quantity_fallowers: '1',
-                        quantity_fallowing: '9',
-                        status_fallowing: 'y'
+                        quantity_followers: '1',
+                        quantity_following: '9',
+                        status_following: 'y'
                     }
                 ];
             }
