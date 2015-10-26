@@ -1,0 +1,22 @@
+<header>
+    <div class="logo">
+        <a><img src="../../images/logo.png" alt="Wonderpage"/></a>
+    </div>
+    <div class="search">
+        <p>one page to rule theme all [beta] </p>
+        <a ng-click="openProfile()"><i class="fa fa-wrench fa-2x"></i></a>
+        <a ng-class="{active: tab == 'search-results'}" ng-click="showMe();tab='search-results'">
+            <i class="fa fa-book fa-2x"></i>
+        </a>
+        <form class="search-group">
+            <input ng-model="searchText" type="text" class="search-control" placeholder="search phrase"/>
+            <cc-select select="select" ng-model="options" class="search-control my-select"></cc-select>
+            <button ng-click="filter" class="search-control" type="submit">search</button>
+        </form>
+    </div>
+    <div class="login">
+        <img ng-src="../../images/avatar.jpg" />
+        <p>Logged as:</p>
+        <p>ANA</p>
+    </div>
+</header>

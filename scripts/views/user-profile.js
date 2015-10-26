@@ -1,36 +1,6 @@
 'use strict';
-angular.module('wonderpage', ['ngRoute','ui.bootstrap', 'wonderpage.public_feed', 'wonderpage.bookmarks_views', 'wonderpage.dialog', 'wonderpage.following', 'wonderpage.public_profile', 'wonderpage.search_results' ])
-    .config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) {
-        $routeProvider.
-            when('/', {
-                templateUrl: 'scripts/views/home.html',
-                controller: 'Ctrl1'
-            }).
-            when('/folderType/folderAssets/folder/folderId', {
-                templateUrl:'scripts/bookmarks_views/list.html',
-                controller: 'myController'
-            }).
-            when('/folderType/folderFollowing', {
-                templateUrl:'scripts/following/following.html',
-                controller: 'myController'
-            }).
-            when('/folderType/folderFollowers', {
-                templateUrl:'scripts/following/following.html',
-                controller: 'myController'
-            }).
-            when('/folderType/mostViewed', {
-                templateUrl:'scripts/following/following.html',
-                controller: 'myController'
-            }).
-            when('/folderType/recentlyAdded', {
-                templateUrl:'scripts/following/following.html',
-                controller: 'myController'
-            }).
-            otherwise({
-                redirectTo: '/'
-            });
-
-    }]).controller("Ctrl1",['$scope', 'dialogService','BookmarksServices', 'search', function($scope, dialogService, BookmarksServices, search){
+angular.module('wonderpage')
+    .controller("Ctrl1",['$scope', 'dialogService','BookmarksServices','search', function($scope, dialogService, BookmarksServices, search){
         //$scope.myItemPerPage = 4;
         $scope.Results = search.getResults();
 

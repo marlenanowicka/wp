@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('wonderpage', [
-    'ngRoute',
+    'ui.router',
     'wonderpage.views',
     'wonderpage.public_feed',
     'wonderpage.bookmarks_views',

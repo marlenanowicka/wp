@@ -1,32 +1,11 @@
-<header>
-    <div class="logo">
-        <a><img src="../../images/logo.png" alt="Wonderpage"/></a>
-    </div>
-    <div class="search">
-        <p>one page to rule theme all [beta] </p>
-        <a ng-click="openProfile()"><i class="fa fa-wrench fa-2x"></i></a>
-        <a ng-class="{active: tab == 'search-results'}" ng-click="showMe();tab='search-results'"><i class="fa fa-book fa-2x"></i></a>
-        <form class="search-group">
-            <input ng-model="searchText" type="text" class="search-control" placeholder="search phrase"/>
-            <cc-select select="select" ng-model="options" class="search-control my-select">
-            </cc-select>
-            <button ng-click="filter" class="search-control" type="submit">search</button>
-        </form>
-    </div>
-    <div class="login">
-        <img ng-src="../../images/avatar.jpg" />
-        <p>Logged as:</p>
-        <p>ANA</p>
-    </div>
-</header>
-
+<div ui-view="header"></div>
 <div class="menu">
     <div class="my-top-border-left"></div>
     <nav>
         <ul>
             <li ng-class="{active: tab == 'home'}" ng-click="tab='home'">
                 <span ng-click="openFolder()" class="fa fa-wrench"></span>
-                <a href="/folderType/folderAssets/folder" data-toggle="tooltip" data-placement="right" title="Home"> Homeeeeeeeeeeeeeee</a>
+                <a ui-sref-active="active" ui-sref=".folder" data-toggle="tooltip" data-placement="right" title="Home"> Homeeeeeeeeeeeeeee</a>
                 <i class="glyphicon glyphicon-user"></i>
             </li>
             <li ng-class="{active: tab == 'moda'}" ng-click="tab='moda'"><span ng-click="openFolder()" class="fa fa-wrench"></span>
@@ -38,19 +17,19 @@
     <div class="my-top-border-left"></div>
     <div class="menu-static1">
             <div ng-class="{active: tab == 'following'}" ng-click="tab='following'">
-                <a>i'm following<i class="glyphicon glyphicon-share-alt"></i></a>
+                <a ui-sref-active="active" ui-sref=".folderFollowing" >i'm following<i class="glyphicon glyphicon-share-alt"></i></a>
             </div>
             <div ng-class="{active: tab == 'followers'}" ng-click="tab='followers'">
-                <a >my followers<i class="glyphicon glyphicon-share-alt"></i></a>
+                <a ui-sref-active="active" ui-sref=".folderFollowers" >my followers<i class="glyphicon glyphicon-share-alt"></i></a>
             </div>
     </div>
     <div class="my-top-border-left"></div>
     <div class="menu-static2">
         <div ng-class="{active: tab == 'most_viewied'}" ng-click="tab='most_viewied'">
-            <a>most viewied<i class="glyphicon glyphicon-signal"></i></a>
+            <a ui-sref-active="active" ui-sref=".mostViewed">most viewied<i class="glyphicon glyphicon-signal"></i></a>
         </div>
         <div ng-class="{active: tab == 'recently_added'}" ng-click="tab='recently_added'">
-            <a>recently added<i class="glyphicon glyphicon-certificate"></i></a>
+            <a ui-sref-active="active" ui-sref=".recentlyAdded">recently added<i class="glyphicon glyphicon-certificate"></i></a>
         </div>
     </div>
     <div ng-show="show" class="my-top-border-left"></div>
@@ -68,9 +47,7 @@
         </div>
     </form>
 </div>
-<section class="content">
-    <div ui-view></div>
-</section>
+<section class="content" ui-view></section>
 <aside class="sidebar">
     <div ng-switch="tab">
         <div ng-switch-when="profile">
@@ -82,10 +59,4 @@
         </div>
     </div>
 </aside>
-<footer>
-    <div class="size-bookmark">
-        <p>ikona miniatur</p>
-        <select class="dropup" id="simpleSizeSel" ng-model="selectionSize"  ng-options="option.value for option in simpleSizeValue track by option.id">
-        </select>
-        </div>
-</footer>
+<div ui-view="footer"></div>

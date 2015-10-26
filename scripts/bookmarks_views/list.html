@@ -1,5 +1,4 @@
-
-    <div class="list" ng-controller="myController">
+<div class="list" ng-controller="myController">
         <ul ng-repeat="view in lists track by $index" >
             <li><a><img ng-src="images/{{view.screen}}" /></a></li>
             <li><a style="color: #49b9ca">{{view.name}}</a></li>
@@ -16,4 +15,4 @@
             <input  ng-class="{ myFocus: focus, myBlur: blur }" ng-focus="focus=true;blur=false;" ng-blur="blur=true;focus=false;" type="text" placeholder="add folder" ng-model="view.name"/>
             <button><i class="glyphicon glyphicon-plus"></i></button>
         </form>
-    </div>
+</div>
