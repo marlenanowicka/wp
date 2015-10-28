@@ -1,0 +1,26 @@
+<div ui-view="header"></div>
+<div class="menu">
+    <div class="my-top-border-left"></div>
+        <menu folders="folders"></menu>
+    <div class="my-top-border-left"></div>
+        <follow></follow>
+    <div class="my-top-border-left"></div>
+        <statistics></statistics>
+    <div ng-show="show" class="my-top-border-left"></div>
+        <result></result>
+    <div class="my-top-border-left"></div>
+        <menu-action></menu-action>
+</div>
+<section class="content" ui-view></section>
+<aside class="sidebar">
+    <div ng-switch="tab">
+        <div ng-switch-when="profile">
+
+            <public-profile></public-profile>
+        </div>
+        <div ng-switch-default>
+            <public-feed></public-feed>
+        </div>
+    </div>
+</aside>
+<div ui-view="footer"></div>

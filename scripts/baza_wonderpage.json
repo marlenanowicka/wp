@@ -1,0 +1,140 @@
+[
+  {
+	"folderId": "1",
+	"name": "Home",
+	"privacy": "private",
+	"description": "",
+	"bookmark": [
+	  {
+		"id": "1",
+		"name": "Yellow Jasmine",
+		"address": "www.yellowjasmine.pl",
+		"description": "",
+		"keywords": "",
+		"privacy": "private",
+		"screen": "",
+		"add_date": "Sep 2015 - Thu the 23th"
+	  },
+	  {
+		"id": "2",
+		"name": "Czyste Auto",
+		"address": "www.czysteaut.pl",
+		"description": "",
+		"keywords": "",
+		"privacy": "private",
+		"screen": "",
+		"add_date": "Sep 2013 - Thu the 12th"
+	  },
+	  {
+		"id": "3",
+		"name": "Wykop",
+		"address": "www.wykop.pl",
+		"description": "",
+		"keywords": "",
+		"privacy": "private",
+		"screen": "",
+		"add_date": "Nov 2015 - Thu the 10th"
+	  },
+	  {
+		"id": "4",
+		"name": "Czyste Auto",
+		"address": "www.czysteaut.pl",
+		"description": "",
+		"keywords": "",
+		"privacy": "private",
+		"screen": "",
+		"add_date": "Sep 2013 - Thu the 12th"
+	  },
+	  {
+		"id": "5",
+		"name": "Onet",
+		"address": "www.onet.pl",
+		"description": "",
+		"keywords": "",
+		"privacy": "private",
+		"screen": "",
+		"add_date": "Sep 2013 - Thu the 12th"
+	  },
+	  {
+		"id": "6",
+		"name": "Interia",
+		"address": "www.interia.pl",
+		"description": "Najświeższe informacje z Polski i ze Świata. Z nami jako pierwszy będziesz wiedział co dzieje się w twoim kraju.",
+		"keywords": "",
+		"privacy": "private",
+		"screen": "",
+		"add_date": "Sep 2013 - Thu the 12th"
+	  },
+	  {
+		"id": "7",
+		"name": "Stylowi",
+		"address": "www.stylowi.pl",
+		"description": "Strona zawiera różnego rodzaju inspiracje, zdjęcia ze świata mody i sportu, ćwiczenia na płaski brzuch oraz wiele innych ciekawych inspiracji",
+		"keywords": "",
+		"privacy": "private",
+		"screen": "",
+		"add_date": "Sep 2013 - Thu the 12th"
+	  }
+	]
+  },
+  {
+	"folderId": "2",
+	"name": "Moda",
+	"privacy": "private",
+	"description": "",
+	"bookmark": [
+				{
+				  "name": "Stylowi",
+				  "address": "www.stylowi.pl",
+				  "description": "",
+				  "keywords": "",
+				  "privacy": "private",
+				  "screen": "",
+				  "add_date": "Jul 2015 - Thu the 9th"
+				},
+				{
+				  "id": "2",
+				  "name": "Onet",
+				  "address": "www.onet.pl",
+				  "description": "",
+				  "keywords": "",
+				  "privacy": "private",
+				  "screen": "",
+				  "add_date": "Sep 2013 - Thu the 12th"
+				},
+				{
+				  "id": "2",
+				  "name": "Interia",
+				  "address": "www.interia.pl",
+				  "description": "Najświeższe informacje z Polski i ze Świata. Z nami jako pierwszy będziesz wiedział co dzieje się w twoim kraju.",
+				  "keywords": "",
+				  "privacy": "private",
+				  "screen": "",
+				  "add_date": "Sep 2013 - Thu the 12th"
+				}]
+  },
+  {
+	"folderId": "3",
+	"name": "Motorcycle",
+	"privacy": "private",
+	"description": "",
+	"bookmark":[{
+				"name": "Motor",
+				"address": "www.aaa.pl",
+				"description": "",
+				"keywords": "",
+				"privacy": "private",
+				"screen": "",
+				"add_date": "Jul 2015 - Thu the 9th"
+				},
+					{
+				"id": "2",
+				"name": "Tuning",
+				"address": "www.tuning.pl",
+				"description": "",
+				"keywords": "",
+				"privacy": "private",
+				"screen": "",
+				"add_date": "Sep 2013 - Thu the 12th"
+			}]
+}]

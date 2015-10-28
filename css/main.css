@@ -214,6 +214,7 @@ button[type="submit"]:hover{
 }
 .login p:last-child  {
     font-size: 1.2em;color: #000000;
+    text-transform: none;
 }
 
 

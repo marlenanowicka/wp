@@ -1,6 +1,14 @@
 'use strict';
 angular.module('wonderpage')
-    .controller("Ctrl1",['$scope', 'dialogService','BookmarksServices','search', function($scope, dialogService, BookmarksServices, search){
+    .controller("UserProfileCtrl",['$scope','$http', 'dialogService','BookmarksServices','search', function($scope, $http, dialogService, BookmarksServices, search, $stateParams){
+        $http.get('scripts/users.json').success(function(data){
+            $scope.items = data;
+        });
+        $http.get('scripts/baza_wonderpage.json').success(function(response){
+            $scope.folders = response;
+        });
+
+        $scope.test = '123';
         //$scope.myItemPerPage = 4;
         $scope.Results = search.getResults();
 
@@ -13,11 +21,6 @@ angular.module('wonderpage')
 
         $scope.inputOpen = false;
         $scope.tab = 'home';
-
-        $scope.items = function($scope) {
-
-            BookmarksServices.getBookmarks();
-        };
 
         $scope.openFolder = function (){
             dialogService.openFolderPropertiesDialog();
@@ -108,4 +111,7 @@ angular.module('wonderpage')
             },
             template: '<label><select ng-model="select" ng-options="c.msg for c in ngModel"><option value=""></option></select></label>'
         }
-    });
+    }).controller('FolderDetailCtrl', ['$scope', '$stateParams',
+        function($scope, $stateParams) {
+            $scope.id = $stateParams.folderId;
+        }]);

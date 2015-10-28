@@ -1,55 +1,45 @@
 'use strict';
-angular.module('wonderpage', ['ui.router','ui.bootstrap', 'wonderpage.public_feed', 'wonderpage.bookmarks_views', 'wonderpage.dialog', 'wonderpage.following', 'wonderpage.public_profile', 'wonderpage.search_results' ])
+angular.module('wonderpage', ['ui.router','ui.bootstrap', 'wonderpage.public_feed', 'wonderpage.bookmarks_views', 'wonderpage.dialog', 'wonderpage.following', 'wonderpage.public_profile', 'wonderpage.search_results','wonderpage.menu' ])
     .config(function($stateProvider, $urlRouterProvider) {
+
+        $urlRouterProvider.otherwise('/user/profile');
 
         $stateProvider
 
             // route to show our basic form (/form)
             .state('user-profile', {
                 url: '/user/profile',
-                controller: 'Ctrl1',
-                abstract: true,
-                    views: {
-                        '': { templateUrl: 'scripts/views/user-profile.html' },
-                        'header@user-profile': {
-                            url: "",
-                            templateUrl: 'scripts/common/header.html'
-                        },
-                        'footer@user-profile': {
-                            url: "",
-                            templateUrl: 'scripts/common/footer.html'
-                        }
-                    }
+                templateUrl: 'scripts/user-profile.html',
+                controller: 'UserProfileCtrl'
             })
+            // url will be //folderType/folderAssets/folder/:folderId
             .state('user-profile.folder', {
                 url: '/folderType/folderAssets/folder/:folderId',
                 templateUrl: 'scripts/bookmarks_views/list.html',
-                controller: 'myController'
+                controller: 'FolderDetailCtrl'
             })
-            // url will be /form/interests
+            // url will be /user-profile.folderFollowing
             .state('user-profile.folderFollowing', {
                 url: '/folderType/folderFollowing',
                 templateUrl: 'scripts/following/following.html'
             })
 
-            // url will be /form/payment
+            // url will be /user-profile.folderFollowers
             .state('user-profile.folderFollowers', {
                 url: '/folderType/folderFollowers',
                 templateUrl: 'scripts/following/following.html'
             })
 
-            // url will be /form/payment
+            // url will be /user-profile.mostViewed
             .state('user-profile.mostViewed', {
                 url: '/folderType/mostViewed',
                 templateUrl: 'scripts/following/following.html'
             })
 
-            // url will be /form/payment
+            // url will be /user-profile.recentlyAdded
             .state('user-profile.recentlyAdded', {
                 url: '/folderType/recentlyAdded',
                 templateUrl: 'scripts/following/following.html'
             });
-        // catch all route
-        // send users to the form page
-        $urlRouterProvider.otherwise('/user/profile');
+
     });

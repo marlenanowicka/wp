@@ -1,7 +1,9 @@
-<div class="list" ng-controller="myController">
-        <ul ng-repeat="view in lists track by $index" >
+<div class="list">
+
+        <ul ng-repeat="view in folders track by $index" >
+            <div>{{view}}</div>
             <li><a><img ng-src="images/{{view.screen}}" /></a></li>
-            <li><a style="color: #49b9ca">{{view.name}}</a></li>
+            <li><a style="color: #49b9ca">{{view}}</a></li>
             <li><a class="address" href="#">{{view.address}}</a></li>
             <li class="description"><a>{{view.description}}</a></li>
             <li><a>

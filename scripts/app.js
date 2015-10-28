@@ -8,6 +8,6 @@ angular.module('wonderpage', [
     'wonderpage.dialog',
     'wonderpage.following',
     'wonderpage.public_profile',
-    'wonderpage.search_results'
-
+    'wonderpage.search_results',
+    'wonderpage.menu'
 ]);
