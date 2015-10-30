@@ -1,8 +1,7 @@
 'use strict';
-angular.module('wonderpage.bookmarks_views')
-    .controller('myController', ['$scope','BookmarksServices', '$stateParams', function ($scope, BookmarksServices, $stateParams) {
-        $scope.lists= BookmarksServices.getBookmarks();
-        $scope.folderId = $stateParams.folderId;
+angular.module('wonderpage.bookmarks_view',[])
+    .controller('listController', ['$scope', function ($scope) {
+        $scope.folder = $scope.folders.bookmark;
         $scope.add = function (view) {
             if(this.view) {
                 $scope.lists.push($scope.view);
