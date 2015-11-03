@@ -1,6 +1,5 @@
-<div class="list">
-
-        <ul ng-repeat="view in currentFolder">
+<div class="list" ng-controller="listController">
+        <ul ng-repeat="view in currentFolder track by $index">
             <li><a><img ng-src="images/{{view.screen}}" /></a></li>
             <li><a style="color: #49b9ca">{{view.name}}</a></li>
             <li><a class="address" href="#">{{view.privacy}}</a></li>
@@ -13,7 +12,7 @@
             </li>
         </ul>
         <form ng-submit="add(view)" ng-init="focus=false;blur=true;active=false">
-            <input  ng-class="{ myFocus: focus, myBlur: blur }" ng-focus="focus=true;blur=false;" ng-blur="blur=true;focus=false;" type="text" placeholder="add folder" ng-model="view.name"/>
+            <input ng-class="{ myFocus: focus, myBlur: blur }" ng-focus="focus=true;blur=false;" ng-blur="blur=true;focus=false;" type="text" placeholder="add folder" ng-model="view.name"/>
             <button><i class="glyphicon glyphicon-plus"></i></button>
         </form>
 </div>

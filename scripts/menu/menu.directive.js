@@ -1,16 +1,6 @@
 'use strict';
 angular.module('wonderpage.menu',[])
-    .directive('menu',  function () {
-        return {
-            scope: {
-                'folders': '='
-            },
-            restrict: 'E',
-            replace: true,
-            transclude: true,
-            templateUrl: 'scripts/menu/menu.html'
-        };
-    }).directive('follow',  function () {
+    .directive('follow',  function () {
         return {
             restrict: 'E',
             replace: true,
@@ -27,7 +17,6 @@ angular.module('wonderpage.menu',[])
     }).directive('menuAction',  function () {
         return {
             restrict: 'E',
-            replace: true,
             transclude: true,
             templateUrl: 'scripts/menu/menu-action.html'
         };

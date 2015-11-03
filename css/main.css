@@ -242,10 +242,6 @@ button[type="submit"]:hover{
 }
 .menu li i{
     padding: 0 6px;
-    border-right-style: dotted;
-    border-color: gray;
-    border-width: 1px;
-    border-left-style: dotted;
     margin-right: 5px;
 }
 .menu nav a {
@@ -272,7 +268,7 @@ button[type="submit"]:hover{
     cursor: pointer;
     background-color: #49b9ca;
     text-align: center;
-    border: 2px solid #ffffff;
+    border: 1px solid #ffffff;
     border-radius: 4px;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
@@ -296,6 +292,10 @@ button[type="submit"]:hover{
 }
 .menu li.active i {
     border-color: #ffffff;
+    border-right-style: dotted;
+    border-width: 1px;
+    border-left-style: dotted;
+    color: black;
 }
 .menu li.active span {
     margin-left: 5px;
@@ -401,9 +401,9 @@ button[type="submit"]:hover{
 .menu-button {
     margin: 5px 8px 0 0;
     display: inline-block;
-    padding-bottom: 15px
-
-}.menu-button input[type="text"] {
+    padding-bottom: 15px;
+}
+.menu-button input[type="text"] {
      width: 110px;
      text-align: center;
     border:1px solid #369aa8;

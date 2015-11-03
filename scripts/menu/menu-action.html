@@ -1,8 +1,11 @@
-<form class="menu-button" ng-submit="add(view)">
-    <div ng-init="focus=false;blur=true;active=true"><input ng-class="{ myFocus: focus, myBlur: blur }" ng-focus="focus=true;blur=false;" ng-blur="blur=true;focus=false;" type="text" placeholder="add bookmark"/>
+<form class="menu-button" ng-submit="add(folder)">
+    <div ng-init="focus=false;blur=true;active=true">
+        <input ng-class="{ myFocus: focus, myBlur: blur }" ng-focus="focus=true;blur=false;" ng-blur="blur=true;focus=false;" type="text" placeholder="add bookmark" />
+        <button class="btn btn-default"><i class="fa fa-user"></i></button>
         <button><i class="glyphicon glyphicon-plus"></i></button>
     </div>
-    <div ng-init="focus=false;blur=true;active=false"><input ng-class="{ myFocus: focus, myBlur: blur }" ng-focus="focus=true;blur=false;" ng-blur="blur=true;focus=false;" type="text" placeholder="add folder"/>
+    <div ng-init="focus=false;blur=true;active=false">
+        <input ng-class="{ myFocus: focus, myBlur: blur }" ng-focus="focus=true;blur=false;" ng-blur="blur=true;focus=false;" type="text" placeholder="add folder" ng-model="folder.name"/>
         <button><i class="glyphicon glyphicon-plus"></i></button>
     </div>
 </form>
