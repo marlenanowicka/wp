@@ -5,7 +5,7 @@
     <div class="search">
         <p>one page to rule theme all [beta] </p>
         <a ng-click="openProfile()"><i class="fa fa-wrench fa-2x"></i></a>
-        <a ng-class="{active: tab == 'search-results'}" ng-click="showMe();tab='search-results'">
+        <a ui-sref-active="active" ui-sref=".folderSearch" ng-click="showMe()">
             <i class="fa fa-book fa-2x"></i>
         </a>
         <form class="search-group">

@@ -42,6 +42,10 @@ angular.module('wonderpage.routes', ['ui.router'])
             .state('user-profile.recentlyAdded', {
                 url: '/folderType/recentlyAdded',
                 templateUrl: 'scripts/following/following.html'
+            })
+            .state('user-profile.folderSearch', {
+                url: 'folderType/folderSearch/search/ZXZlcnlvbmU=/searchFilter/searchEveryone',
+                templateUrl: 'scripts/search_results/all-public-users.html'
             });
 
     });

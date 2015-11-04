@@ -368,61 +368,122 @@ button[type="submit"]:hover{
     text-overflow: clip;
 }
 .menu-button button  {
-    box-shadow: inset 1px 1px 1px -1px #ffffff;
+    box-shadow: 0 1px 1px 0 #216d58, 0 1px 1px 0 #dbf8e4 inset, inset 1px 1px 1px -1px #ffffff;
     color: #ffffff;
+    float: left;
     font-size: .7em;
     text-align: center;
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-    border: 1px solid #206b57;
+    border: 1px solid #2d816a;
     padding: 4px 5px 3px 5px;
-    transition-duration:3s;
-    -webkit-transition-duration:3s;
-    transition-property:background;
-    background: -moz-linear-gradient(top,  #b5eccb 0%, #b5eccb 50%, #4c9d85 51%, #38a4b4 4c9d85%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b5eccb), color-stop(50%,#b5eccb), color-stop(51%,#4c9d85), color-stop(100%,#4c9d85));
-    background: -webkit-linear-gradient(top,  #b5eccb 0%,#b5eccb 50%,#4c9d85 51%,#4c9d85 100%);
-    background: -o-linear-gradient(top,  #b5eccb 0%,#b5eccb 50%,#4c9d85 51%,#4c9d85 100%);
-    background: -ms-linear-gradient(top,  #b5eccb 0%,#b5eccb 50%,#4c9d85 51%,#4c9d85 100%);
-    background: linear-gradient(to bottom, #b5eccb 0%,#b5eccb 50%,#4c9d85 51%,#4c9d85 100%);
-    background-color:#38a4b4;
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(173,232,199,1) 3%, rgba(159,224,194,1) 50%, rgba(113,207,172,1) 51%, rgba(91,178,150,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(3%, rgba(173,232,199,1)), color-stop(50%, rgba(159,224,194,1)), color-stop(51%, rgba(113,207,172,1)), color-stop(100%, rgba(91,178,150,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(173,232,199,1) 3%, rgba(159,224,194,1) 50%, rgba(113,207,172,1) 51%, rgba(91,178,150,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(173,232,199,1) 3%, rgba(159,224,194,1) 50%, rgba(113,207,172,1) 51%, rgba(91,178,150,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(173,232,199,1) 3%, rgba(159,224,194,1) 50%, rgba(113,207,172,1) 51%, rgba(91,178,150,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(173,232,199,1) 3%, rgba(159,224,194,1) 50%, rgba(113,207,172,1) 51%, rgba(91,178,150,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#5bb296', GradientType=0 );
 }
-.menu-button button:hover {
-    background: linear-gradient(to top, #b5eccb 0%,#b5eccb 50%,#4c9d85 51%,#4c9d85 100%);
+.menu-button button:last-child:hover {
+    box-shadow:2px 2px 5px 0 #8ebe9f inset, 0 1px 1px 0 #12606d, 1px 0 2px 0 #dbf8e4 inset;
 }
-.menu-button div {
-    margin: 1px 0 1px 0;
-    float: right;
-}
-.menu-button div:first-child {
-    margin-top: 10px;
-}
+
 .menu-button {
+    float: right;
+    text-align: right;
     margin: 5px 8px 0 0;
     display: inline-block;
-    padding-bottom: 15px;
+}
+.menu-button:first-child {
+    padding-top: 10px;
+}
+
+#icon {
+    box-shadow: none;
+    /* image replacement */
+    width:20px;
+    height: 17px;
+    border:none;
+    margin-left: -23px;
+    margin-top: 1px;
+    background: #ffffff;
+    border-left: 1px dotted #cdcdcd;
+    color: #000000;
+    /* placing next to input using float or absolute positioning omitted ... */
+    display: none;
+}
+input[ng-model="folder.name"]:focus + #icon {
+    display:block;
 }
 .menu-button input[type="text"] {
      width: 110px;
-     text-align: center;
-    border:1px solid #369aa8;
+     text-align: left;
+    border:1px solid #1e8d9d;
+    float: left;
+    margin-right: 2px;
  }
+.menu-button input::-webkit-input-placeholder {
+    color: white !important;
+    text-align: right;
+}
+
+.menu-button input:-moz-placeholder { /* Firefox 18- */
+    color: white !important;
+    text-align: right;
+}
+
+.menu-button input::-moz-placeholder {  /* Firefox 19+ */
+    color: white !important;
+    text-align: right;
+}
+
+.menu-button input:-ms-input-placeholder {
+    color: white !important;
+    text-align: right;
+}
+.menu-button :focus::-webkit-input-placeholder {
+    color: #000000 !important;
+    text-align: left;
+}
+
+.menu-button :-moz-placeholder:focus { /* Firefox 18- */
+    color: #000000 !important;
+    text-align: left;
+}
+
+.menu-button :-moz-placeholder:focus {  /* Firefox 19+ */
+    color: #000000 !important;
+    text-align: left;
+}
+
+.menu-button :-ms-input-placeholder:focus {
+    color: #000000 !important;
+    text-align: left;
+}
 input[type="text"].myFocus {
     background-color: white;
+    border-color: #cdcdcd;
+    outline: none;
+    box-shadow: #cdcdcd -20px 0 10px 0 inset;
 }
 input[type="text"].myBlur {
-    background: -moz-linear-gradient(top,  #77cedc 0%, #77cedc 50%, #38a4b4 51%, #38a4b4 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#77cedc), color-stop(50%,#77cedc), color-stop(51%,#38a4b4), color-stop(100%,#38a4b4));
-    background: -webkit-linear-gradient(top,  #77cedc 0%,#77cedc 50%, #38a4b4 51%,#38a4b4 100%);
-    background: -o-linear-gradient(top,  #77cedc 0%,#77cedc 50%,#38a4b4 51%,#38a4b4 100%);
-    background: -ms-linear-gradient(top,  #77cedc 0%,#77cedc 50%,#38a4b4 51%,#38a4b4 100%);
-    background: linear-gradient(to bottom, #77cedc 0%,#77cedc 50%,#38a4b4 51%,#38a4b4 100%);
-    background-color:#38a4b4;
+    box-shadow: 0 1px 1px 0 #095f6b, 0 1px 1px 0 #cdeef2 inset;
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(116,206,218,1) 3%, rgba(107,201,216,1) 50%, rgba(56,171,189,1) 51%, rgba(54,155,171,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(3%, rgba(116,206,218,1)), color-stop(50%, rgba(107,201,216,1)), color-stop(51%, rgba(56,171,189,1)), color-stop(100%, rgba(54,155,171,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(116,206,218,1) 3%, rgba(107,201,216,1) 50%, rgba(56,171,189,1) 51%, rgba(54,155,171,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(116,206,218,1) 3%, rgba(107,201,216,1) 50%, rgba(56,171,189,1) 51%, rgba(54,155,171,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(116,206,218,1) 3%, rgba(107,201,216,1) 50%, rgba(56,171,189,1) 51%, rgba(54,155,171,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(116,206,218,1) 3%, rgba(107,201,216,1) 50%, rgba(56,171,189,1) 51%, rgba(54,155,171,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#369bab', GradientType=0 );
 }
 input[type="text"].myBlur:hover{
+    box-shadow:0 4px 10px 0 #5ba5b2 inset, 0 1px 1px 0 #12606d, 1px 0 2px 0 #fff inset;
     cursor: pointer;
-    background: linear-gradient(to top, #77cedc 0%,#77cedc 50%,#38a4b4 51%,#38a4b4 100%);
+    border-color: #1e8d9d;
 }
 caption {
     background-color: red;
