@@ -15,7 +15,8 @@ angular.module('wonderpage', ['ui.router','ui.bootstrap','wonderpage.service','w
                 $scope.folder = "";
             }
         };
-
+        $scope.pages = [];
+        $scope.pageContent = [];
 
         $scope.Results = search.getResults();
 
@@ -107,8 +108,8 @@ angular.module('wonderpage', ['ui.router','ui.bootstrap','wonderpage.service','w
         } else {
             $scope.currentFolder = FolderServices.getFolderById(folderId);
         }
-    }])
-       .directive('toggle', function(){
+
+    }]).directive('toggle', function(){
         return {
             restrict: 'A',
 

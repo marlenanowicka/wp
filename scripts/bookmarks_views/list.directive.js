@@ -1,5 +1,5 @@
 'use strict';
-angular.module('wonderpage.bookmarks_views',[])
+angular.module('wonderpage.bookmarks_views')
     .directive('list', ['FolderServices', function (FolderServices) {
         return {
             restrict: 'E',

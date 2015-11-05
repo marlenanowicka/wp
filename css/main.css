@@ -1,9 +1,9 @@
-*{
-    padding: 0;
-    margin: 0;
-}
+* { margin: 0; padding: 0; }
 body {
+    max-width: 1690px;
+    min-width: 678px;
     font-size: 1.2em;
+    margin: 0 auto;
     background: rgba(231,231,231,1);
     background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(231,231,231,1) 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)),color-stop(100%,rgba(231,231,231,1)));
@@ -13,23 +13,29 @@ body {
     background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(231,231,231,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e7e7e7', GradientType=0 );
 }
-.menu, .logo {
-    width: 9.16666666666667%;
-    float: left;
-}
 .content, .search {
-    width: 79.16666666666666%;
+    margin: 0 197px 0 155px;
+    overflow: hidden;
+}
+#wrapper {
+    float: left;
+    width: 100%;
+    margin-right: -197px;
+}
+.menu, .logo {
+    width: 155px;
     float: left;
 }
+
 .sidebar, .login {
-    width: 11.6666666666667%;
+    width: 197px;
     float: left;
     text-shadow:0 1px 1px white;
 }
 footer {
-    width: 79.16666666666666%;
-    margin-left: 9.16666666666667%;
-    margin-right:11.6666666666667% ;
+    clear: both;
+    margin-left: 155px;
+    margin-right:197px ;
     text-shadow:0 1px 1px white;
 }
 h5 {
@@ -394,7 +400,7 @@ button[type="submit"]:hover{
 .menu-button {
     float: right;
     text-align: right;
-    margin: 5px 8px 0 0;
+    margin: 5px 5px 0 0;
     display: inline-block;
 }
 .menu-button:first-child {
@@ -414,6 +420,11 @@ button[type="submit"]:hover{
     color: #000000;
     /* placing next to input using float or absolute positioning omitted ... */
     display: none;
+    vertical-align: middle;
+}
+#icon i {
+    font-size: 1.5em;
+    margin-bottom: 3px;
 }
 input[ng-model="folder.name"]:focus + #icon {
     display:block;
