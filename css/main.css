@@ -14,21 +14,21 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e7e7e7', GradientType=0 );
 }
 .content, .search {
-    margin: 0 197px 0 155px;
+    margin: 0 190px 0 154px;
     overflow: hidden;
 }
 #wrapper {
     float: left;
     width: 100%;
-    margin-right: -197px;
+    margin-right: -190px;
 }
 .menu, .logo {
-    width: 155px;
+    width: 154px;
     float: left;
 }
 
 .sidebar, .login {
-    width: 197px;
+    width: 190px;
     float: left;
     text-shadow:0 1px 1px white;
 }
@@ -1097,6 +1097,7 @@ a .fa-envelope-square {
      box-sizing: border-box;
  }
 .list ul{
+    margin-bottom: 12px;
     border: 1px solid #edebec;
     border-radius: 3px;
     -moz-border-radius: 3px;
@@ -1673,3 +1674,6 @@ a .fa-envelope-square {
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
 }
+
+/*-------- drag and drop ----------*/
+

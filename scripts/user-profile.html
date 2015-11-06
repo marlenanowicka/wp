@@ -2,12 +2,6 @@
 <div id="wrapper">
     <div class="menu">
         <div class="my-top-border-left"></div>
-        <div sv-root sv-part="folders">
-            <div ng-repeat="item in folders" sv-element>
-                <div>{{item.name}}</div>
-                <span sv-handle>button</span>
-            </div>
-        </div>
         <nav>
             <ul>
                 <li ng-repeat="folder in folders track by $index" ui-sref-active="active">

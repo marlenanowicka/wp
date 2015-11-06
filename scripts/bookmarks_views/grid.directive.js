@@ -5,6 +5,8 @@ angular.module('wonderpage.bookmarks_views',[])
             restrict: 'E',
             replace: true,
             transclude: true,
+
+
             templateUrl: 'scripts/bookmarks_views/grid.html'
         };
     }]);

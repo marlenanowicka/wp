@@ -1,7 +1,6 @@
 'use strict';
-angular.module('wonderpage', ['ui.router','ui.bootstrap','wonderpage.service','wonderpage.routes','wonderpage.followers', 'wonderpage.public_feed', 'wonderpage.bookmarks_views', 'wonderpage.dialog', 'wonderpage.following', 'wonderpage.public_profile', 'wonderpage.search_results','wonderpage.menu'])
-
-    .controller('ListFolderController',['$scope','$http','FolderServices','dialogService','search', function($scope,$http, FolderServices, dialogService, search){
+angular.module('wonderpage')
+.controller('ListFolderController',['$scope','$http','FolderServices','dialogService','search', function($scope,$http, FolderServices, dialogService, search){
 
         $scope.folders = FolderServices.getFolders();
 
@@ -97,7 +96,7 @@ angular.module('wonderpage', ['ui.router','ui.bootstrap','wonderpage.service','w
                 value: 'huge'
             }
         ];
-        $scope.selectionSize = {'id': '1', value: 'list'};
+        $scope.selectionSize = {'id': '2', value: 'tiny'};
 
     }])
     .controller('BookmarkController',['$scope', '$state', '$stateParams', 'FolderServices', function($scope,$state, $stateParams, FolderServices){

@@ -1,5 +1,5 @@
-<div class="list" ng-controller="listController">
-        <ul ng-repeat="view in currentFolder track by $index">
+<div sv-root sv-part="currentFolder" class="list sortable-container" ng-controller="listController">
+        <ul ng-repeat="view in currentFolder track by $index" sv-element="opts">
             <li><a><img ng-src="images/{{view.screen}}" /></a></li>
             <li><a style="color: #49b9ca">{{view.name}}</a></li>
             <li><a class="address" href="#">{{view.privacy}}</a></li>
