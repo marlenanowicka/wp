@@ -736,6 +736,7 @@ input[type="text"].myBlur :-ms-input-placeholder { /* Internet Explorer 10-11 */
     padding: 2px;
     box-sizing: border-box;
     box-shadow: -25px -1px 40px 6px #82c6d0 inset;
+    cursor: pointer;
 }
 
 .tiny img {
@@ -1677,3 +1678,34 @@ a .fa-envelope-square {
 
 /*-------- drag and drop ----------*/
 
+.tiny.over div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 2px;
+    box-sizing: border-box;
+    background-color: #ffa255;
+    border: 1px solid #ffa255;
+    box-shadow: -25px -1px 60px 6px #ffa255 inset;
+    background: -moz-linear-gradient(top,  #ffa255 0%, #ffa255 50%, #ffc391 71%,#ffc391 90%, #ffa255 91%, #ffa255 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffa255), color-stop(50%,#ffa255),color-stop(71%,#ffc391),color-stop(90%,#ffc391), color-stop(91%,#ffa255), color-stop(100%,#ffa255));
+    background: -webkit-linear-gradient(top,  #ffa255 0%,#ffa255 50%,#ffc391 71%,#ffc391 90%, #ffa255 91%,#ffa255 100%);
+    background: -o-linear-gradient(top,  #ffa255 0%,#ffa255 50%,#ffc391 71%, #ffc391 90%, #ffa255 91%,#ffa255 100%);
+    background: -ms-linear-gradient(top,  #ffa255 0%,#ffa255 50%,#ffc391 71%,#ffc391 90%, #ffa255 91%,#ffa255 100%);
+    background: linear-gradient(to bottom, #ffa255 0%,#ffa255 50%, #ffc391 71%,#ffc391 90%,#ffa255 91%,#ffa255 100%);
+}
+.list ul.moving {
+    background-color: #f6f5f6;
+    border: 1px solid #f6f5f6;
+}
+[ondragover] {
+    background-color: red;
+}
+[draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /* Required to make elements draggable in old WebKit */
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+}

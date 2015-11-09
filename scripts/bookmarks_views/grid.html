@@ -1,12 +1,10 @@
-<div class="sortable-container grid" sv-root sv-part="currentFolder">
-<div class="tiny grid" ng-repeat="view in currentFolder" sv-element>
+<div ng-repeat="view in currentFolder">
     <div ng-mouseover="options = true" ng-mouseout="options = false">
-                <img ng-src="images/{{view.screen}}" />
-                <span class="icons glyphicon glyphicon-user"></span>
-                <p class="name">{{view.name}}</p>
-         <button ng-hide="true" ng-show="options" ng-click="openBookmark()"><i class="fa fa-wrench"></i></button>
-         <button ng-hide="true" ng-show="options" ng-click="openSocial()"><i class="fa fa-facebook"></i></button>
-         <button sv-handle ng-hide="true" ng-show="options"><i class="fa fa-arrows-h"></i></button>
+        <img class="handle" ng-src="images/{{view.screen}}" />
+        <span class="icons glyphicon glyphicon-user"></span>
+        <p class="name">{{view.name}}</p>
+        <button ng-hide="true" ng-show="options" ng-click="openBookmark()"><i class="fa fa-wrench"></i></button>
+        <button ng-hide="true" ng-show="options" ng-click="openSocial()"><i class="fa fa-facebook"></i></button>
+        <button class="handle" ng-hide="true" ng-show="options"><i class="fa fa-arrows-h"></i></button>
     </div>
- </div>
 </div>

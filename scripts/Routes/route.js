@@ -15,15 +15,17 @@ angular.module('wonderpage.routes', ['ui.router'])
             .state('user-profile.folder', {
                 url: '/folderType/folderAssets/folder/:folderId',
                 controller: 'BookmarkController',
-                templateUrl: 'scripts/bookmarks_views/grid.html'
-                  /* '<div ng-switch on="selectionSize.id">' +
+                template:
+                   '<div ng-switch on="selectionSize.id">' +
                                 '<div ng-switch-when="1">' +
                                 '   <list></list>' +
                                 '</div>' +
                                 '<div ng-switch-default>'+
-                                '   <grid sv-root sv-part="currentFolder" ng-class="[selectionSize.value]"></grid>' +
+                                '<div html-sortable="" ng-model="currentFolder">'+
+                                '<grid id="cursor" ng-class="[selectionSize.value]"></grid>' +
                                 '</div>' +
-                            '</div>'*/
+                                '</div>' +
+                            '</div>'
             })
             // url will be /user-profile.folderFollowing
 

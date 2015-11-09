@@ -1,18 +1,14 @@
-<div sv-root sv-part="currentFolder" class="list sortable-container" ng-controller="listController">
-        <ul ng-repeat="view in currentFolder track by $index" sv-element="opts">
-            <li><a><img ng-src="images/{{view.screen}}" /></a></li>
-            <li><a style="color: #49b9ca">{{view.name}}</a></li>
-            <li><a class="address" href="#">{{view.privacy}}</a></li>
-            <li class="description"><a>{{view.description}}</a></li>
-            <li><a>
-                <button class="btn btn-xs" ng-click="openBookmark()"><i class="fa fa-wrench"></i></button>
-                <button class="btn btn-xs" ng-click="openSocial()"><i class="fa fa-facebook"></i></button>
-                <button class="btn btn-xs"><i class="fa fa-arrows-h"></i></button>
-            </a>
-            </li>
-        </ul>
-        <form ng-submit="add(view)" ng-init="focus=false;blur=true;active=false">
-            <input ng-class="{ myFocus: focus, myBlur: blur }" ng-focus="focus=true;blur=false;" ng-blur="blur=true;focus=false;" type="text" placeholder="add folder" ng-model="view.name"/>
-            <button><i class="glyphicon glyphicon-plus"></i></button>
-        </form>
+<div class="columns list" html-sortable="sortable_cross_option" ng-model="currentFolder">
+    <ul class="column" ng-repeat="view in currentFolder">
+        <li><a><img ng-src="images/{{view.screen}}" /></a></li>
+        <li><a style="color: #49b9ca">{{view.name}}</a></li>
+        <li><a class="address" href="#">{{view.privacy}}</a></li>
+        <li class="description"><a>{{view.description}}</a></li>
+        <li><a>
+            <button class="btn btn-xs" ng-click="openBookmark()"><i class="fa fa-wrench"></i></button>
+            <button class="btn btn-xs" ng-click="openSocial()"><i class="fa fa-facebook"></i></button>
+            <button class="btn btn-xs"><i class="fa fa-arrows-h"></i></button>
+        </a>
+        </li>
+    </ul>
 </div>
