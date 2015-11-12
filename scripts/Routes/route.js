@@ -22,7 +22,7 @@ angular.module('wonderpage.routes', ['ui.router'])
                                 '</div>' +
                                 '<div ng-switch-default>'+
                                 '<div html-sortable="" ng-model="currentFolder">'+
-                                '<grid id="cursor" ng-class="[selectionSize.value]"></grid>' +
+                                '<grid ng-class="[selectionSize.value]"></grid>' +
                                 '</div>' +
                                 '</div>' +
                             '</div>'

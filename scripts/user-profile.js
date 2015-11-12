@@ -101,7 +101,6 @@ angular.module('wonderpage')
     }])
     .controller('BookmarkController',['$scope', '$state', '$stateParams', 'FolderServices', function($scope,$state, $stateParams, FolderServices){
 
-
         var folderId = $stateParams.folderId;
         if(!folderId) {
             $state.go('user-profile.folder', {folderId:1});

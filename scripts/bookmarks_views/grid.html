@@ -1,6 +1,6 @@
-<div ng-repeat="view in currentFolder">
+<div ng-repeat="view in currentFolder" ng-animate="'animate'">
     <div ng-mouseover="options = true" ng-mouseout="options = false">
-        <img class="handle" ng-src="images/{{view.screen}}" />
+        <img ng-src="images/{{view.screen}}" />
         <span class="icons glyphicon glyphicon-user"></span>
         <p class="name">{{view.name}}</p>
         <button ng-hide="true" ng-show="options" ng-click="openBookmark()"><i class="fa fa-wrench"></i></button>
