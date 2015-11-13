@@ -3,6 +3,7 @@ angular.module('wonderpage', [
     'ui.router',
     'ui.bootstrap',
     'html5.sortable',
+    'angularAmf',
     'wonderpage.service',
     'wonderpage.routes',
     'wonderpage.public_feed',

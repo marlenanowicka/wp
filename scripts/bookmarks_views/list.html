@@ -1,14 +1,15 @@
-<div class="list" html-sortable="">
-    <ul class="arrow-over" ng-repeat="view in currentFolder">
+<div class="list" html-sortable="" ng-model="currentFolder">
+    <ul class="handle arrow-over" ng-repeat="view in currentFolder">
         <li><a><img ng-src="images/{{view.screen}}" /></a></li>
         <li><a style="color: #49b9ca">{{view.name}}</a></li>
         <li><a class="address" href="#">{{view.privacy}}</a></li>
         <li class="description"><a>{{view.description}}</a></li>
-        <li><a>
+        <li>
+            <a>
             <button class="btn btn-xs" ng-click="openBookmark()"><i class="fa fa-wrench"></i></button>
             <button class="btn btn-xs" ng-click="openSocial()"><i class="fa fa-facebook"></i></button>
             <button class="btn btn-xs"><i class="fa fa-arrows-h"></i></button>
-        </a>
+            </a>
         </li>
     </ul>
 </div>

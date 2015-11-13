@@ -2,6 +2,7 @@
 angular.module('wonderpage')
 .controller('ListFolderController',['$scope','$http','FolderServices','dialogService','search', function($scope,$http, FolderServices, dialogService, search){
 
+        $scope.somePlaceholder = 'add bookmark';
         $scope.folders = FolderServices.getFolders();
 
         $http.get('scripts/users.json').success(function(data){

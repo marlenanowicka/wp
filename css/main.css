@@ -1,9 +1,8 @@
 * { margin: 0; padding: 0; }
 body {
-    max-width: 1690px;
+    max-width: 2000px;
     min-width: 678px;
     font-size: 1.2em;
-    margin: 0 auto;
     background: rgba(231,231,231,1);
     background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(231,231,231,1) 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)),color-stop(100%,rgba(231,231,231,1)));
@@ -14,28 +13,28 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e7e7e7', GradientType=0 );
 }
 .content, .search {
-    margin: 0 190px 0 154px;
+    margin: 0 195px 0 160px;
     overflow: hidden;
 }
 #wrapper {
     float: left;
     width: 100%;
-    margin-right: -190px;
+    margin-right: -195px;
 }
 .menu, .logo {
-    width: 154px;
+    width: 160px;
     float: left;
 }
 
 .sidebar, .login {
-    width: 190px;
+    width: 195px;
     float: left;
     text-shadow:0 1px 1px white;
 }
 footer {
     clear: both;
-    margin-left: 155px;
-    margin-right:197px ;
+    margin-left: 160px;
+    margin-right:195px ;
     text-shadow:0 1px 1px white;
 }
 h5 {
@@ -256,7 +255,7 @@ button[type="submit"]:hover{
     text-align: right;
     float: left;
     width: 60px;
-    margin-left: 20px;
+    margin-left: 28px;
     overflow: hidden;
     text-overflow: clip;
     color: #4d5c67;
@@ -267,18 +266,34 @@ button[type="submit"]:hover{
     text-decoration: none;
 }
 .menu span {
+    opacity: 0;
     float: left;
-    margin: 2px 10px 0 10px;
-    width: 18px;
-    height: 18px;
+    margin: 5px 10px 0 13px;
+    width: 13px;
+    height: 13px;
     cursor: pointer;
-    background-color: #49b9ca;
     text-align: center;
-    border: 1px solid #ffffff;
-    border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
     color: #ffffff;
+}
+.btn-green {
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    -webkit-box-shadow: 0px 0px 0px 1px rgba(83,174,192,1),0px 0px 0px 3px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 0px 1px rgba(83,174,192,1), 0px 0px 0px 3px rgba(255,255,255,1);
+    box-shadow: 0px 0px 0px 1px rgba(83,174,192,1),0px 0px 0px 3px rgba(255,255,255,1);
+    background: rgba(49,139,153,1);
+    background: -moz-linear-gradient(-45deg, rgba(190,232,242,1) 0%, rgba(49,139,153,1) 99%, rgba(49,139,153,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(190,232,242,1)), color-stop(99%, rgba(49,139,153,1)), color-stop(100%, rgba(49,139,153,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(190,232,242,1) 0%, rgba(49,139,153,1) 99%, rgba(49,139,153,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(190,232,242,1) 0%, rgba(49,139,153,1) 99%, rgba(49,139,153,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(190,232,242,1) 0%, rgba(49,139,153,1) 99%, rgba(49,139,153,1) 100%);
+    background: linear-gradient(135deg, rgba(190,232,242,1) 0%, rgba(49,139,153,1) 99%, rgba(49,139,153,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bee8f2', endColorstr='#318b99', GradientType=1 );
+}
+.menu li.active span {
+    opacity: 1;
+    margin-left: 8px;
 }
 .menu li.active  {
     color: #ffffff;
@@ -302,9 +317,6 @@ button[type="submit"]:hover{
     border-width: 1px;
     border-left-style: dotted;
     color: black;
-}
-.menu li.active span {
-    margin-left: 5px;
 }
 .menu-static1, .menu-static2 {
     font-weight: 600;
@@ -360,8 +372,11 @@ button[type="submit"]:hover{
     color: darkcyan;
     margin-right: 5px;
     margin-left: 5px;
+
+}
+.menu-static1 div.active a i, .menu-static2 div.active a i {
     border-right-style: dotted;
-    border-color: gray;
+    border-color: #fff;
     border-width: 1px;
     border-left-style: dotted;
 }
@@ -420,13 +435,14 @@ button[type="submit"]:hover{
     color: #000000;
     /* placing next to input using float or absolute positioning omitted ... */
     display: none;
-    vertical-align: middle;
+    font-size: 1.2em;
 }
 #icon i {
-    font-size: 1.5em;
-    margin-bottom: 3px;
+    inline-box-align: 5px;
+    display: block;
+
 }
-input[ng-model="folder.name"]:focus + #icon {
+input[ng-model="folder.name"]:focus + button#icon {
     display:block;
 }
 .menu-button input[type="text"] {
@@ -455,25 +471,42 @@ input[ng-model="folder.name"]:focus + #icon {
     color: white !important;
     text-align: right;
 }
-.menu-button :focus::-webkit-input-placeholder {
+.menu-button :focus::-webkit-input-placeholder::before {
     color: #000000 !important;
     text-align: left;
+    content: "type url here";
+    text-indent: 0;
+    display: block;
+    line-height: initial;
 }
 
-.menu-button :-moz-placeholder:focus { /* Firefox 18- */
+.menu-button :-moz-placeholder:focus::before { /* Firefox 18- */
     color: #000000 !important;
     text-align: left;
+    content: "New text";
+    text-indent: 0;
+    display: block;
+    line-height: initial;
 }
 
-.menu-button :-moz-placeholder:focus {  /* Firefox 19+ */
+.menu-button::-moz-placeholder:focus::before {  /* Firefox 19+ */
     color: #000000 !important;
     text-align: left;
+    content: "type url here";
+    text-indent: 0;
+    display: block;
+    line-height: initial;
 }
 
-.menu-button :-ms-input-placeholder:focus {
+.menu-button :-ms-input-placeholder:focus::before {
     color: #000000 !important;
     text-align: left;
+    content: "type url here";
+    text-indent: 0;
+    display: block;
+    line-height: initial;
 }
+
 input[type="text"].myFocus {
     background-color: white;
     border-color: #cdcdcd;
@@ -594,12 +627,19 @@ input[type="text"].myBlur :-ms-input-placeholder { /* Internet Explorer 10-11 */
 .sidebar p{
     margin-left: 30px;
     padding-right: 10px;
-    background-color: orange;
+    background: rgba(255,140,9,1);
+    background: -moz-linear-gradient(45deg, rgba(255,140,9,1) 0%, rgba(255,140,9,1) 66%, rgba(251,236,217,1) 99%, rgba(251,236,217,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(255,140,9,1)), color-stop(66%, rgba(255,140,9,1)), color-stop(99%, rgba(251,236,217,1)), color-stop(100%, rgba(251,236,217,1)));
+    background: -webkit-linear-gradient(45deg, rgba(255,140,9,1) 0%, rgba(255,140,9,1) 66%, rgba(251,236,217,1) 99%, rgba(251,236,217,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(255,140,9,1) 0%, rgba(255,140,9,1) 66%, rgba(251,236,217,1) 99%, rgba(251,236,217,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(255,140,9,1) 0%, rgba(255,140,9,1) 66%, rgba(251,236,217,1) 99%, rgba(251,236,217,1) 100%);
+    background: linear-gradient(45deg, rgba(255,140,9,1) 0%, rgba(255,140,9,1) 66%, rgba(251,236,217,1) 99%, rgba(251,236,217,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8c09', endColorstr='#fbecd9', GradientType=1 );
     color: #ffffff;
     line-height: 20px;
     padding-left: 10px;
     border-right: 5px solid coral;
-    text-shadow:0 1px 1px white;
+    text-shadow:0 1px 1px grey;
 }
 .my-to-border {
     border-color: #ffffff;
@@ -632,14 +672,14 @@ input[type="text"].myBlur :-ms-input-placeholder { /* Internet Explorer 10-11 */
 }
 .feed ul:hover {
     border-right: 4px solid #49b9ca;
-    background: rgba(250,250,250,1);
-    background: -moz-linear-gradient(left, rgba(250,250,250,1) 0%, rgba(234,234,234,1) 72%, rgba(230,230,230,1) 92%, rgba(230,230,230,1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(250,250,250,1)), color-stop(72%, rgba(234,234,234,1)), color-stop(92%, rgba(230,230,230,1)), color-stop(100%, rgba(230,230,230,1)));
-    background: -webkit-linear-gradient(left, rgba(250,250,250,1) 0%, rgba(234,234,234,1) 72%, rgba(230,230,230,1) 92%, rgba(230,230,230,1) 100%);
-    background: -o-linear-gradient(left, rgba(250,250,250,1) 0%, rgba(234,234,234,1) 72%, rgba(230,230,230,1) 92%, rgba(230,230,230,1) 100%);
-    background: -ms-linear-gradient(left, rgba(250,250,250,1) 0%, rgba(234,234,234,1) 72%, rgba(230,230,230,1) 92%, rgba(230,230,230,1) 100%);
-    background: linear-gradient(to right, rgba(250,250,250,1) 0%, rgba(234,234,234,1) 72%, rgba(230,230,230,1) 92%, rgba(230,230,230,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#e6e6e6', GradientType=1 );
+    background: rgba(255,255,255,0);
+    background: -moz-linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(222,222,222,0.64) 64%, rgba(222,222,222,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(64%, rgba(222,222,222,0.64)), color-stop(100%, rgba(222,222,222,1)));
+    background: -webkit-linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(222,222,222,0.64) 64%, rgba(222,222,222,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(222,222,222,0.64) 64%, rgba(222,222,222,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(222,222,222,0.64) 64%, rgba(222,222,222,1) 100%);
+    background: linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(222,222,222,0.64) 64%, rgba(222,222,222,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dedede', GradientType=1 );
 }
 .feed ul li {
     padding: 0;
@@ -738,9 +778,7 @@ input[type="text"].myBlur :-ms-input-placeholder { /* Internet Explorer 10-11 */
     box-shadow: -25px -1px 40px 6px #82c6d0 inset;
     cursor: pointer;
 }
-.tiny.moving div {
-    border-image: url("../images/arrow.jpg");
-}
+
 
 .tiny img {
     width: 100%;
@@ -749,7 +787,7 @@ input[type="text"].myBlur :-ms-input-placeholder { /* Internet Explorer 10-11 */
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
 }
-.tiny div:hover, .small div:hover, .medium div:hover, .huge div:hover {
+.tiny div:hover, .small div:hover, .medium div:hover, .huge div:hover, .tiny.over div, .small.over div, .medium.over div, .huge.over div {
     background-color: #ffa255;
     border: 1px solid #ffa255;
     box-shadow: -25px -1px 60px 6px #ffa255 inset;
@@ -760,17 +798,6 @@ input[type="text"].myBlur :-ms-input-placeholder { /* Internet Explorer 10-11 */
     background: -ms-linear-gradient(top,  #ffa255 0%,#ffa255 50%,#ffc391 71%,#ffc391 90%, #ffa255 91%,#ffa255 100%);
     background: linear-gradient(to bottom, #ffa255 0%,#ffa255 50%, #ffc391 71%,#ffc391 90%,#ffa255 91%,#ffa255 100%);
 }
-.tiny > div .icons, .small > div .icons, .medium > div .icons, .large > div .icons, .huge > div .icons {
-    float: left;
-    display: inline-block;
-    margin: 5px 4px;
-    padding: 2px;
-    background-color: #ffffff;
-    border: 1px solid gray;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-}
 .tiny > div .name, .small > div .name, .medium > div .name, .large > div .name, .huge > div .name {
     color: #ffffff;
     text-shadow:0 1px 1px gray;
@@ -780,34 +807,41 @@ input[type="text"].myBlur :-ms-input-placeholder { /* Internet Explorer 10-11 */
     overflow: hidden;
     text-overflow: clip;
 }
-.tiny button, .small button, .medium button, .large button, .huge button {
-    margin-left: 2px;
+.tiny span, .small span, .medium span, .large span, .huge span {
+    margin-left: 8px;
     float: right;
     position: relative;
-    right: 0;
-    bottom: 20px;
+    right: 5px;
+    bottom: 18px;
     z-index: 2;
-    border: 1px solid white;
-    background: -moz-linear-gradient(top,  #77cedc 0%, #77cedc 50%, #38a4b4 51%, #38a4b4 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#77cedc), color-stop(50%,#77cedc), color-stop(51%,#38a4b4), color-stop(100%,#38a4b4));
-    background: -webkit-linear-gradient(top,  #77cedc 0%,#77cedc 50%, #38a4b4 51%,#38a4b4 100%);
-    background: -o-linear-gradient(top,  #77cedc 0%,#77cedc 50%,#38a4b4 51%,#38a4b4 100%);
-    background: -ms-linear-gradient(top,  #77cedc 0%,#77cedc 50%,#38a4b4 51%,#38a4b4 100%);
-    background: linear-gradient(to bottom, #77cedc 0%,#77cedc 50%,#38a4b4 51%,#38a4b4 100%);
-    background-color:#38a4b4;
-    width: 18px;
-    height: 18px;
+    width: 13px;
+    height: 13px;
     text-align: center;
+}
+.tiny span i, .small span i, .medium span i, .large span i, .huge span i {
+    font-size: .8em;
+    color: #ffffff;
+    padding-bottom: 4px;
+    vertical-align: middle;
+    text-shadow: 0px 0px 3px #266b76;
+}
+.tiny > div .icons, .small > div .icons, .medium > div .icons, .large > div .icons, .huge > div .icons {
+    float: left;
+    display: inline-block;
+    margin: 5px 4px;
+    padding: 2px;
+    right: 0;
+    bottom:  0;
+    width: 17px;
+    height: 17px;
+    background-color: #ffffff;
+    border: 1px solid gray;
     border-radius: 2px;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
-    vertical-align: middle;
+    font-size:.8em;
 }
-.tiny button i, .small button i, .medium button i, .large button i, .huge button i {
-    font-size: .8em;
-    color: #ffffff;
-    padding-bottom: 3px;
-}
+
 /*------------finish grid tiny ----------->*/
 /*--------------start grid small --------->*/
 .small {
@@ -1098,11 +1132,9 @@ a .fa-envelope-square {
 }
 .list {
     margin: 20px;
-     box-sizing: border-box;
+    box-sizing: border-box;
  }
 .list ul{
-    box-sizing: border-box;
-    display: block;
     margin-bottom: 12px;
     border: 1px solid #edebec;
     border-radius: 3px;
@@ -1112,7 +1144,6 @@ a .fa-envelope-square {
     transition-duration:400ms;
     -webkit-transition-duration:400ms;
     transition-property:background-color;
-    cursor:pointer;
 }
 .list ul li {
     line-height: 35px;
@@ -1179,7 +1210,7 @@ a .fa-envelope-square {
 .list ul li:nth-child(1) a, .list ul li:nth-child(2) a {
     border: none;
 }
-.list ul:hover {
+.list ul:hover, .list ul.over {
     background-color: #d7d7d9;
     cursor:pointer;
 }
@@ -1260,7 +1291,7 @@ a .fa-envelope-square {
     color: #ffffff;
     border: 1px solid #49b9ca;
 }
-.row-table li button {
+.btn-grey {
     text-align: left;
     letter-spacing:-.5px;
     font-size: .95em;
@@ -1270,16 +1301,17 @@ a .fa-envelope-square {
     text-shadow:0 1px 1px white;
     display: inline;
     margin-right: 10px;
-    border: 1px solid #d7d6d6;
-    background: rgba(250,250,250,1);
-    background: -moz-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(201,201,201,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(250,250,250,1)), color-stop(100%, rgba(201,201,201,1)));
-    background: -webkit-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(201,201,201,1) 100%);
-    background: -o-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(201,201,201,1) 100%);
-    background: -ms-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(201,201,201,1) 100%);
-    background: linear-gradient(to bottom, rgba(250,250,250,1) 0%, rgba(201,201,201,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#c9c9c9', GradientType=0 );
+    border: 1px solid #b1b1b1;
+    background: rgba(204,204,204,1);
+    background: -moz-linear-gradient(top, rgba(252,252,252,1) 0%, rgba(255,255,255,1) 32%, rgba(204,204,204,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(252,252,252,1)), color-stop(32%, rgba(255,255,255,1)), color-stop(100%, rgba(204,204,204,1)));
+    background: -webkit-linear-gradient(top, rgba(252,252,252,1) 0%, rgba(255,255,255,1) 32%, rgba(204,204,204,1) 100%);
+    background: -o-linear-gradient(top, rgba(252,252,252,1) 0%, rgba(255,255,255,1) 32%, rgba(204,204,204,1) 100%);
+    background: -ms-linear-gradient(top, rgba(252,252,252,1) 0%, rgba(255,255,255,1) 32%, rgba(204,204,204,1) 100%);
+    background: linear-gradient(to bottom, rgba(252,252,252,1) 0%, rgba(255,255,255,1) 32%, rgba(204,204,204,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#cccccc', GradientType=0 );
 }
+
 .my-table .row-table img, .list img, .my-table-results .row-table-results img {
     width: 75%;
     height: 32px;
@@ -1683,28 +1715,13 @@ a .fa-envelope-square {
 
 /*-------- drag and drop ----------*/
 
-.tiny.over div {
-    cursor: url("../images/cursor.cur"), pointer !important;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 2px;
-    box-sizing: border-box;
-    background-color: #ffa255;
-    border: 1px solid #ffa255;
-    box-shadow: -25px -1px 60px 6px #ffa255 inset;
-    background: -moz-linear-gradient(top,  #ffa255 0%, #ffa255 50%, #ffc391 71%,#ffc391 90%, #ffa255 91%, #ffa255 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffa255), color-stop(50%,#ffa255),color-stop(71%,#ffc391),color-stop(90%,#ffc391), color-stop(91%,#ffa255), color-stop(100%,#ffa255));
-    background: -webkit-linear-gradient(top,  #ffa255 0%,#ffa255 50%,#ffc391 71%,#ffc391 90%, #ffa255 91%,#ffa255 100%);
-    background: -o-linear-gradient(top,  #ffa255 0%,#ffa255 50%,#ffc391 71%, #ffc391 90%, #ffa255 91%,#ffa255 100%);
-    background: -ms-linear-gradient(top,  #ffa255 0%,#ffa255 50%,#ffc391 71%,#ffc391 90%, #ffa255 91%,#ffa255 100%);
-    background: linear-gradient(to bottom, #ffa255 0%,#ffa255 50%, #ffc391 71%,#ffc391 90%,#ffa255 91%,#ffa255 100%);
-}
 .list ul.moving {
     background-color: #f6f5f6;
     border: 1px solid #f6f5f6;
 }
 
 [draggable] {
+    cursor: pointer;
     -moz-user-select: none;
     -khtml-user-select: none;
     -webkit-user-select: none;
@@ -1713,7 +1730,7 @@ a .fa-envelope-square {
     -khtml-user-drag: none;
     -webkit-user-drag: none;
 }
-.list ul[draggable]{
+.list ul[draggable=true]{
     -khtml-user-drag: element;
     -webkit-user-drag: element;
 }

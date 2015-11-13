@@ -1,10 +1,10 @@
-<div ng-repeat="view in currentFolder" ng-animate="'animate'">
+<div ng-repeat="view in currentFolder">
     <div ng-mouseover="options = true" ng-mouseout="options = false">
-        <img ng-src="images/{{view.screen}}" />
-        <span class="icons glyphicon glyphicon-user"></span>
+        <img class="handle" ng-src="images/{{view.screen}}" />
+        <span class="btn-white icons glyphicon glyphicon-user"></span>
         <p class="name">{{view.name}}</p>
-        <button ng-hide="true" ng-show="options" ng-click="openBookmark()"><i class="fa fa-wrench"></i></button>
-        <button ng-hide="true" ng-show="options" ng-click="openSocial()"><i class="fa fa-facebook"></i></button>
-        <button class="handle" ng-hide="true" ng-show="options"><i class="fa fa-arrows-h"></i></button>
+        <span class="handle btn-green" ng-hide="true" ng-show="options"><i class="fa fa-arrows-h"></i></span>
+        <span class="btn-green" ng-hide="true" ng-show="options" ng-click="openSocial()"><i class="fa fa-facebook"></i></span>
+        <span class="btn-green" ng-hide="true" ng-show="options" ng-click="openBookmark()"><i class="fa fa-wrench"></i></span>
     </div>
 </div>
