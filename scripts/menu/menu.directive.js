@@ -1,5 +1,13 @@
 'use strict';
 angular.module('wonderpage.menu',[])
+    .directive('menu',  function () {
+        return {
+            restrict: 'E',
+            replace: true,
+            transclude: true,
+            templateUrl: 'scripts/menu/menu.html'
+        };
+    })
     .directive('follow',  function () {
         return {
             restrict: 'E',

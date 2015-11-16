@@ -13,9 +13,10 @@
         <li>{{item.followers}}</li>
         <li>{{item.following}}</li>
         <li>{{item.status}}</li>
-        <li><button ng-class="{active: tab == 'profile'}" ng-click="tab='profile'" class="btn-grey btn btn-xs">profile</button>
+        <li><button ui-sref="user-profile.folderFollowers.publicProfile" class="btn-grey btn btn-xs">profile</button>
             <button ng-click="openMessage()" class="btn-grey btn btn-xs">send message</button>
             <button class="btn-grey btn btn-xs">block</button>
             <button ng-click="openUnfollow()" class="btn-grey btn btn-xs">unfollow</button></li>
     </ul>
 </div>
+<div ui-view></div>

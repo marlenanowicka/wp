@@ -13,7 +13,8 @@ angular.module('wonderpage.service')
                             "name": "nowicki.przemek",
                             "followers": "4",
                             "following": "10",
-                            "status":"Y"
+                            "status":"Y",
+                            "country": "Poland"
                         },
                         {
                             "id": "102",
@@ -21,7 +22,8 @@ angular.module('wonderpage.service')
                             "name": "ala.nowak",
                             "followers": "1",
                             "following": "0",
-                            "status":"N"
+                            "status":"N",
+                            "country": "germany"
                         },
                         {
                             "id": "104",
@@ -29,7 +31,8 @@ angular.module('wonderpage.service')
                             "name": "ola.kowalska",
                             "followers": "19",
                             "following": "3",
-                            "status": "Y"
+                            "status": "Y",
+                            "country": "Russia"
                         },
                         {
                             "id": "102",
@@ -37,7 +40,8 @@ angular.module('wonderpage.service')
                             "name": "ala.nowak",
                             "followers": "1",
                             "following": "0",
-                            "status": "N"
+                            "status": "N",
+                            "country": "Portugal"
                         },
                         {
                             "id": "104",
@@ -45,7 +49,8 @@ angular.module('wonderpage.service')
                             "name": "ola.kowalska",
                             "followers": "19",
                             "following": "3",
-                            "status": "N"
+                            "status": "N",
+                            "country": "Poland"
 
                         }]
                     },
@@ -58,7 +63,8 @@ angular.module('wonderpage.service')
                                 "name": "nowicki.przemek",
                                 "followers": "4",
                                 "following": "10",
-                                "status":"Y"
+                                "status":"Y",
+                                "country": "Spain"
 
                             },
                             {
@@ -67,7 +73,8 @@ angular.module('wonderpage.service')
                                 "name": "ala.nowak",
                                 "followers": "1",
                                 "following": "0",
-                                "status": "N"
+                                "status": "N",
+                                "country": "Italy"
                             },
                             {
                                 "id": "104",
@@ -75,7 +82,8 @@ angular.module('wonderpage.service')
                                 "name": "ola.kowalska",
                                 "followers": "19",
                                 "following": "3",
-                                "status":"Y"
+                                "status":"Y",
+                                "country": "Poland"
                             }]
                     }]
             }

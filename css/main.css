@@ -624,8 +624,7 @@ input[type="text"].myBlur :-ms-input-placeholder { /* Internet Explorer 10-11 */
 /*-----------finish menu------------*/
 
 /*------------start public feed---------*/
-.sidebar p{
-    margin-left: 30px;
+.orange-background{
     padding-right: 10px;
     background: rgba(255,140,9,1);
     background: -moz-linear-gradient(45deg, rgba(255,140,9,1) 0%, rgba(255,140,9,1) 66%, rgba(251,236,217,1) 99%, rgba(251,236,217,1) 100%);
@@ -637,16 +636,16 @@ input[type="text"].myBlur :-ms-input-placeholder { /* Internet Explorer 10-11 */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8c09', endColorstr='#fbecd9', GradientType=1 );
     color: #ffffff;
     line-height: 20px;
-    padding-left: 10px;
+    padding-left: 30px;
     border-right: 5px solid coral;
     text-shadow:0 1px 1px grey;
 }
-.my-to-border {
+.my-top-border {
     border-color: #ffffff;
     border-width: 2px;
     border-top-style: groove;
     margin-left: 30px;
-    padding-top: 15px;
+    padding-top: 20px;
 }
 .my-top-border-left {
     border-color: #ffffff;
@@ -727,7 +726,40 @@ input[type="text"].myBlur :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: darkorange;
 }
 
-/*----------ned public feed -------------->*/
+/*----------end public feed -------------->*/
+
+
+/*----------start public profile -------------->*/
+.public-profile p, .public-profile img {
+    margin-left: 30px;
+}
+
+
+.public-profile img {
+    width: 70px;
+    height: 69px;
+    padding-top: 2px;
+    border: 1px solid #e7e7e7;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: inset 0px 1px 5px 0px rgba(190,190,190,1);
+    -moz-box-shadow: inset 0px 1px 5px 0px rgba(190,190,190,1);
+    box-shadow: inset 0px 1px 5px 0px rgba(190,190,190,1);
+}
+.public-profile .my-top-border {
+    padding-top: 10px;
+}
+.public-profile button {
+    display: block;
+    margin-left: 30px;
+    margin-top: 0;
+    width: 105px;
+    margin-bottom: 8px;
+}
+
+/*----------end public profile -------------->*/
 
 /*------------start footer -------------->*/
 .size-bookmark select, .fileUpload{

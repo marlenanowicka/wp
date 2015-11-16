@@ -1,9 +1,9 @@
 <nav>
     <ul>
-        <li ng-repeat="folder in folders" ng-class="{active: tab == 'home'}" ng-click="tab='home'">
-            <span ui-sref-active="active" ng-click="openFolder()" class="fa fa-wrench"></span>
-            <a ui-sref-active="active" ui-sref=".folder({id: folder.folderId})" data-toggle="tooltip" data-placement="right" title="home">{{folder.name}}</a>
-            <i class="glyphicon glyphicon-user"></i>
+        <li ng-repeat="folder in folders track by $index" ui-sref-active="active">
+            <span ng-click="openFolder()" class="btn-green fa fa-wrench"></span>
+            <a ui-sref=".folder({folderId:folder.folderId})">{{folder.name}}</a>
+            <i ng-if="folder.privacy == 'private'" class="fa fa-lock"></i><i ng-if="folder.privacy == 'public'" class="fa fa-user"></i>
         </li>
     </ul>
 </nav>

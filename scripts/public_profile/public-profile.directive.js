@@ -1,13 +1,11 @@
 'use strict';
-angular.module('wonderpage.public_profile',[])
-    .directive('publicProfile', ['PublicProfileServices', function (PublicProfileServices) {
+angular.module('wonderpage.public_profile')
+    .directive('publicProfile',  function () {
         return {
             restrict: 'E',
             replace: true,
             transclude: true,
             templateUrl: 'scripts/public_profile/public-profile.html',
-            link: function ($scope, element, attrs) {
-                $scope.profiles = PublicProfileServices.getProfile();
-            }
+            controller: 'PublicProfileController'
         };
-    }]);
+    });

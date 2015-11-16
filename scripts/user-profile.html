@@ -1,36 +1,10 @@
-<div ng-include="'scripts/common/header.html'"></div>
+<div ui-view="header"></div>
 <div id="wrapper">
-    <div class="menu">
-        <div class="my-top-border-left"></div>
-        <nav>
-            <ul>
-                <li ng-repeat="folder in folders track by $index" ui-sref-active="active">
-                    <span ng-click="openFolder()" class="btn-green fa fa-wrench"></span>
-                    <a ui-sref=".folder({folderId:folder.folderId})">{{folder.name}}</a>
-                    <i ng-if="folder.privacy == 'private'" class="fa fa-lock"></i><i ng-if="folder.privacy == 'public'" class="fa fa-user"></i>
-                </li>
-            </ul>
-        </nav>
-        <div class="my-top-border-left"></div>
-            <follow></follow>
-        <div class="my-top-border-left"></div>
-            <statistics></statistics>
-        <div ng-show="show" class="my-top-border-left"></div>
-            <result></result>
-        <div class="my-top-border-left"></div>
-        <menu-action></menu-action>
-    </div>
-    <section class="content" ui-view></section>
+<div ui-view="nav"></div>
+    <section class="content" ui-view="content"></section>
 </div>
-<aside class="sidebar">
-    <div ng-switch="tab">
-        <div ng-switch-when="profile">
-            <public-profile></public-profile>
-        </div>
-        <div ng-switch-default>
-            <public-feed></public-feed>
-        </div>
-    </div>
+<aside class="sidebar" ui-view="aside">
+    <public-profile></public-profile>
 </aside>
 <footer>
     <div class="size-bookmark">

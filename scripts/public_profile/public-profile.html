@@ -1,18 +1,15 @@
 <div>
-    <div class="panel panel-default" ng-repeat="profile in profiles">
-        <div class="panel-heading">public profile</div>
-        <div class="panel-body">
-            <ul>
-                <li>
-                    {{feed.add}}
-                </li>
-                <li>
-                    {{feed.login}}
-                </li>
-                <li>
-                    {{feed.bookmark}}
-                </li>
-            </ul>
-        </div>
+    <div class="my-top-border"></div>
+    <p class="orange-background">public profile</p>
+    <div class="public-profile">
+        <p>{{followersProfile.followers[1].name}}</p>
+        <div class="my-top-border"></div>
+        <img ng-src="{{followersProfile.followers[1].avatar}}"/>
+        <p>{{followersProfile.followers[1].country}}</p>
+        <div class="my-top-border"></div>
+        <div class="clearfix"></div>
+        <button ng-if="followersProfile.followers[1].status == 'Y'" ng-click="openUnfollow()" class="btn btn-xs btn-grey">unfollow</button>
+        <button ng-if="followersProfile.followers[1].status == 'N'" ng-click="openFollow()" class="btn btn-xs btn-grey">follow</button>
+        <button ng-click="openMessage()" class="btn btn-xs btn-grey">send message</button>
     </div>
 </div>
