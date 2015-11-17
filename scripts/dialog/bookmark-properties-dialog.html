@@ -31,19 +31,19 @@
         </div>
     </form>
 </div>
-<footer class="modal-footer my-btn">
+<footer class="modal-footer">
     <div class="btn-left">
-        <button class="btn btn-inverse" ng-disabled="isCancelDisabled()" ng-click="isCollapsed = isCollapse">remove</button>
-        <button class="btn btn-primary" ng-click="uploadFiles()" ng-disabled="isUploadDisabled()">save</button>
-        <button class="btn btn-inverse" ng-disabled="isCancelDisabled()" ng-click="close()">cancel</button>
+        <button class="btn btn-grey" ng-disabled="isCancelDisabled()" ng-click="isCollapsed = isCollapse">remove</button>
+        <button class="btn btn-grey" ng-click="uploadFiles()" ng-disabled="isUploadDisabled()">save</button>
+        <button class="btn btn-grey" ng-disabled="isCancelDisabled()" ng-click="close()">cancel</button>
     </div>
-    <button type="button" class="btn btn-inverse" ng-disabled="isCancelDisabled()" ng-click="close()">recepture</button>
+    <button type="button" class="btn btn-grey" ng-disabled="isCancelDisabled()" ng-click="close()">recepture</button>
     <div collapse="isCollapsed" class="my-border">
         <form>
             <div class="remove">
                 <p>Are you sure, you want to remove this page</p>
-                <button type="button" class="btn btn-inverse btn-xs" >yes<i class="fa fa-plus-square"></i></button>
-                <button type="button" class="btn btn-inverse btn-xs" ng-click="isCollapsed = !isCollapsed">no<i class="fa fa-check-square"></i></button>
+                <button type="button" class="btn btn-grey btn-xs" >yes<i class="fa fa-plus-square"></i></button>
+                <button type="button" class="btn btn-grey btn-xs" ng-click="isCollapsed = !isCollapsed">no<i class="fa fa-check-square"></i></button>
             </div>
         </form>
     </div>

@@ -8,12 +8,16 @@ angular.module('wonderpage')
             $scope.items = data;
         });
 
+
         $scope.add = function (folder) {
-            if (this.folder) {
-                $scope.folders.push($scope.folder);
-                $scope.folder = "";
+
+            if (folder) {
+                folder.privacy = 'private';
+                $scope.folders.push(folder);
+                this.folder = {};
             }
         };
+
         $scope.pages = [];
         $scope.pageContent = [];
 
@@ -63,6 +67,9 @@ angular.module('wonderpage')
 
         $scope.openProfile = function (){
             dialogService.openProfileSettingsDialog();
+        };
+        $scope.openBlock = function (item){
+            dialogService.openBlockDialog();
         };
 
         $scope.select = '123';

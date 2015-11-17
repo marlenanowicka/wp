@@ -3,10 +3,10 @@
 <div ui-view="nav"></div>
     <section class="content" ui-view="content"></section>
 </div>
-<aside class="sidebar" ui-view="aside">
+<aside class="sidebar" ui-view="sidebar">
     <public-profile></public-profile>
 </aside>
-<footer>
+<footer class="stopka">
     <div class="size-bookmark">
         <p>ikona miniatur</p>
         <select class="dropup btn-grey" id="simpleSizeSel" ng-model="selectionSize" ng-options="option.value for option in simpleSizeValue track by option.id">

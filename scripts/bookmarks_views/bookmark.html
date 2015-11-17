@@ -1,0 +1,10 @@
+<div ng-switch on="selectionSize.id">
+    <div ng-switch-when="1">
+        <list></list>
+    </div>
+    <div ng-switch-default>
+        <div html-sortable="" ng-model="currentFolder">
+            <grid ng-class="[selectionSize.value]"></grid>
+        </div>
+    </div>
+</div>

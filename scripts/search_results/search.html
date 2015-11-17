@@ -10,7 +10,7 @@
         <li></li>
     </ul>
     <ul class="row-table-results" ng-repeat="item in Results | filter: searchText: select">
-        <li><a href="{{item.address}}" target="_blank"><img ng-src="{{item.screen}}"/></a></li>
+        <li><a href="www.{{item.address}}" target="_blank"><img ng-src="{{item.screen}}"/></a></li>
         <li><a href="{{item.address}}" target="_blank" style="color: #49b9ca">{{item.name}}</a></li>
         <li><a href="{{item.address}}" target="_blank">{{item.address}}</a></li>
         <li><a href="{{item.address}}" target="_blank">{{item.description}}</a></li>

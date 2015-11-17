@@ -21,7 +21,7 @@ angular.module('wonderpage.routes', ['ui.router'])
                     'content@user-profile': {
                         template: '<div ui-view></div>'
                     },
-                    'aside@user-profile': {
+                    'sidebar@user-profile': {
                         template: '<public-feed></public-feed>'
                     },
                     'footer@user-profile': {
@@ -36,16 +36,7 @@ angular.module('wonderpage.routes', ['ui.router'])
                 views: {
                     'content@user-profile': {
                         controller: 'BookmarkController',
-                        template: '<div ng-switch on="selectionSize.id">' +
-                                    '<div ng-switch-when="1">' +
-                                    '   <list></list>' +
-                                    '</div>' +
-                                    '<div ng-switch-default>' +
-                                    '<div html-sortable="" ng-model="currentFolder">' +
-                                    '<grid ng-class="[selectionSize.value]"></grid>' +
-                                    '</div>' +
-                                    '</div>' +
-                                    '</div>'
+                        templateUrl: 'scripts/bookmarks_views/bookmark.html'
                                     }
                         }
             })
@@ -64,8 +55,9 @@ angular.module('wonderpage.routes', ['ui.router'])
                 templateUrl: 'scripts/followers/followers.html'
             })
 
-            .state('user-profile.folderFollowers.publicProfile', {
-                url: '/publicProfile',
+            .state('publicProfile', {
+                url: '^/:UserName',
+                parent:'user-profile.folderFollowers',
                 views: {
                     'nav@user-profile': {
                         controller: 'PublicProfileController',
@@ -73,11 +65,14 @@ angular.module('wonderpage.routes', ['ui.router'])
                     },
                     'content@user-profile': {
                         controller: 'PublicProfileController',
-                        template: '<p>udało się </p>'
+                        templateUrl: 'scripts/bookmarks_views/bookmark.html'
                     },
-                    'aside@user-profile': {
+                    'sidebar@user-profile': {
                         controller: 'PublicProfileController',
                         template: '<public-profile></public-profile>'
+                    },
+                    'footer@user-profile': {
+                        templateUrl: ''
                     }
                 }
             })
@@ -95,6 +90,11 @@ angular.module('wonderpage.routes', ['ui.router'])
             })
             .state('user-profile.folderSearch', {
                 url: 'folderType/folderSearch/search/ZXZlcnlvbmU=/searchFilter/searchEveryone',
-                templateUrl: 'scripts/search_results/all-public-users.html'
+                views: {
+                    'content@user-profile': {
+                        controller: 'ListFolderController',
+                        templateUrl: 'scripts/search_results/search.html'
+                    }
+                }
             })
     });

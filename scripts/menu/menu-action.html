@@ -1,6 +1,6 @@
 <form class="menu-button" ng-submit="add(folder)">
     <div ng-init="focus=false;blur=true">
-            <input id="add-folder" ng-class="{ myFocus: focus, myBlur: blur }" ng-focus="focus=true;blur=false" ng-blur="blur=true;focus=false;" type="text" placeholder="add bookmark" ng-model="folder.name" />
+            <input id="add-folder" ng-class="{ myFocus: focus, myBlur: blur }" ng-focus="focus=true;blur=false" ng-blur="blur=true;focus=false;" type="text" placeholder="add bookmark" ng-model="folder.name" value="" />
             <button id="icon"><i ng-init="index=0; classes=['fa fa-lock', 'fa fa-user']" ng-click="index = index + 1" ng-class="classes[index % classes.length]"></i></button>
             <button><i class="glyphicon glyphicon-plus"></i></button>
     </div>

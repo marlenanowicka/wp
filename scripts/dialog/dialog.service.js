@@ -13,7 +13,8 @@ angular
             openImproperBookmarkDialog: improperBookmarkDialog,
             openCopyBookmarkDialog: copyBookmarkDialog,
             openProfileSettingsDialog: profileSettingsDialog,
-            openInviteFriendsDialog: inviteFriendsDialog
+            openInviteFriendsDialog: inviteFriendsDialog,
+            openBlockDialog: BlockDialog
         };
 
         function folderPropertiesDialog() {
@@ -101,6 +102,15 @@ angular
                 templateUrl: 'scripts/dialog/invite-friends-dialog.html',
                 controller: 'openInviteDialog',
                 windowClass: 'if-dialog',
+                backdrop: 'static',
+                keyboard: false
+            });
+        }
+        function BlockDialog() {
+            return $modal.open({
+                templateUrl: 'scripts/dialog/block-dialog.html',
+                controller: 'blockDialog',
+                windowClass: 'un-dialog',
                 backdrop: 'static',
                 keyboard: false
             });

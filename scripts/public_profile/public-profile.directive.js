@@ -2,6 +2,9 @@
 angular.module('wonderpage.public_profile')
     .directive('publicProfile',  function () {
         return {
+            scope:{
+                UserName: '&'
+            },
             restrict: 'E',
             replace: true,
             transclude: true,
