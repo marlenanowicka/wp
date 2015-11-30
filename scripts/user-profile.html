@@ -11,5 +11,7 @@
         <p>ikona miniatur</p>
         <select class="dropup btn-grey" id="simpleSizeSel" ng-model="selectionSize" ng-options="option.value for option in simpleSizeValue track by option.id">
         </select>
+        <button ng-click="changePlus()" class="btn-grey"><i class="fa fa-plus"></i></button>
+        <button ng-click="changeMinus()" class="btn-grey"><i class="fa fa-minus"></i></button>
     </div>
 </footer>

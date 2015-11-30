@@ -8,6 +8,18 @@ angular.module('wonderpage')
             $scope.items = data;
         });
 
+        var max = 6;
+        $scope.changePlus = function(){
+            if ($scope.selectionSize.id < max)
+                $scope.selectionSize.id ++
+
+        };
+        var min = 1;
+        $scope.changeMinus = function(){
+            if ($scope.selectionSize.id > min)
+                $scope.selectionSize.id --
+
+        };
 
         $scope.add = function (folder) {
 
@@ -103,7 +115,8 @@ angular.module('wonderpage')
                 value: 'huge'
             }
         ];
-        $scope.selectionSize = {'id': '2', value: 'tiny'};
+        $scope.selectionSize = {'id': '6',
+            value: 'huge'};
 
     }])
     .controller('BookmarkController',['$scope', '$state', '$stateParams', 'FolderServices', function($scope,$state, $stateParams, FolderServices){
